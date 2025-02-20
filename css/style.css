@@ -1,0 +1,449 @@
+/* RESET CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F9F8F8;
+    color: #453F78;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.navBar {
+    display: none;
+}
+
+header .navBarMobile {
+    background-color: #FFF8E3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+}
+
+/*flex brand */
+header .navBarMobile .brand {
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+header .navBarMobile .brand img {
+    width: 50px;
+}
+
+/*Menu toggle*/
+#toggle {
+    width: 28px;
+    height: 30px;
+    margin-left: auto;
+    padding: 12px;
+    background-color: #FFF8E3;
+}
+
+#toggle div {
+    width: 100%;
+    height: 5px;
+    background: #453F78;
+    margin: 4px auto;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    backface-visibility: hidden;
+    z-index: 9999;
+    position: sticky;
+}
+
+#toggle.on .one {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on .two {
+    opacity: 0;
+}
+
+#toggle.on .three {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+.itemMenuFooter {
+    display: none;
+}
+
+/* estilos MENÚ CELULAR*/
+
+
+header .navBarMobile .menuMobile {
+    background-color: #FFF8E3;
+
+    width: 100%;
+    height: 70vh;
+    padding: 10px;
+
+    line-height: 70px;
+    text-align: left;
+
+    margin: auto;
+    display: none;
+    z-index: 99999;
+    position: absolute;
+
+}
+
+header .navBarMobile .menuMobile .itemMenuMobile {
+    font-family: "Space Grotesk", sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: #453F78;
+}
+
+header .navBarMobile .menuMobile .itemMenuMobile:hover {
+    color: #6A668D;
+    border-bottom: 2px solid #6A668D;
+    transition: 0.4s ease-in-out;
+}
+
+header .navBarMobile .menuMobile .socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+}
+
+header .navBarMobile .menuMobile .socialMedia a {
+    color: #453F78;
+    text-decoration: none;
+}
+
+header .navBarMobile .menuMobile .socialMedia a:hover {
+    color: #6A668D;
+    transition: .3s ease-in-out;
+}
+
+section {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 50px;
+    color: #453F78;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 50px;
+    background-image: url('../img/main-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #BBB5BD;
+
+}
+
+main img {
+    display: none;
+}
+.seccionSegunda {
+    background-color: #FFC94A;
+}
+
+.seccionTercera {
+    background-color: #FFC526;
+}
+
+.seccionCuarta {
+    background-color: #FFBE0D;
+}
+
+.seccionQuinta {
+    background-color: #FFB800;
+}
+
+/* Entre 992px y 1199px */
+/* Bootstrap breakpoints LG y superiores */
+@media (min-width: 992px) {
+
+    header .navBarMobile {
+        display: none;
+    }
+
+    .navBar {
+        /* organización del contenido */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        /* Asegura que esté por encima de otros elementos */
+        z-index: 9999;
+
+        /* estilos del contenido */
+        height: 50px;
+        position: relative;
+        margin-top: -50px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+    }
+
+    .navBar .itemsNavBar {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .navBar .itemsNavBar .itemMenu {
+        text-decoration: none;
+        color: #EAF2E3;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        position: relative;
+
+    }
+
+    .navBar .itemsNavBar .itemMenu.item-icon {
+        display: none;
+    }
+
+    .navBar .itemsNavBar .itemMenu:not(:first-child):hover {
+        color: #FAFFD8;
+        border-bottom: 2px solid #FAFFD8;
+        margin-top: 2px;
+        /* Añade una línea debajo en el estado de hover */
+    }
+
+    /* Estilo cuando .containerNavBar está fijo en la parte superior */
+    .navBar.fixed {
+        margin-top: 0;
+        position: fixed;
+        top: 3%;
+        left: 5%;
+        width: 90%;
+        border-radius: 5px;
+        background-color: #FFF8E3;
+        /* Puedes ajustar el color de fondo según tu diseño */
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
+        /* Sombra para resaltar */
+        animation: slideDown 1.2s ease;
+        /* Duración, transición y tipo de animación */
+        font-family: "Space Grotesk", sans-serif;
+    }
+
+    .navBar.fixed .itemsNavBar .itemMenu {
+        color: #453F78;
+    }
+
+    .navBar.fixed .itemsNavBar .itemMenu.item-icon {
+        display: inline-block;
+    }
+
+    .navBar.fixed .itemsNavBar .itemMenu img {
+        width: 50px;
+    }
+
+
+    .navBar.fixed .itemsNavBar .itemMenu:not(:first-child):hover {
+        color: #6A668D;
+        border-bottom: 2px solid #6A668D;
+        margin-top: 2px;
+    }
+
+   /*  main img {
+        display: flex;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    } */
+
+    main {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 800;
+        padding-left: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        background-color: #112626; /* Fondo oscuro */
+    }
+
+    main div {
+        position: relative;
+    }
+
+    main h1 {
+        font-size: 100px;
+        color: #F9F8F8;
+        margin: 0;
+        position: relative;
+    }
+
+    main h3 {
+        font-size: 70px;
+        position: absolute;
+        background: #f4c52c; /* Color amarillo */
+        color: black;
+        padding: 5px 15px;
+        transform: rotate(-5deg); /* Inclinación */
+        left: 0;
+        bottom: -60px; /* Ajuste para mejor ubicación */
+        margin: 0;
+        display: inline-block;
+    }
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(1%);
+    }
+}
+}
