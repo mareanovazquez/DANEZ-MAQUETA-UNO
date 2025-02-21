@@ -145,11 +145,13 @@ body {
     font-family: "Space Grotesk", sans-serif;
 }
 
-.navBar {
+/* Navegación desktop (oculta en móvil) */
+.nav-desktop {
     display: none;
 }
 
-header .navBarMobile {
+/* Header y navegación móvil */
+.header .nav-mobile {
     background-color: #FFF8E3;
     position: fixed;
     width: 100%;
@@ -157,20 +159,20 @@ header .navBarMobile {
     height: 60px;
 }
 
-/*flex brand */
-header .navBarMobile .brand {
+/* Bloque de marca */
+.nav-mobile__brand {
     display: inline-block;
     position: absolute;
     left: 2px;
     top: 2px;
 }
 
-header .navBarMobile .brand img {
+.nav-mobile__brand img {
     width: 50px;
 }
 
-/*Menu toggle*/
-#toggle {
+/* Botón toggle del menú */
+.nav-mobile__toggle {
     width: 28px;
     height: 30px;
     margin-left: auto;
@@ -178,7 +180,7 @@ header .navBarMobile .brand img {
     background-color: #FFF8E3;
 }
 
-#toggle div {
+.nav-mobile__toggle-line {
     width: 100%;
     height: 5px;
     background: #453F78;
@@ -190,73 +192,69 @@ header .navBarMobile .brand img {
     position: sticky;
 }
 
-#toggle.on .one {
+.nav-mobile__toggle.on .nav-mobile__toggle-line--one {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-#toggle.on .two {
+.nav-mobile__toggle.on .nav-mobile__toggle-line--two {
     opacity: 0;
 }
 
-#toggle.on .three {
+.nav-mobile__toggle.on .nav-mobile__toggle-line--three {
     transform: rotate(-45deg) translate(7px, -8px);
 }
 
-.itemMenuFooter {
+/* Footer link (oculto en móvil) */
+.footer__link {
     display: none;
 }
 
-/* estilos MENÚ CELULAR*/
-
-
-header .navBarMobile .menuMobile {
+/* Menú móvil */
+.nav-mobile__menu {
     background-color: #FFF8E3;
-
     width: 100%;
     height: 70vh;
     padding: 10px;
-
     line-height: 70px;
     text-align: left;
-
     margin: auto;
     display: none;
     z-index: 99999;
     position: absolute;
-
 }
 
-header .navBarMobile .menuMobile .itemMenuMobile {
+.nav-mobile__link {
     font-family: "Space Grotesk", sans-serif;
     text-decoration: none;
     font-size: 18px;
     color: #453F78;
 }
 
-header .navBarMobile .menuMobile .itemMenuMobile:hover {
+.nav-mobile__link:hover {
     color: #6A668D;
     border-bottom: 2px solid #6A668D;
     transition: 0.4s ease-in-out;
 }
 
-header .navBarMobile .menuMobile .socialMedia {
+.nav-mobile__social {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: end;
 }
 
-header .navBarMobile .menuMobile .socialMedia a {
+.nav-mobile__social-link {
     color: #453F78;
     text-decoration: none;
 }
 
-header .navBarMobile .menuMobile .socialMedia a:hover {
+.nav-mobile__social-link:hover {
     color: #6A668D;
     transition: .3s ease-in-out;
 }
 
-section {
+/* Secciones comunes */
+.section {
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -269,7 +267,8 @@ section {
     color: #453F78;
 }
 
-main {
+/* Sección principal */
+.main {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -277,41 +276,43 @@ main {
     align-items: start;
     font-family: "Space Grotesk", sans-serif;
     font-size: 50px;
-    background-image: url('../img/main-bg.jpg');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
+
     background-size: cover;
     background-position: center;
     color: #BBB5BD;
-
 }
 
-main img {
+.main img {
     display: none;
 }
-.seccionSegunda {
+
+/* Colores específicos de cada sección */
+.section--que-hacemos {
     background-color: #FFC94A;
 }
 
-.seccionTercera {
+.section--staff {
     background-color: #FFC526;
 }
 
-.seccionCuarta {
+.section--sedes {
     background-color: #FFBE0D;
 }
 
-.seccionQuinta {
+.section--contacto {
     background-color: #FFB800;
 }
 
-/* Entre 992px y 1199px */
-/* Bootstrap breakpoints LG y superiores */
+/* Estilos responsive - Media Queries */
+/* Entre 992px y 1199px - Bootstrap breakpoints LG y superiores */
 @media (min-width: 992px) {
 
-    header .navBarMobile {
+    .header .nav-mobile {
         display: none;
     }
 
-    .navBar {
+    .nav-desktop {
         /* organización del contenido */
         display: flex;
         flex-direction: row;
@@ -330,38 +331,36 @@ main img {
         backdrop-filter: blur(10px);
     }
 
-    .navBar .itemsNavBar {
+    .nav-desktop__items {
         width: 80%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-
     }
 
-    .navBar .itemsNavBar .itemMenu {
+    .nav-desktop__link {
         text-decoration: none;
         color: #EAF2E3;
         font-family: "Space Grotesk", sans-serif;
         font-size: 20px;
         font-weight: 900;
         position: relative;
-
     }
 
-    .navBar .itemsNavBar .itemMenu.item-icon {
+    .nav-desktop__link--icon {
         display: none;
     }
 
-    .navBar .itemsNavBar .itemMenu:not(:first-child):hover {
+    .nav-desktop__link:not(:first-child):hover {
         color: #FAFFD8;
         border-bottom: 2px solid #FAFFD8;
         margin-top: 2px;
         /* Añade una línea debajo en el estado de hover */
     }
 
-    /* Estilo cuando .containerNavBar está fijo en la parte superior */
-    .navBar.fixed {
+    /* Estilo cuando .nav-desktop está fijo en la parte superior */
+    .nav-desktop--fixed {
         margin-top: 0;
         position: fixed;
         top: 3%;
@@ -377,31 +376,25 @@ main img {
         font-family: "Space Grotesk", sans-serif;
     }
 
-    .navBar.fixed .itemsNavBar .itemMenu {
+    .nav-desktop--fixed .nav-desktop__link {
         color: #453F78;
     }
 
-    .navBar.fixed .itemsNavBar .itemMenu.item-icon {
+    .nav-desktop--fixed .nav-desktop__link--icon {
         display: inline-block;
     }
 
-    .navBar.fixed .itemsNavBar .itemMenu img {
+    .nav-desktop--fixed .nav-desktop__link--icon img {
         width: 50px;
     }
 
-
-    .navBar.fixed .itemsNavBar .itemMenu:not(:first-child):hover {
+    .nav-desktop--fixed .nav-desktop__link:not(:first-child):hover {
         color: #6A668D;
         border-bottom: 2px solid #6A668D;
         margin-top: 2px;
     }
 
-   /*  main img {
-        display: flex;
-        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    } */
-
-    main {
+    .main {
         height: 100vh;
         display: flex;
         flex-direction: row;
@@ -414,18 +407,18 @@ main img {
         background-color: #112626; /* Fondo oscuro */
     }
 
-    main div {
+    .main__content {
         position: relative;
     }
 
-    main h1 {
+    .main__title {
         font-size: 100px;
         color: #F9F8F8;
         margin: 0;
         position: relative;
     }
 
-    main h3 {
+    .main__subtitle {
         font-size: 70px;
         position: absolute;
         background: #f4c52c; /* Color amarillo */
@@ -437,13 +430,14 @@ main img {
         margin: 0;
         display: inline-block;
     }
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
 
-    to {
-        transform: translateY(1%);
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(1%);
+        }
     }
-}
 }

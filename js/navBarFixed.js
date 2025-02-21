@@ -1,15 +1,16 @@
 document.addEventListener("scroll", function () {
-    let navBarDesktop = document.getElementById('navbar-desktop')
-    let principal = document.getElementById("principal");
+    // Seleccionamos los elementos usando las nuevas clases BEM
+    let navDesktop = document.getElementById('navbar-desktop');
+    let mainSection = document.getElementById("principal");
 
-    // Calcula la posición de sectionUno
-    let principalRect = principal.offsetTop + principal.offsetHeight;
+    // Calcula la posición del final de la sección principal
+    let mainSectionBottom = mainSection.offsetTop + mainSection.offsetHeight;
     
-    // Agrega o quita la clase según la posición de scroll
-    if (window.scrollY > principalRect) {
-
-        navBarDesktop.classList.add("fixed");
+    // Agrega o quita la clase modificadora BEM según la posición de scroll
+    if (window.scrollY > mainSectionBottom) {
+        // Usando el modificador BEM "--fixed" en lugar de solo "fixed"
+        navDesktop.classList.add("nav-desktop--fixed");
     } else {
-        navBarDesktop.classList.remove("fixed");
+        navDesktop.classList.remove("nav-desktop--fixed");
     }
 });

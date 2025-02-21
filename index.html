@@ -14,87 +14,88 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navBarMobile">
-            <div class="brand"><img src="./img/icon.svg" alt=""></div>
-            <div id="toggle">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
+    <header class="header">
+        <nav class="nav-mobile">
+            <div class="nav-mobile__brand"><img src="./img/icon.svg" alt="DANEZ logo"></div>
+            <div class="nav-mobile__toggle" id="toggle">
+                <div class="nav-mobile__toggle-line nav-mobile__toggle-line--one"></div>
+                <div class="nav-mobile__toggle-line nav-mobile__toggle-line--two"></div>
+                <div class="nav-mobile__toggle-line nav-mobile__toggle-line--three"></div>
             </div>
-            <div class="menuMobile" id="menu">
-                <div><a class="itemMenuMobile" href="#nosotros">NOSOTROS</a></div>
-                <div><a class="itemMenuMobile" href="#queHacemos"> QUÉ HACEMOS</a></div>
-                <div><a class="itemMenuMobile" href="#staff"> STAFF</a></div>
-                <div><a class="itemMenuMobile" href="#sedes">SEDES</a></div>
-                <div><a class="itemMenuMobile" href="#contacto">CONTACTO</a></div>
-                <div class="socialMedia">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                    <a href=""><i class="fa-solid fa-envelope"></i></a>
-                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href=""><i class="fa-brands fa-telegram"></i></a>
+            <div class="nav-mobile__menu" id="menu">
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#nosotros">NOSOTROS</a></div>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#queHacemos">QUÉ HACEMOS</a></div>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#staff">STAFF</a></div>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#sedes">SEDES</a></div>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#contacto">CONTACTO</a></div>
+                <div class="nav-mobile__social">
+                    <a class="nav-mobile__social-link" href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a class="nav-mobile__social-link" href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="nav-mobile__social-link" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a class="nav-mobile__social-link" href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a class="nav-mobile__social-link" href=""><i class="fa-solid fa-envelope"></i></a>
+                    <a class="nav-mobile__social-link" href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="nav-mobile__social-link" href=""><i class="fa-brands fa-telegram"></i></a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main id="principal" class="principal">
-        <div>
-            <h1>DANEZ</h1>
-            <h3>Training</h3>
+    <main class="main" id="principal">
+        <div class="main__content">
+            <h1 class="main__title">DANEZ</h1>
+            <h3 class="main__subtitle">Training</h3>
         </div>
-        
     </main>
-    <nav class="navBar" id="navbar-desktop">
-        <div class="itemsNavBar">
-            <a href="" class="itemMenu item-icon"><img src="./img/icon.svg" alt=""></a>
-            <a class="itemMenu" href="#nosotros"> NOSOTROS</a>
-            <a class="itemMenu" href="#queHacemos"> QUÉ HACEMOS</a>
-            <a class="itemMenu" href="#staff"> STAFF</a>
-            <a class="itemMenu" href="#sedes">SEDES</a>
-            <a class="itemMenu" href="#contacto">CONTACTO</a>
+
+    <nav class="nav-desktop" id="navbar-desktop">
+        <div class="nav-desktop__items">
+            <a href="" class="nav-desktop__link nav-desktop__link--icon"><img src="./img/icon.svg" alt="DANEZ logo"></a>
+            <a class="nav-desktop__link" href="#nosotros">NOSOTROS</a>
+            <a class="nav-desktop__link" href="#queHacemos">QUÉ HACEMOS</a>
+            <a class="nav-desktop__link" href="#staff">STAFF</a>
+            <a class="nav-desktop__link" href="#sedes">SEDES</a>
+            <a class="nav-desktop__link" href="#contacto">CONTACTO</a>
         </div>
     </nav>
 
-    <section id="nostros" class="nosotros">
-        <article>
-            <h2>NOSOTROS</h2>
-        </article>
-    </section>
-    <section id="queHacemos" class="seccionSegunda">
-        <article>
-            <h2>QUÉ HACEMOS</h2>
+    <section class="section section--nosotros" id="nosotros">
+        <article class="section__article">
+            <h2 class="section__title">NOSOTROS</h2>
         </article>
     </section>
 
-    <section id="staff" class="seccionTercera">
-        <article>
-            <h2>STAFF</h2>
+    <section class="section section--que-hacemos" id="queHacemos">
+        <article class="section__article">
+            <h2 class="section__title">QUÉ HACEMOS</h2>
         </article>
     </section>
 
-    <section id="sedes" class="seccionCuarta">
-        <article>
-            <h2>SEDES</h2>
+    <section class="section section--staff" id="staff">
+        <article class="section__article">
+            <h2 class="section__title">STAFF</h2>
         </article>
     </section>
 
-    <section id="contacto" class="seccionQuinta">
-        <article>
-            <h2>CONTACTO</h2>
+    <section class="section section--sedes" id="sedes">
+        <article class="section__article">
+            <h2 class="section__title">SEDES</h2>
         </article>
     </section>
 
-    <footer>
-        <nav class="menuFooter">
-            <a class="itemMenuFooter" href="#nosotros"> NOSOTROS</a>
-            <a class="itemMenuFooter" href="#queHacemos"> QUÉ HACEMOS</a>
-            <a class="itemMenuFooter" href="#staff"> STAFF</a>
-            <a class="itemMenuFooter" href="#sedes">SEDES</a>
-            <a class="itemMenuFooter" href="#contacto">CONTACTO</a>
+    <section class="section section--contacto" id="contacto">
+        <article class="section__article">
+            <h2 class="section__title">CONTACTO</h2>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <a class="footer__link" href="#nosotros">NOSOTROS</a>
+            <a class="footer__link" href="#queHacemos">QUÉ HACEMOS</a>
+            <a class="footer__link" href="#staff">STAFF</a>
+            <a class="footer__link" href="#sedes">SEDES</a>
+            <a class="footer__link" href="#contacto">CONTACTO</a>
         </nav>
     </footer>
     <script src="./js/menuToggle.js"></script>
