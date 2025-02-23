@@ -1,0 +1,40 @@
+:root {
+    /* FONTS */
+    --primary-font-family: "Raleway", sans-serif;
+    --secondary-font-family: "Sora", sans-serif;
+    --font-size-base: 16px;
+    --spacing-unit: 8px;
+
+    /* FONT COLOR */
+    --primary-font-color: #1D2D32;
+    --secondary-font-color: #1C3C45;
+    --primary-font-light-color: #EEF2F3;
+    --secondary-font-light-color: #B1C6CC;
+
+    --hover-font-color: #fed049;
+    --hover-font-color2: #155263;
+    --hover-button-color2: #132428;
+
+    /* NAVBAR */
+    --background-color-navbar: #155263;
+    --background-color-navbar-fixed: #F9f8f8;
+    --background-color-features:#EFD178;
+    --background-color-features2:#B1D2DB;
+    --background-color-contact: #2A6778;
+
+
+    /* COLOR */
+    --primary-color: #155263;
+    --secondary-color: #fed049;
+
+    /* BACKGROUND COLOR */
+    --background-color-body:#EEF2F3 ;
+    --background-color-body-alt:#76A2AF;
+    
+    /* INPUT-SELECT */
+    --background-color-select: #FAF9F5;
+
+    /* BTN WHATSAPP */
+    --background-color-whatsapp: #25d366;
+    --background-color-hover-whastapp: #075e54;
+}

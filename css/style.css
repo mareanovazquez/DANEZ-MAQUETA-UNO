@@ -1,3 +1,5 @@
+@import url('./variables.css');
+
 /* RESET CSS */
 html,
 body,
@@ -143,6 +145,7 @@ body {
     background-color: #F9F8F8;
     color: #453F78;
     font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
 }
 
 /* Navegación desktop (oculta en móvil) */
@@ -273,18 +276,38 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     font-family: "Space Grotesk", sans-serif;
     font-size: 50px;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
-
     background-size: cover;
     background-position: center;
     color: #BBB5BD;
 }
 
-.main img {
-    display: none;
+.main__content {
+    position: relative;
+}
+
+.main__title {
+    font-size: 70px;
+    color: #F9F8F8;
+    margin: 0;
+    position: relative;
+}
+
+.main__subtitle {
+    font-size: 40px;
+    position: absolute;
+    background: #f4c52c; /* Color amarillo */
+    color: black;
+    padding: 5px 15px;
+    transform: rotate(-5deg); /* Inclinación */
+    left: 0;
+    bottom: -25px; /* Ajuste para mejor ubicación */
+    margin: 0;
+    display: inline-block;
+    z-index: 44444;
 }
 
 /* Colores específicos de cada sección */
