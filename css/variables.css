@@ -1,7 +1,8 @@
 :root {
-    /* FONTS */
-    --primary-font-family: "Raleway", sans-serif;
-    --secondary-font-family: "Sora", sans-serif;
+    /* FONTS */ 
+    --logo-font-family: "Space Grotesk", serif;
+    --primary-font-family: "Sora", sans-serif;
+    --secondary-font-family: "Lato", serif;
     --font-size-base: 16px;
     --spacing-unit: 8px;
 

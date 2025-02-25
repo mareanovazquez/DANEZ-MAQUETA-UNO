@@ -144,7 +144,7 @@ html {
 body {
     background-color: #F9F8F8;
     color: #453F78;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 16px;
 }
 
@@ -167,7 +167,10 @@ body {
     display: inline-block;
     position: absolute;
     left: 2px;
-    top: 2px;
+    top: 7px;
+    font-family: var(--logo-font-family);
+    font-weight: 800;
+    font-size: 2rem;
 }
 
 .nav-mobile__brand img {
@@ -224,12 +227,13 @@ body {
     display: none;
     z-index: 99999;
     position: absolute;
+    font-family: var(--primary-font-family);
 }
 
 .nav-mobile__link {
-    font-family: "Space Grotesk", sans-serif;
+
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #453F78;
 }
 
@@ -242,13 +246,15 @@ body {
 .nav-mobile__social {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: end;
 }
 
 .nav-mobile__social-link {
     color: #453F78;
     text-decoration: none;
+    padding-right: 20px;
+    font-size: 2rem;
 }
 
 .nav-mobile__social-link:hover {
@@ -277,7 +283,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Space Grotesk", sans-serif;
     font-size: 50px;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
     background-size: cover;
@@ -286,28 +291,63 @@ body {
 }
 
 .main__content {
-    position: relative;
+    /*position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main__title {
     font-size: 70px;
     color: #F9F8F8;
     margin: 0;
-    position: relative;
+    /* position: relative; */
+    font-family: var(--logo-font-family);
+    font-weight: 800;
 }
 
 .main__subtitle {
     font-size: 40px;
-    position: absolute;
-    background: #f4c52c; /* Color amarillo */
+    /*  position: absolute; */
+    background: #f4c52c;
+    /* Color amarillo */
     color: black;
     padding: 5px 15px;
-    transform: rotate(-5deg); /* Inclinación */
-    left: 0;
-    bottom: -25px; /* Ajuste para mejor ubicación */
+    /*  transform: rotate(-5deg); */
+    /* Inclinación */
+    /* left: 0;*/
+    bottom: -25px;
+    /* Ajuste para mejor ubicación */
     margin: 0;
     display: inline-block;
-    z-index: 44444;
+    font: var(--primary-font-family);
+    font-weight: 600;
+}
+
+.main__cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: #fbc02d; /* Amarillo fuerte */
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    
+}
+
+.main__cta:hover {
+    background: #ffeb3b; /* Amarillo más claro */
+
+}
+
+.main__cta-text {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: grey;
+    text-align: center;   
 }
 
 /* Colores específicos de cada sección */
@@ -365,9 +405,9 @@ body {
     .nav-desktop__link {
         text-decoration: none;
         color: #EAF2E3;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        font-weight: 900;
+        font-family: var(--primary-font-family);
+        font-size: 1.1rem;
+        font-weight: 600;
         position: relative;
     }
 
@@ -396,7 +436,8 @@ body {
         /* Sombra para resaltar */
         animation: slideDown 1.2s ease;
         /* Duración, transición y tipo de animación */
-        font-family: "Space Grotesk", sans-serif;
+        font-family: var(--primary-font-family);
+        padding-left: 40px;
     }
 
     .nav-desktop--fixed .nav-desktop__link {
@@ -405,11 +446,21 @@ body {
 
     .nav-desktop--fixed .nav-desktop__link--icon {
         display: inline-block;
+        font-family: var(--logo-font-family);
+        font-size: 2rem;
+        font-weight: 800;
+        position: absolute;
+        left: 10px;
+        /* Ajusta este valor según sea necesario */
+        top: 50%;
+        /* Centra verticalmente */
+        transform: translateY(-50%);
+        /* Ajusta para centrar verticalmente */
     }
 
-    .nav-desktop--fixed .nav-desktop__link--icon img {
+    /* .nav-desktop--fixed .nav-desktop__link--icon img {
         width: 50px;
-    }
+    } */
 
     .nav-desktop--fixed .nav-desktop__link:not(:first-child):hover {
         color: #6A668D;
@@ -423,33 +474,42 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        font-family: "Space Grotesk", sans-serif;
-        font-weight: 800;
+
         padding-left: 30px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        background-color: #112626; /* Fondo oscuro */
+        background-color: #112626;
+        /* Fondo oscuro */
     }
 
     .main__content {
-        position: relative;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 30px;
     }
 
     .main__title {
         font-size: 100px;
         color: #F9F8F8;
         margin: 0;
-        position: relative;
+        /*         position: relative;
+ */
     }
 
     .main__subtitle {
         font-size: 70px;
-        position: absolute;
-        background: #f4c52c; /* Color amarillo */
+        /* position: absolute; */
+        background: #f4c52c;
+        /* Color amarillo */
         color: black;
         padding: 5px 15px;
-        transform: rotate(-5deg); /* Inclinación */
-        left: 0;
-        bottom: -60px; /* Ajuste para mejor ubicación */
+        /*  transform: rotate(-5deg); */
+        /* Inclinación */
+        /*   left: 0;
+        bottom: -60px; */
+        /* Ajuste para mejor ubicación */
         margin: 0;
         display: inline-block;
     }
