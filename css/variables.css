@@ -7,33 +7,40 @@
     --spacing-unit: 8px;
 
     /* FONT COLOR */
-    --primary-font-color: #1D2D32;
-    --secondary-font-color: #1C3C45;
-    --primary-font-light-color: #EEF2F3;
-    --secondary-font-light-color: #B1C6CC;
+    --primary-font-color: #003049;
+    --secondary-font-color: #093a53;
+    --primary-font-light-color: #EEF2F3; 
+    --secondary-font-light-color: #f4f6ff;
 
-    --hover-font-color: #fed049;
-    --hover-font-color2: #155263;
-    --hover-button-color2: #132428;
+    /* HOVER FONT COLOR */
+    --hover-font-color: #f2613f;
+    --hover-font-color2: #f3c623;
 
-    /* NAVBAR */
-    --background-color-navbar: #155263;
-    --background-color-navbar-fixed: #F9f8f8;
-    --background-color-features:#EFD178;
-    --background-color-features2:#B1D2DB;
-    --background-color-contact: #2A6778;
+    /* BACKGROUND */
+    --primary-bg-color: #ffffff;  /* Fondo principal */
+    --secondary-bg-color: #f8f9fa;  /* Fondo secundario */
+    --hover-bg-color: #f2613f; /* Fondo al pasar el mouse */
+    --hover-bg-color2: #f3c623;
+
+    /* BORDER */
+    --border-color: #ced4da;
+    --hover-border-color: #f2613f;
+
+    /* BUTTON */
+    --button-bg-color: #f2613f;
+    --button-bg-color2: #f3c623;
+    --button-bg-color3: #003049;
+    --button-text-color: #ffffff;
+
+    /* SHADOWS */
+    --box-shadow-light: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: 0px 4px 15px rgba(0, 0, 0, 0.3);
+
+    /* TRANSITIONS */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-medium: 0.4s ease-in-out;
 
 
-    /* COLOR */
-    --primary-color: #155263;
-    --secondary-color: #fed049;
-
-    /* BACKGROUND COLOR */
-    --background-color-body:#EEF2F3 ;
-    --background-color-body-alt:#76A2AF;
-    
-    /* INPUT-SELECT */
-    --background-color-select: #FAF9F5;
 
     /* BTN WHATSAPP */
     --background-color-whatsapp: #25d366;
