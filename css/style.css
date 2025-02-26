@@ -304,7 +304,7 @@ body {
     margin: 0;
     /* position: relative; */
     font-family: var(--logo-font-family);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .main__subtitle {
@@ -322,7 +322,7 @@ body {
     margin: 0;
     display: inline-block;
     font: var(--primary-font-family);
-    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .main__cta {
@@ -494,12 +494,13 @@ body {
         font-size: 100px;
         color: #F9F8F8;
         margin: 0;
+        letter-spacing: 5px;
         /*         position: relative;
  */
     }
 
     .main__subtitle {
-        font-size: 70px;
+        font-size: 2rem;
         /* position: absolute; */
         background: #f4c52c;
         /* Color amarillo */
