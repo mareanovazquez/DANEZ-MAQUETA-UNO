@@ -311,9 +311,9 @@ body {
 .main__subtitle {
     font-size: 1.4rem;
     /*  position: absolute; */
-    background: #f4c52c;
+    background: var(--primary-font-color);
     /* Color amarillo */
-    color: black;
+    color: var(--primary-font-light-color);
     padding: 5px 15px;
     /*  transform: rotate(-5deg); */
     /* Inclinación */
@@ -324,7 +324,7 @@ body {
     display: inline-block;
     font-family: var(--primary-font-family);
     letter-spacing: 2px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .main__cta {
@@ -333,23 +333,26 @@ body {
     padding: 12px 24px;
     font-size: 1.1rem;
     font-weight: bold;
-    color: white;
-    background: #fbc02d; /* Amarillo fuerte */
+    color:var(--button-text-color);
+    background: var(--button-bg-color);
+    /* Amarillo fuerte */
     text-decoration: none;
-    transition: background 0.3s, transform 0.2s;
-    
-}
+    border-radius: 5px;
+    }
 
 .main__cta:hover {
-    background: #ffeb3b; /* Amarillo más claro */
-
+    background: var(--primary-bg-color);
+    border: 3px solid var(--button-bg-color);
+    color: var(--primary-font-color);
+    transition: 0.3s;
+  
 }
 
 .main__cta-text {
     margin-top: 0.5rem;
     font-size: 1rem;
     color: grey;
-    text-align: center;   
+    text-align: center;
 }
 
 /* Colores específicos de cada sección */
@@ -406,7 +409,7 @@ body {
 
     .nav-desktop__link {
         text-decoration: none;
-        color: #EAF2E3;
+        color: var(--primary-font-light-color);
         font-family: var(--primary-font-family);
         font-size: 1.1rem;
         font-weight: 600;
@@ -418,21 +421,22 @@ body {
     }
 
     .nav-desktop__link:not(:first-child):hover {
-        color: #FAFFD8;
-        border-bottom: 2px solid #FAFFD8;
+        color: var(--hover-font-color);
+        border-bottom: 2px solid var(--hover-font-color);
         margin-top: 2px;
         /* Añade una línea debajo en el estado de hover */
     }
 
     /* Estilo cuando .nav-desktop está fijo en la parte superior */
     .nav-desktop--fixed {
+        height: 60px;
         margin-top: 0;
         position: fixed;
         top: 3%;
         left: 5%;
         width: 90%;
         border-radius: 5px;
-        background-color: #FFF8E3;
+        background-color:var(--secondary-bg-color) ;
         /* Puedes ajustar el color de fondo según tu diseño */
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
         /* Sombra para resaltar */
@@ -443,7 +447,7 @@ body {
     }
 
     .nav-desktop--fixed .nav-desktop__link {
-        color: #453F78;
+        color: var(--primary-font-color);
     }
 
     .nav-desktop--fixed .nav-desktop__link--icon {
@@ -451,6 +455,7 @@ body {
         font-family: var(--logo-font-family);
         font-size: 2rem;
         font-weight: 800;
+        letter-spacing: 2px;
         position: absolute;
         left: 10px;
         /* Ajusta este valor según sea necesario */
@@ -465,8 +470,8 @@ body {
     } */
 
     .nav-desktop--fixed .nav-desktop__link:not(:first-child):hover {
-        color: #6A668D;
-        border-bottom: 2px solid #6A668D;
+        color: var(--hover-font-color);
+        border-bottom: 2px solid var(--hover-font-color);
         margin-top: 2px;
     }
 
@@ -478,7 +483,7 @@ body {
         align-items: center;
 
         padding-left: 30px;
-       
+
         background-color: #112626;
         /* Fondo oscuro */
     }
@@ -494,7 +499,7 @@ body {
 
     .main__title {
         font-size: 6rem;
-        color: #F9F8F8;
+
         margin: 0;
         letter-spacing: 5px;
         /*         position: relative;
@@ -504,9 +509,7 @@ body {
     .main__subtitle {
         font-size: 1.7rem;
         /* position: absolute; */
-        background: #f4c52c;
-        /* Color amarillo */
-        color: black;
+
         padding: 5px 15px;
         /*  transform: rotate(-5deg); */
         /* Inclinación */

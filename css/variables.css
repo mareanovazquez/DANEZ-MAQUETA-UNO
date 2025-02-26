@@ -9,7 +9,7 @@
     /* FONT COLOR */
     --primary-font-color: #003049;
     --secondary-font-color: #093a53;
-    --primary-font-light-color: #EEF2F3; 
+    --primary-font-light-color: #f0f8ff; 
     --secondary-font-light-color: #f4f6ff;
 
     /* HOVER FONT COLOR */
@@ -17,10 +17,11 @@
     --hover-font-color2: #f3c623;
 
     /* BACKGROUND */
-    --primary-bg-color: #ffffff;  /* Fondo principal */
+    --primary-bg-color: #f0f8ff;  /* Fondo principal */
     --secondary-bg-color: #f8f9fa;  /* Fondo secundario */
     --hover-bg-color: #f2613f; /* Fondo al pasar el mouse */
     --hover-bg-color2: #f3c623;
+    --navbar-bg-color:#FFF8E3;
 
     /* BORDER */
     --border-color: #ced4da;
@@ -30,7 +31,7 @@
     --button-bg-color: #f2613f;
     --button-bg-color2: #f3c623;
     --button-bg-color3: #003049;
-    --button-text-color: #ffffff;
+    --button-text-color: #f0f8ff;
 
     /* SHADOWS */
     --box-shadow-light: 0px 2px 10px rgba(0, 0, 0, 0.1);
