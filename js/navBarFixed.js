@@ -8,7 +8,7 @@ document.addEventListener("scroll", function () {
     
     // Agrega o quita la clase modificadora BEM según la posición de scroll
     if (window.scrollY > mainSectionBottom) {
-        // Usando el modificador BEM "--fixed" en lugar de solo "fixed"
+    
         navDesktop.classList.add("nav-desktop--fixed");
     } else {
         navDesktop.classList.remove("nav-desktop--fixed");
