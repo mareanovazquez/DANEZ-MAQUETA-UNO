@@ -276,19 +276,6 @@ body {
     transition: var(--transition-fast);
 }
 
-/* Secciones comunes */
-.section {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 800;
-    letter-spacing: 3px;
-    font-size: 50px;
-    color: #453F78;
-}
 
 /* Sección principal */
 .main {
@@ -375,6 +362,31 @@ body {
     text-align: center;
 }
 
+/* Secciones comunes */
+.section {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+.section .section__article .section__title{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    margin-bottom: 1rem;
+    font-family: var(--title-font-family);
+}
+
+.section__text {
+    font-size: 1.4rem;
+    color: var(--primary-font-color);
+    font-family: var(--text-font-family);
+    padding: 30px;
+    
+}
 /* Colores específicos de cada sección */
 .section--que-hacemos {
     background-color: #FFC94A;

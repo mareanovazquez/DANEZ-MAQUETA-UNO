@@ -1,6 +1,8 @@
 :root {
     /* FONTS */ 
     --logo-font-family: "bombarda", serif;
+    --title-font-family: "arvo", serif;
+    --text-font-family: "hind", sans-serif;
     --primary-font-family: "Sora", sans-serif;
     --secondary-font-family: "Lato", serif;
     --font-size-base: 16px;
