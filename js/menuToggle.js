@@ -1,33 +1,22 @@
-// Obtén el elemento del botón toggle usando el id
+// Obtén los elementos principales una sola vez
 let toggleButton = document.getElementById("toggle");
+let mobileMenu = document.getElementById("mobileMenu");
+let menuLinks = document.querySelectorAll(".nav-mobile__link");
 
 // Agrega un evento de clic al botón
 toggleButton.addEventListener("click", function () {
-    // Toggle de la clase "on" en el botón (mantenemos "on" como estado, no como clase BEM)
+    // Toggle de la clase "on" en el botón (mantenemos "on" como estado)
     toggleButton.classList.toggle("on");
 
-    // Obtén el elemento del menú móvil
-    let mobileMenu = document.getElementById("menu");
-
-    // Alternar la visibilidad del menú
-    if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
-        mobileMenu.style.display = "block";
-    } else {
-        mobileMenu.style.display = "none";
-    }
+    // Alternar la clase para la transición deslizante
+    mobileMenu.classList.toggle("nav-mobile__menu--active");
 });
-
-// Obtén todos los elementos de enlace del menú móvil usando la nueva clase BEM
-let menuLinks = document.querySelectorAll(".nav-mobile__link");
 
 // Agrega un controlador de eventos a cada enlace para cerrar el menú cuando se hace clic
 menuLinks.forEach(link => {
     link.addEventListener("click", function () {
-        // Obtén el elemento del menú móvil
-        let mobileMenu = document.getElementById("menu");
-
-        // Cierra el menú
-        mobileMenu.style.display = "none";
+        // Cierra el menú quitando la clase active
+        mobileMenu.classList.remove("nav-mobile__menu--active");
 
         // Asegúrate de quitar la clase "on" del botón toggle
         if (toggleButton.classList.contains("on")) {
@@ -39,14 +28,11 @@ menuLinks.forEach(link => {
 // Cierra el menú al presionar la tecla Escape
 window.addEventListener('keydown', (event) => {
     if (event.code === 'Escape') {
-        // Obtén el elemento del menú para asegurarnos de que existe
-        let mobileMenu = document.getElementById("menu");
-        
-        // Cierra el menú y resetea el botón toggle
+        // Cierra el menú quitando la clase active
         if (mobileMenu) {
-            mobileMenu.style.display = "none";
+            mobileMenu.classList.remove("nav-mobile__menu--active");
         }
-        
+
         if (toggleButton) {
             toggleButton.classList.remove("on");
         }

@@ -155,7 +155,7 @@ body {
 
 /* Header y navegación móvil */
 .header .nav-mobile {
-    background-color:var(--secondary-bg-color);
+    background-color: var(--secondary-bg-color);
     color: var(--primary-font-color);
     position: fixed;
     width: 100%;
@@ -218,6 +218,7 @@ body {
 }
 
 /* Menú móvil */
+/* Menú móvil */
 .nav-mobile__menu {
     background-color: var(--secondary-bg-color);
     width: 100%;
@@ -226,18 +227,28 @@ body {
     line-height: 70px;
     text-align: left;
     margin: auto;
-    display: none;
     z-index: 99999;
     position: absolute;
     font-family: var(--primary-font-family);
-    
+    left: -100%;
+    /* Comienza fuera de la pantalla */
+    top: 60px;
+    display: block;
+    /* Para que funcione la transición */
+    opacity: 0;
+    /* Inicialmente invisible */
+    transition: left var(--transition-medium), opacity var(--transition-medium);
+}
+
+.nav-mobile__menu.nav-mobile__menu--active {
+    left: 0;
+    opacity: 1;
 }
 
 .nav-mobile__link {
-
     text-decoration: none;
     font-size: 1.2rem;
-    color: var(--primary-font-color);  
+    color: var(--primary-font-color);
 }
 
 .nav-mobile__link:hover {
@@ -309,12 +320,12 @@ body {
     font-family: var(--logo-font-family);
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.5),
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }
 
 .main__subtitle {
@@ -348,7 +359,7 @@ body {
     border-radius: 5px;
 }
 
-.main__cta:hover{
+.main__cta:hover {
     background: var(--primary-bg-color);
     border: 1px solid var(--button-bg-color);
     color: var(--primary-font-color);
@@ -360,7 +371,7 @@ body {
 .main__cta-text {
     margin-top: 0.5rem;
     font-size: 1rem;
-    color:var(--secondary-font-light-color);
+    color: var(--secondary-font-light-color);
     text-align: center;
 }
 
