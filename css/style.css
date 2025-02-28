@@ -352,7 +352,6 @@ body {
     color: var(--primary-font-color);
     transition: var(--transition-fast);
     margin-left: -1px;
-
 }
 
 .main__cta-text {
@@ -363,16 +362,21 @@ body {
 }
 
 /* Secciones comunes */
-.section {
-    height: 70vh;
+/* .section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    }
+} */
 
-.section .section__article .section__title{
+.section__article {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* SECCIÓN QUÉ HACEMOS */
+
+.section .section__article .section__title {
     font-size: 2.5rem;
     text-align: center;
     font-weight: 800;
@@ -386,7 +390,37 @@ body {
     color: var(--primary-font-color);
     font-family: var(--text-font-family);
     padding: 30px;
-    
+}
+
+.section-pilates__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.section-pilates__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section-funcional__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-funcional__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* BOTÓN WHATSAPP */
