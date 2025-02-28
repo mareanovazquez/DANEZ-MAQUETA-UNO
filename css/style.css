@@ -142,8 +142,8 @@ html {
 }
 
 body {
-    background-color: #F9F8F8;
-    color: #453F78;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
     font-family: var(--primary-font-family);
     font-size: 16px;
 }
@@ -369,6 +369,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     }
 
 .section .section__article .section__title{
@@ -386,22 +387,6 @@ body {
     font-family: var(--text-font-family);
     padding: 30px;
     
-}
-/* Colores específicos de cada sección */
-.section--que-hacemos {
-    background-color: #FFC94A;
-}
-
-.section--staff {
-    background-color: #FFC526;
-}
-
-.section--sedes {
-    background-color: #FFBE0D;
-}
-
-.section--contacto {
-    background-color: #FFB800;
 }
 
 /* BOTÓN WHATSAPP */
