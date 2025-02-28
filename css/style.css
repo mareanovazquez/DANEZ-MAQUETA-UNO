@@ -392,33 +392,46 @@ body {
     padding: 30px;
 }
 
-.section-pilates__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.section--nosotros {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-.section-pilates__content {
+
+.section--que-hacemos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Estilo común para los contenedores de actividades */
+.section__activity {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: 0 auto;
+    margin-top: 20px;
 }
 
-.section-funcional__container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-funcional__content {
+/* Estilo común para el contenido de las actividades */
+.section__activity-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.section__activity-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section__activity-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section__activity-img {
+    border-radius: 5px;
     width: 80%;
     margin: 0 auto;
 }
@@ -642,6 +655,26 @@ body {
         margin: 0;
         display: inline-block;
     }
+
+    /* Estilo común para los contenedores de actividades */
+    .section__activity {
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    .section__activity--funcional {
+        flex-direction: row-reverse;
+    }
+
+    .section__activity-content {
+        width: 50%;
+    }
+
+    .section__activity-img {
+        width: 35%;
+    }
+
+
 
     @keyframes slideDown {
         from {
