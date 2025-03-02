@@ -13,24 +13,26 @@
     --secondary-font-color: #093a53;
     --primary-font-light-color: #f0f8ff; 
     --secondary-font-light-color: #f4f6ff;
+    --activity-font-color: #eb8317;
 
     /* HOVER FONT COLOR */
-    --hover-font-color: #f2613f;
+    --hover-font-color: #eb8317;
     --hover-font-color2: #f3c623;
 
     /* BACKGROUND */
     --primary-bg-color: #f0f8ff;  /* Fondo principal */
     --secondary-bg-color: #f8f9fa;  /* Fondo secundario */
-    --hover-bg-color: #f2613f; /* Fondo al pasar el mouse */
+    --hover-bg-color: #eb8317; /* Fondo al pasar el mouse */
     --hover-bg-color2: #f3c623;
     --navbar-bg-color:#FFF8E3;
+    --pilates-bg-color: #10375c;
 
     /* BORDER */
     --border-color: #ced4da;
-    --hover-border-color: #f2613f;
+    --hover-border-color: #eb8317;
 
     /* BUTTON */
-    --button-bg-color: #f2613f;
+    --button-bg-color: #eb8317;
     --button-bg-color2: #f3c623;
     --button-bg-color3: #003049;
     --button-text-color: #f0f8ff;
@@ -38,6 +40,7 @@
     /* SHADOWS */
     --box-shadow-light: 0px 2px 10px rgba(0, 0, 0, 0.1);
     --box-shadow-dark: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    --activity-box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
     /* TRANSITIONS */
     --transition-fast: 0.2s ease-in-out;

@@ -660,6 +660,10 @@ body {
     .section__activity {
         flex-direction: row;
         margin-bottom: 40px;
+        background-color: var(--pilates-bg-color);
+        box-shadow: var(--activity-box-shadow);
+        border-radius: 5px;
+        padding: 50px;
     }
 
     .section__activity--funcional {
@@ -668,8 +672,20 @@ body {
 
     .section__activity-content {
         width: 50%;
+        align-items: flex-start;
     }
 
+    .section__activity-title {
+        color: var(--activity-font-color);
+    }
+
+    .section__activity-text {
+        color: var(--primary-font-light-color);
+    }
+
+    .section__activity-text a {
+        color: var(--activity-font-color);
+    }
     .section__activity-img {
         width: 35%;
     }
