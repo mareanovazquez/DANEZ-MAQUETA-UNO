@@ -409,6 +409,10 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    background-color: var(--pilates-bg-color);
+        box-shadow: var(--activity-box-shadow);
+        border-radius: 5px;
+        padding: 50px;
 }
 
 /* Estilo común para el contenido de las actividades */
@@ -436,6 +440,11 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.section__activity--stretching {
+    background-color: var(--stretching-bg-color);
+    color: var(--primary-font-light-color);
 }
 
 /* BOTÓN WHATSAPP */
@@ -713,6 +722,18 @@ body {
         margin-right: 0;
     }
 
+    .section__activity--stretching {
+        flex-direction: row;
+        background-color: var(--stretching-bg-color);
+        color: var(--primary-font-light-color);
+    }
+
+    .section__activity--stretching .section__activity-title {
+        color: var(--primary-font-color);
+    }
+    .section__activity--stretching .section__activity-text a {
+        color: var(--primary-font-color);
+    }
 
 
     @keyframes slideDown {
