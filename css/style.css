@@ -428,12 +428,14 @@ body {
     font-size: 1.2rem;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: var(--secondary-font-family);
 }
 
 .section__activity-img {
     border-radius: 5px;
     width: 80%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* BOTÓN WHATSAPP */
@@ -659,6 +661,8 @@ body {
     /* Estilo común para los contenedores de actividades */
     .section__activity {
         flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         margin-bottom: 40px;
         background-color: var(--pilates-bg-color);
         box-shadow: var(--activity-box-shadow);
@@ -666,8 +670,35 @@ body {
         padding: 50px;
     }
 
+    .section__activity-text {
+        font-size: 1.4rem;
+        
+    }
+
+    .section__activity--pilates .section__activity-title {
+        color: var(--activity-font-color);
+    }
+
+    .section__activity--pilates .section__activity-text {
+        color: var(--primary-font-light-color);
+    }
+
+    .section__activity--pilates .section__activity-text a {
+        color: var(--activity-font-color);
+    }
+
     .section__activity--funcional {
         flex-direction: row-reverse;
+        background-color: var(--funcional-bg-color);
+        color: var(--primary-font-light-color);
+    }
+
+    .section__activity--funcional .section__activity-title {
+        color: var(--primary-font-color);
+    }
+
+    .section__activity--funcional .section__activity-text a {
+        color: var(--primary-font-color);
     }
 
     .section__activity-content {
@@ -675,19 +706,11 @@ body {
         align-items: flex-start;
     }
 
-    .section__activity-title {
-        color: var(--activity-font-color);
-    }
 
-    .section__activity-text {
-        color: var(--primary-font-light-color);
-    }
-
-    .section__activity-text a {
-        color: var(--activity-font-color);
-    }
     .section__activity-img {
         width: 35%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
 
