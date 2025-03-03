@@ -410,9 +410,10 @@ body {
     align-items: center;
     margin-top: 20px;
     background-color: var(--pilates-bg-color);
-        box-shadow: var(--activity-box-shadow);
-        border-radius: 5px;
-        padding: 50px;
+    box-shadow: var(--activity-box-shadow);
+    border-radius: 5px;
+    padding: 50px;
+    color: var(--primary-font-light-color);
 }
 
 /* Estilo común para el contenido de las actividades */
@@ -426,6 +427,7 @@ body {
 .section__activity-title {
     font-size: 2rem;
     font-weight: 600;
+    color: var(--activity-font-color);
 }
 
 .section__activity-text {
@@ -433,6 +435,29 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: var(--secondary-font-family);
+}
+.section__activity .section__activity-text a {
+    color: var(--activity-font-color);
+}
+.section__activity-img {
+    width: 100%;
+}
+
+/* Estilos específicos para FUNCIONAL */
+
+.section__activity--funcional {
+    background-color: var(--funcional-bg-color);
+    color: var(--primary-font-light-color);
+}
+.section__activity--funcional .section__activity-title {
+    color: var(--primary-font-color);
+}
+
+.section__activity--funcional .section__activity-text {
+    color: var(--primary-font-light-color);
+}
+.section__activity--funcional .section__activity-text a {
+    color: var(--primary-font-color);
 }
 
 .section__activity-img {
@@ -442,10 +467,15 @@ body {
     margin-right: auto;
 }
 
+
+
+    /* Estilos específicos para stretching */
+
 .section__activity--stretching {
     background-color: var(--stretching-bg-color);
     color: var(--primary-font-light-color);
 }
+
 
 /* BOTÓN WHATSAPP */
 .whatsapp-section__link {
@@ -681,7 +711,7 @@ body {
 
     .section__activity-text {
         font-size: 1.4rem;
-        
+
     }
 
     .section__activity--pilates .section__activity-title {
@@ -731,6 +761,7 @@ body {
     .section__activity--stretching .section__activity-title {
         color: var(--primary-font-color);
     }
+
     .section__activity--stretching .section__activity-text a {
         color: var(--primary-font-color);
     }
