@@ -83,7 +83,6 @@ body {
 }
 
 /* Menú móvil */
-/* Menú móvil */
 .nav-mobile__menu {
     background-color: var(--secondary-bg-color);
     width: 100%;
@@ -225,22 +224,30 @@ body {
     color: var(--secondary-font-light-color);
     text-align: center;
 }
-
-/* Secciones comunes */
-/* .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
+/* DIMENSIONES COMUNES DE LAS SECCIONES */
 .section__article {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SECCIÓN NOSOTROS */
+.section__article--nosotros{
+    width: 100%;
+    margin: 0;
+    background-color: var(--nosotros-bg-color);
+    color: var(--primary-font-light-color);
+}
+.section__nosotros-container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 3rem;
+    text-align: justify;
     width: 80%;
     margin: 0 auto;
 }
 
 /* SECCIÓN QUÉ HACEMOS */
-
 .section .section__article .section__title {
     font-size: 2.5rem;
     text-align: center;
