@@ -224,6 +224,7 @@ body {
     color: var(--secondary-font-light-color);
     text-align: center;
 }
+
 /* DIMENSIONES COMUNES DE LAS SECCIONES */
 .section__article {
     width: 80%;
@@ -232,19 +233,41 @@ body {
 }
 
 /* SECCIÓN NOSOTROS */
-.section__article--nosotros{
+.section__article--nosotros {
     width: 100%;
+    height: 100vh;
     margin: 0;
-    background-color: var(--nosotros-bg-color);
+    background:
+        linear-gradient(to right,
+            rgba(0, 48, 73, 0) 0%,
+            rgba(0, 48, 73, 0.5) 50%,
+            rgba(0, 48, 73, 1) 100%),
+        url('../img/nosotros.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--primary-font-light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    margin-top: -30px;
 }
-.section__nosotros-container{
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-size: 3rem;
-    text-align: justify;
+
+.section__nosotros-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.5rem;
+    text-align: right;
+    }
+
+.section__text--nosotros {
+    text-align: center;
     width: 80%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* SECCIÓN QUÉ HACEMOS */
@@ -308,9 +331,11 @@ body {
     margin-bottom: 10px;
     font-family: var(--secondary-font-family);
 }
+
 .section__activity .section__activity-text a {
     color: var(--activity-font-color);
 }
+
 .section__activity-img {
     width: 100%;
 }
@@ -321,6 +346,7 @@ body {
     background-color: var(--funcional-bg-color);
     color: var(--primary-font-light-color);
 }
+
 .section__activity--funcional .section__activity-title {
     color: var(--primary-font-color);
 }
@@ -328,6 +354,7 @@ body {
 .section__activity--funcional .section__activity-text {
     color: var(--primary-font-light-color);
 }
+
 .section__activity--funcional .section__activity-text a {
     color: var(--primary-font-color);
 }
@@ -341,7 +368,7 @@ body {
 
 
 
-    /* Estilos específicos para stretching */
+/* Estilos específicos para stretching */
 
 .section__activity--stretching {
     background-color: var(--stretching-bg-color);
@@ -568,6 +595,46 @@ body {
         margin: 0;
         display: inline-block;
     }
+
+    /* SECCIÓN NOSOTROS */
+.section__article--nosotros {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background:
+        linear-gradient(to right,
+            rgba(0, 48, 73, 0) 0%,
+            rgba(0, 48, 73, 0.5) 50%,
+            rgba(0, 48, 73, 1) 100%),
+        url('../img/nosotros.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--primary-font-light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    margin-top: -30px;
+}
+
+.section__nosotros-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2.5rem;
+    text-align: right;
+    }
+
+.section__text--nosotros {
+    text-align: right;
+    padding-right: 40px;
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
     /* Estilo común para los contenedores de actividades */
     .section__activity {
