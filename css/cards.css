@@ -1,24 +1,26 @@
 /* Estilos para la sección de staff */
+.section--staff {
+    margin-bottom: 40px;
+}
+
 .staff {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
-    /* Para responsividad */
 }
 
 /* Estilos generales de la card */
 .staff__card {
-    width: 350px;
-    height: 490px;
+    width: 250px;
+    height: 350px;
     border-radius: 5px;
-    box-shadow: var(--box-shadow-light);
+    box-shadow: var(--box-shadow-dark);
     overflow: hidden;
     background: var(--secondary-bg-color);
     position: relative;
     text-align: center;
-    perspective: 1000px;
-    /* Para efecto 3D */
+    perspective: 1000px; /* Para efecto 3D */
 }
 
 .staff__image {
@@ -50,7 +52,6 @@
     position: relative;
     transform-style: preserve-3d;
     transition: transform var(--transition-medium);
-
 }
 
 .staff__card:hover .staff__card-inner {
@@ -92,8 +93,8 @@
 
 /* Ajustes para la imagen dentro del contenedor */
 .staff__header .staff__image {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 5px;
     margin-bottom: 5px;
     object-fit: cover;
@@ -103,21 +104,20 @@
 .staff__header .staff__fullname {
     margin-top: 5px;
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 800;
 }
 
 .staff__details {
     width: 90%;
-    margin: 45px auto;
-
+    margin: 15px auto;
 }
 
 .staff__detail {
-    font-size: 1.2rem;
-    margin: 5px 0;
+    font-size: 1rem;
     font-family: var(--secondary-font-family);
     color: var(--secondary-font-color);
+    margin-bottom: 5px;
 }
 
 .staff__detail-label {
@@ -174,4 +174,35 @@
 .staff__social-link:hover {
     color: var(--hover-font-color);
     transform: scale(1.1);
+}
+
+/* Media query para desktop */
+@media (min-width: 992px) {
+    .staff {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .staff__card {
+        width: 350px;
+        height: 490px;
+    }
+
+    .staff__header .staff__image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .staff__header .staff__fullname {
+        font-size: 2rem;
+    }
+
+    .staff__details {
+        margin: 40px auto;
+    }
+
+    .staff__detail {
+        font-size: 1.2rem;
+    }
 }
