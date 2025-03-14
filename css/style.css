@@ -559,6 +559,111 @@ body {
     transform: scale(1.1);
 }
 
+/* CONTACTO */
+/* Estilos para el formulario de contacto */
+
+.section--contacto .section__title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    margin-bottom: 1rem;
+    font-family: var(--title-font-family);
+}
+.contact-form__container {
+    width: 85%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form__label {
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    color: var(--primary-font-color);
+    font-size: 1rem;
+}
+
+.contact-form__input,
+
+.contact-form__textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--primary-font-family);
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+    transition: border-color var(--transition-fast);
+}
+
+.contact-form__select {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--primary-font-family);
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+    transition: border-color var(--transition-fast);
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23003049' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+.contact-form__input:focus,
+.contact-form__select:focus, 
+.contact-form__textarea:focus {
+    outline: none;
+    border-color: var(--hover-border-color);
+    box-shadow: 0 0 0 2px rgba(235, 131, 23, 0.2);
+}
+
+.contact-form__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form__button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.contact-form__button:hover {
+    background-color: var(--button-bg-color);
+    border: 1px solid var(--primary-font-color);
+    color: var(--primary-font-color);
+    transition: var(--transition-medium);
+}
+
+.contact-form__button:active {
+    transform: translateY(0);
+}
+
 /* BOTÓN WHATSAPP */
 .whatsapp-section__link {
     position: fixed;
@@ -916,14 +1021,38 @@ body {
         font-size: 1.2rem;
     }
 
+    /* CONTACTO */
 
-    @keyframes slideDown {
-        from {
-            transform: translateY(-100%);
-        }
+    .contact-form__container {
+        width: 60%;
+        padding: 30px;
+        max-width: 800px;
+    }
+    
+    .contact-form__label {
+        font-size: 1.1rem;
+    }
+    
+    .contact-form__input,
+    .contact-form__select,
+    .contact-form__textarea {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+    
+    .contact-form__button {
+        font-size: 1.1rem;
+        padding: 14px 28px;
+    }
+   
+}
 
-        to {
-            transform: translateY(1%);
-        }
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(1%);
     }
 }
