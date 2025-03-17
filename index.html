@@ -44,7 +44,8 @@
     <header class="header">
         <nav class="nav-mobile">
             <div class="nav-mobile__brand">
-                <h2>DANEZ</h2>
+                <!--  <h2>DANEZ</h2> -->
+                <img src="./img/logo-negro-navbar.svg" alt="">
             </div>
             <div class="nav-mobile__toggle" id="toggle">
                 <div class="nav-mobile__toggle-line nav-mobile__toggle-line--one"></div>
@@ -70,19 +71,18 @@
 
     <main class="main" id="principal">
         <div class="main__content">
-            <h1 class="main__title">DANEZ</h1>
-            <h3 class="main__subtitle">PILATES - FUNCIONAL</h3>
+            <img class="main__logo" src="./img/logo-blanco.svg" alt="Logo DANEZ">
+            <!-- <h1 class="main__title">DANEZ</h1>
+            <h3 class="main__subtitle">PILATES - FUNCIONAL</h3> -->
             <a href="#contacto" class="main__cta">¡Vení!</a>
             <p class="main__cta-text">Clase de prueba gratis</p>
-
-
         </div>
     </main>
 
     <nav class="nav-desktop" id="navbar-desktop">
         <div class="nav-desktop__items">
             <a href="" class="nav-desktop__link nav-desktop__link--icon">
-                <h2>DANEZ</h2>
+                <img src="./img/logo-negro-navbar.svg" alt="">
             </a>
             <a class="nav-desktop__link" href="#nosotros">NOSOTROS</a>
             <a class="nav-desktop__link" href="#queHacemos">QUÉ HACEMOS</a>
@@ -293,17 +293,19 @@
             <form class="contact-form" id="contactForm">
                 <div class="contact-form__group">
                     <label for="nombre" class="contact-form__label">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="contact-form__input" placeholder="Nombre" required>
+                    <input type="text" id="nombre" name="nombre" class="contact-form__input" placeholder="Nombre"
+                        required>
                 </div>
 
                 <div class="contact-form__group">
                     <label for="email" class="contact-form__label">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" class="contact-form__input" placeholder="correo electrónico"required>
+                    <input type="email" id="email" name="email" class="contact-form__input"
+                        placeholder="correo electrónico" required>
                 </div>
 
                 <div class="contact-form__group">
                     <label for="tipoConsulta" class="contact-form__label">Tipo de Consulta</label>
-                    <select id="tipoConsulta" name="tipoConsulta" class="contact-form__select"   required>
+                    <select id="tipoConsulta" name="tipoConsulta" class="contact-form__select" required>
                         <option value="" disabled selected>¿Qué actividad te interesa?</option>
                         <option value="funcional">Funcional</option>
                         <option value="pilates">Pilates</option>
@@ -313,7 +315,8 @@
 
                 <div class="contact-form__group">
                     <label for="mensaje" class="contact-form__label">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" class="contact-form__textarea" rows="5" placeholder="Dejanos acá tu consulta" required></textarea>
+                    <textarea id="mensaje" name="mensaje" class="contact-form__textarea" rows="5"
+                        placeholder="Dejanos acá tu consulta" required></textarea>
                 </div>
 
                 <div class="contact-form__submit">
