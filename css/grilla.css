@@ -30,7 +30,7 @@ tr:hover {
     display: inline-block;
     padding: 4px 8px;
     border-radius: 4px;
-    color: white;
+    color: var(--primary-font-light-color);
     font-weight: 600;
     font-size: 0.85rem;
 }
@@ -49,15 +49,20 @@ tr:hover {
 
 .sede {
     font-weight: 600;
+    padding: 6px 6px;
+    border-radius: 3px;
+    display: inline-block;
 }
 
 .sede-campana {
-    color: var(--pilates-bg-color);
+    color:var(--primary-font-color);
+    
 }
 
 .sede-cuenca {
-    color: var(--funcional-bg-color);
-}
+    color:var(--primary-font-light-color);
+    background-color: var(--button-bg-color3);
+    }
 
 @media (max-width: 768px) {
     table {
