@@ -1,0 +1,74 @@
+.schedule-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+th {
+    background-color: var(--primary-font-color);
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.tag-pilates {
+    background-color: var(--pilates-bg-color);
+}
+
+.tag-funcional {
+    background-color: var(--funcional-bg-color);
+}
+
+.tag-stretching {
+    background-color: var(--stretching-bg-color);
+}
+
+.sede {
+    font-weight: 600;
+}
+
+.sede-campana {
+    color: var(--pilates-bg-color);
+}
+
+.sede-cuenca {
+    color: var(--funcional-bg-color);
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+    }
+}
