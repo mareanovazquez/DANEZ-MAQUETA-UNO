@@ -278,6 +278,8 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
 }
 
 /* SECCIÓN QUÉ HACEMOS */
@@ -565,6 +567,78 @@ body {
     transform: scale(1.1);
 }
 
+/* GRILLA */
+.section--grilla {
+    margin-top: 30px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+.schedule-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-bg-color);
+}
+
+th {
+    background-color: var(--nosotros-bg-color);
+    color:var(--primary-font-light-color);
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--primary-font-light-color);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.tag-pilates {
+    background-color: var(--pilates-bg-color);
+}
+
+.tag-funcional {
+    background-color: var(--funcional-bg-color);
+}
+
+.tag-stretching {
+    background-color: var(--stretching-bg-color);
+}
+
+.sede {
+    font-weight: 600;
+    padding: 6px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.sede-campana {
+    color:var(--primary-font-color);
+    
+}
+
+.sede-cuenca {
+    color:var(--primary-font-light-color);
+    background-color: var(--button-bg-color3);
+    }
 /* CONTACTO */
 /* Estilos para el formulario de contacto */
 
@@ -1027,6 +1101,20 @@ body {
         font-size: 1.2rem;
     }
 
+    /* GRILLA */
+
+    table {
+        font-size: 1.2rem;
+    }
+    
+    th, td {
+        padding: 20px;
+    }
+    
+    .tag {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
     /* CONTACTO */
 
     .contact-form__container {
