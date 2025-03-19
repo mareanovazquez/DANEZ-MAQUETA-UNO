@@ -653,7 +653,6 @@ tr:hover {
 
 .contact-form__container {
     width: 85%;
-    max-width: 600px;
     margin: 0 auto 40px;
     padding: 20px;
     background-color: var(--secondary-bg-color);
@@ -816,6 +815,160 @@ tr:hover {
     transform: translateY(-3px);
     transition: var(--transition-medium);
     color: var(--primary-font-color);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--nosotros-bg-color);
+    color: var(--primary-font-light-color);
+    padding: 40px 0 20px;
+    font-family: var(--primary-font-family);
+}
+
+.footer__container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer__column {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.footer__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--hover-font-color);
+    display: inline-block;
+}
+
+/* Estilos para navegación */
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__link {
+    display: block;
+    color: var(--primary-font-light-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: var(--transition-fast);
+    padding-left: 5px;
+    font-weight: 500;
+}
+
+.footer__link:hover {
+    color: var(--hover-font-color);
+    border-left: 2px solid var(--hover-font-color);
+}
+
+/* Estilos para sedes */
+.footer__sede {
+    margin-bottom: 20px;
+}
+
+.footer__sede-name {
+    font-size: 1.1rem;
+    color: var(--hover-font-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.footer__sede-address,
+.footer__sede-hours {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+/* Estilos para contacto */
+.footer__contact {
+    margin-bottom: 25px;
+}
+
+.footer__contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.footer__icon {
+    margin-right: 10px;
+    color: var(--hover-font-color);
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.footer__contact-link {
+    color: var(--primary-font-light-color);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.footer__contact-link:hover {
+    color: var(--hover-font-color);
+}
+
+/* Estilos para la App */
+.footer__app {
+    margin-top: 20px;
+}
+
+.footer__app-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.footer__app-button {
+    display: inline-block;
+    background-color: var(--hover-font-color);
+    color: var(--primary-font-light-color);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.footer__app-button:hover {
+    background-color: var(--button-bg-color2);
+    color: var(--primary-font-color);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-light);
+}
+
+/* Estilos para la parte inferior del footer */
+.footer__bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer__copyright {
+    margin-bottom: 8px;
+}
+
+.footer__credits {
+    color: var(--primary-font-light-color);
+    opacity: 0.8;
+}
+
+.footer__credits-link {
+    color: var(--hover-font-color);
+    text-decoration: none;
+}
+
+.footer__credits-link:hover {
+    text-decoration: underline;
 }
 
 /* Estilos responsive - Media Queries */
@@ -1118,9 +1271,9 @@ tr:hover {
     /* CONTACTO */
 
     .contact-form__container {
-        width: 60%;
+        width: 80%;
         padding: 30px;
-        max-width: 800px;
+        margin: 0 auto 40px;
     }
 
     .contact-form__label {
@@ -1137,6 +1290,28 @@ tr:hover {
     .contact-form__button {
         font-size: 1.1rem;
         padding: 14px 28px;
+    }
+
+    /* FOOTER */
+    .footer__container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer__column {
+        width: 30%;
+        padding-left: 0;
+    }
+
+    .footer__link {
+        font-size: 1.1rem;
+    }
+
+    .footer__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 5%;
     }
 
 }
