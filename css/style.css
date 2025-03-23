@@ -158,15 +158,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
     background-size: cover;
     background-position: center;
-    color: #BBB5BD;
 }
 
 .main__content {
-    /*position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,37 +173,8 @@ body {
 .main__logo {
     max-width: 80%;
     height: auto;
-    margin-bottom: 2rem;
     filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.7));
 }
-
-/* .main__title {
-    font-size: 5rem;
-    color: var(--primary-font-light-color);
-    margin: 0;
-    font-family: var(--logo-font-family);
-    font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-shadow:
-        2px 2px 4px rgba(0, 0, 0, 0.5),
-        -1px -1px 0 black,
-        1px -1px 0 black,
-        -1px 1px 0 black,
-        1px 1px 0 black;
-}
-
-.main__subtitle {
-    font-size: 1.4rem;
-        background: var(--primary-font-color);
-    color: var(--primary-font-light-color);
-    padding: 5px 15px;
-    bottom: -25px;
-    margin: 0;
-    display: inline-block;
-    font-family: var(--primary-font-family);
-    letter-spacing: 2px;
-    font-weight: 600;
-} */
 
 .main__cta {
     display: inline-block;
@@ -269,8 +237,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    text-align: right;
 }
 
 .section__text--nosotros {
@@ -280,6 +246,7 @@ body {
     margin-right: auto;
     letter-spacing: 0.5px;
     line-height: 1.25;
+    font-size: 1.5rem;
 }
 
 /* SECCIÓN QUÉ HACEMOS */
@@ -574,8 +541,10 @@ body {
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
+
 .schedule-container {
     overflow-x: auto;
+    font-size: 1rem;
 }
 
 table {
@@ -587,7 +556,7 @@ table {
 
 th {
     background-color: var(--nosotros-bg-color);
-    color:var(--primary-font-light-color);
+    color: var(--primary-font-light-color);
     text-align: left;
     padding: 12px;
     font-weight: 600;
@@ -631,14 +600,15 @@ tr:hover {
 }
 
 .sede-campana {
-    color:var(--primary-font-color);
-    
+    color: var(--primary-font-color);
+
 }
 
 .sede-cuenca {
-    color:var(--primary-font-light-color);
+    color: var(--primary-font-light-color);
     background-color: var(--button-bg-color3);
-    }
+}
+
 /* CONTACTO */
 /* Estilos para el formulario de contacto */
 
@@ -1010,7 +980,7 @@ tr:hover {
         text-decoration: none;
         color: var(--primary-font-light-color);
         font-family: var(--primary-font-family);
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
         position: relative;
     }
@@ -1102,20 +1072,8 @@ tr:hover {
     }
 
     .main__cta {
-        margin-top: -3rem;
+        margin-top: -4rem;
     }
-
-    /*    .main__title {
-        font-size: 6rem;
-        margin: 0;
-        letter-spacing: 5px;
-
-    .main__subtitle {
-        font-size: 1.7rem;
-        padding: 5px 15px;
-        margin: 0;
-        display: inline-block;
-    } */
 
     /* SECCIÓN NOSOTROS */
     .section__article--nosotros {
@@ -1144,16 +1102,15 @@ tr:hover {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        font-size: 2.5rem;
-        text-align: right;
     }
 
     .section__text--nosotros {
-        text-align: right;
         padding-right: 40px;
         width: 50%;
         margin-left: 0;
         margin-right: 0;
+        font-size: 2rem;
+        text-align: right;
     }
 
 
@@ -1257,21 +1214,23 @@ tr:hover {
     /* GRILLA */
 
     table {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 20px;
     }
-    
+
     .tag {
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 10px;
     }
+
     /* CONTACTO */
 
     .contact-form__container {
-        width: 80%;
+        width: 55%;
         padding: 30px;
         margin: 0 auto 40px;
     }
@@ -1287,6 +1246,10 @@ tr:hover {
         font-size: 1.1rem;
     }
 
+    .contact-form__select {
+        width: 93%;
+        
+    }
     .contact-form__button {
         font-size: 1.1rem;
         padding: 14px 28px;
