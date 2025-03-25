@@ -612,14 +612,27 @@ tr:hover {
 /* CONTACTO */
 /* Estilos para el formulario de contacto */
 
+.section--contacto {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url('../img/bg-contacto.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    
+}
+
 .section--contacto .section__title {
     font-size: 2.5rem;
     text-align: center;
     font-weight: 800;
-    color: var(--primary-font-color);
+    color: var(--primary-font-light-color);
     margin-bottom: 1rem;
     font-family: var(--title-font-family);
-}
+    padding-bottom: 20px;
+    }
 
 .contact-form__container {
     width: 85%;
@@ -1230,7 +1243,7 @@ tr:hover {
     /* CONTACTO */
 
     .contact-form__container {
-        width: 55%;
+        width: 50%;
         padding: 30px;
         margin: 0 auto 40px;
     }
