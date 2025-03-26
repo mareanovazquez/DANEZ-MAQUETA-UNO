@@ -166,7 +166,7 @@ body {
 .main__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -186,6 +186,9 @@ body {
     background: var(--button-bg-color);
     text-decoration: none;
     border-radius: 5px;
+    position: relative;
+    z-index: 3;
+    
 }
 
 .main__cta:hover {
