@@ -208,9 +208,7 @@ body {
 
 /* DIMENSIONES COMUNES DE LAS SECCIONES */
 .section__article {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;;
 }
 
 /* SECCIÓN NOSOTROS */
@@ -252,6 +250,11 @@ body {
     font-size: 1.5rem;
 }
 
+.section--nosotros {
+    margin-top: 30px;
+    
+}
+
 /* SECCIÓN QUÉ HACEMOS */
 .section .section__article .section__title {
     font-size: 2.5rem;
@@ -269,13 +272,8 @@ body {
     padding: 30px;
 }
 
-.section--nosotros {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
 .section--que-hacemos {
-    margin-top: 30px;
+    margin-top: -30px;
     margin-bottom: 30px;
 }
 
@@ -285,10 +283,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
     background-color: var(--pilates-bg-color);
     box-shadow: var(--activity-box-shadow);
-    border-radius: 5px;
     padding: 50px;
     color: var(--primary-font-light-color);
 }
@@ -343,18 +339,24 @@ body {
 
 .section__activity-img {
     border-radius: 5px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
 
-/* Estilos específicos para stretching */
+/* Estilos específicos para STRETCHING */
 
 .section__activity--stretching {
     background-color: var(--stretching-bg-color);
     color: var(--primary-font-light-color);
 }
 
+.section__activity--stretching .section__activity-title {
+    color: var(--primary-font-color);
+}
+.section__activity--stretching .section__activity-text a {
+    color: var(--primary-font-color);
+}
 
 /* Estilos para la sección de staff */
 .section--staff {
@@ -543,6 +545,10 @@ body {
     padding-top: 30px;
     margin-bottom: 30px;
     padding-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--box-shadow-dark);
 }
 
 .schedule-container {
@@ -1129,24 +1135,29 @@ tr:hover {
         text-align: right;
     }
 
-
+    /* SECCIÓN QUÉ HACEMOS */
     /* Estilo común para los contenedores de actividades */
     .section__activity {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 40px;
         background-color: var(--pilates-bg-color);
         box-shadow: var(--activity-box-shadow);
-        border-radius: 5px;
         padding: 50px;
     }
 
+    .section__activity-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--activity-font-color);
+    }
     .section__activity-text {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
 
     }
-
+    .section__activity--pilates {
+        flex-direction: row-reverse;
+    }
     .section__activity--pilates .section__activity-title {
         color: var(--activity-font-color);
     }
@@ -1160,7 +1171,6 @@ tr:hover {
     }
 
     .section__activity--funcional {
-        flex-direction: row-reverse;
         background-color: var(--funcional-bg-color);
         color: var(--primary-font-light-color);
     }
@@ -1174,13 +1184,13 @@ tr:hover {
     }
 
     .section__activity-content {
-        width: 50%;
+        width: 40%;
         align-items: flex-start;
     }
 
 
     .section__activity-img {
-        width: 35%;
+        width: 50%;
         margin-left: 0;
         margin-right: 0;
     }
