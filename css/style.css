@@ -151,6 +151,27 @@ body {
 }
 
 
+/* Estilos para los enlaces activos en el menú móvil */
+.nav-mobile__link--active {
+    color: var(--hover-font-color);
+    border-bottom: 2px solid var(--hover-font-color);
+}
+
+/* Estilos para los enlaces activos en el menú desktop */
+.nav-desktop__link--active {
+    color: var(--hover-font-color);
+    border-bottom: 2px solid var(--hover-font-color);
+    margin-top: 2px;
+}
+
+/* Modificación para el menú fijo en la parte superior */
+.nav-desktop--fixed .nav-desktop__link--active {
+    color: var(--hover-font-color);
+    border-bottom: 2px solid var(--hover-font-color);
+    margin-top: 2px;
+}
+
+
 /* Sección principal */
 .main {
     height: 100vh;
@@ -188,7 +209,7 @@ body {
     border-radius: 5px;
     position: relative;
     z-index: 3;
-    
+
 }
 
 .main__cta:hover {
@@ -208,7 +229,8 @@ body {
 
 /* DIMENSIONES COMUNES DE LAS SECCIONES */
 .section__article {
-    width: 100%;;
+    width: 100%;
+    ;
 }
 
 /* SECCIÓN NOSOTROS */
@@ -252,7 +274,7 @@ body {
 
 .section--nosotros {
     margin-top: 30px;
-    
+
 }
 
 /* SECCIÓN QUÉ HACEMOS */
@@ -342,7 +364,7 @@ body {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    }
+}
 
 /* Estilos específicos para STRETCHING */
 
@@ -354,13 +376,21 @@ body {
 .section__activity--stretching .section__activity-title {
     color: var(--primary-font-color);
 }
+
 .section__activity--stretching .section__activity-text a {
     color: var(--primary-font-color);
 }
 
 /* Estilos para la sección de staff */
 .section--staff {
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section--staff .section__title {
+    margin-top: 30px;
 }
 
 .staff {
@@ -548,12 +578,16 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: var(--box-shadow-dark);
+   }
+
+.section--grilla .section__title {
+    margin-top: 30px;
 }
 
 .schedule-container {
     overflow-x: auto;
     font-size: 1rem;
+    box-shadow: var(--box-shadow-dark);
 }
 
 table {
@@ -630,10 +664,11 @@ tr:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
-    
+
 }
 
 .section--contacto .section__title {
+    margin-top: 30px;
     font-size: 2.5rem;
     text-align: center;
     font-weight: 800;
@@ -641,7 +676,7 @@ tr:hover {
     margin-bottom: 1rem;
     font-family: var(--title-font-family);
     padding-bottom: 20px;
-    }
+}
 
 .contact-form__container {
     width: 85%;
@@ -1151,13 +1186,16 @@ tr:hover {
         font-weight: 600;
         color: var(--activity-font-color);
     }
+
     .section__activity-text {
         font-size: 1.3rem;
 
     }
+
     .section__activity--pilates {
         flex-direction: row-reverse;
     }
+
     .section__activity--pilates .section__activity-title {
         color: var(--activity-font-color);
     }
@@ -1214,6 +1252,9 @@ tr:hover {
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
+    .section--staff .section__title {
+        margin-top: 0;
+    }
 
     .staff__card {
         width: 350px;
@@ -1239,6 +1280,10 @@ tr:hover {
 
     /* GRILLA */
 
+    .section--grilla .section__title {
+        margin-top: 0;
+    }
+
     table {
         font-size: 1rem;
     }
@@ -1254,6 +1299,9 @@ tr:hover {
     }
 
     /* CONTACTO */
+    .section--contacto .section__title {
+        margin-top: 0;
+    }
 
     .contact-form__container {
         width: 50%;
@@ -1274,8 +1322,9 @@ tr:hover {
 
     .contact-form__select {
         width: 93%;
-        
+
     }
+
     .contact-form__button {
         font-size: 1.1rem;
         padding: 14px 28px;
