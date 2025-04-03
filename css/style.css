@@ -613,7 +613,16 @@ td {
 tr:hover {
     background-color: var(--secondary-bg-color);
 }
+/* Excluir las celdas que contienen los días de la semana del efecto hover */
+tr:hover td:first-child[rowspan] {
+    background-color:var(--primary-bg-color); /* O el color base de la tabla */
+}
 
+tr td[rowspan] {
+    font-weight: 600;
+    color: var(--primary-font-color);
+    border-right: 2px solid var(--border-color);
+    }
 .tag {
     display: inline-block;
     padding: 4px 8px;
