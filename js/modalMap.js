@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Crear el título del modal
         let tituloModal = document.createElement('h3');
         tituloModal.classList.add('modal-mapa__titulo');
-        tituloModal.textContent = `Ubicación - SEDE ${sede.toUpperCase()}`;
+        tituloModal.textContent = `SEDE ${sede.toUpperCase()}`;
 
         // Crear el contenedor del mapa
         let mapaContenedor = document.createElement('div');
