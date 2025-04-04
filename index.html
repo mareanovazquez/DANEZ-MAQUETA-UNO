@@ -27,6 +27,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modalMap.css">
 
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -530,6 +531,9 @@
             </form>
         </div>
     </section>
+
+    <section id="contendorModalMap">
+    </section>
     <footer class="footer">
         <div class="footer__container">
             <!-- Columna 1: Navegación -->
@@ -550,17 +554,18 @@
             <div class="footer__column">
                 <h3 class="footer__title">Nuestras Sedes</h3>
                 <div class="footer__sede">
-                    <h4 class="footer__sede-name">SEDE CAMPANA</h4>
-                    <p class="footer__sede-address">Av. Campana 1644, CABA</p>
+                    <h4 class="footer__sede-name">SEDE CAMPANA </h4>
+                    <p class="footer__sede-address" id="sedeCampana"><i class="fa-solid fa-location-dot"></i> Av. Campana 1644, CABA </p>
                     <p class="footer__sede-hours">Lunes a Viernes: 8:00 - 21:00</p>
                     <p class="footer__sede-hours">Sábados: 9:00 - 13:00</p>
                 </div>
                 <div class="footer__sede">
                     <h4 class="footer__sede-name">SEDE CUENCA</h4>
-                    <p class="footer__sede-address">Cuenca 2118, CABA</p>
+                    <p class="footer__sede-address" id="sedeCuenca"> <i class="fa-solid fa-location-dot"></i> Cuenca 2118, CABA</p>
                     <p class="footer__sede-hours">Lunes a Viernes: 10:00 - 20:00</p>
                 </div>
             </div>
+            
 
             <!-- Columna 3: Contacto -->
             <div class="footer__column">
@@ -625,6 +630,7 @@
     <script src="./js/activeNavLinks.js"></script>
     <script src="./js/backToTop.js"></script>
     <script src="./js/parallaxContacto.js"></script>
+    <script src="./js/modalMap.js"></script>
 </body>
 
 </html>
