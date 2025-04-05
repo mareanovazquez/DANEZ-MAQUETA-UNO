@@ -1167,8 +1167,11 @@ tr td[rowspan] {
         margin-top: 0;
         position: fixed;
         top: 3%;
-        left: 5%;
+        left: 0;
+        right: 0;        
         width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         border-radius: 5px;
         background-color: var(--secondary-bg-color);
         /* Puedes ajustar el color de fondo según tu diseño */
