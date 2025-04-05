@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Seleccionar los elementos de dirección de cada sede
     let sedeCampana = document.getElementById('sedeCampana');
     let sedeCuenca = document.getElementById('sedeCuenca');
-    let contenedorModalMap = document.getElementById('contendorModalMap');
+    let contenedorModalMap = document.getElementById('contenedorModalMap');
 
     // URLs de iframe de Google Maps para cada sede
     const mapasIframe = {
@@ -12,21 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para desplegar el modal con el mapa
     function desplegarModalMapa(sede) {
-        // Crear el contenedor del modal
+        // Crear el contenedor del modal y ya le agrega la clase para animación y el id único
         let modal = document.createElement('div');
         modal.id = 'modalMapa';
         modal.classList.add('modal-mapa');
 
-        // Crear el contenido del modal
+        // Crear el contenido del modal y se le agrega una clase para el estilo
         let contenidoModal = document.createElement('div');
         contenidoModal.classList.add('modal-mapa__contenido');
 
-        // Crear el título del modal
+        // Crear el título del modal en un H3 y le agrega una clase para el estilo
+        // y el texto del título
         let tituloModal = document.createElement('h3');
         tituloModal.classList.add('modal-mapa__titulo');
         tituloModal.textContent = `SEDE ${sede.toUpperCase()}`;
 
-        // Crear el contenedor del mapa
+        // Crear el contenedor del mapa y le agrega una clase para el estilo
+        // y el id único para el iframe
         let mapaContenedor = document.createElement('div');
         mapaContenedor.id = 'mapa';
         mapaContenedor.classList.add('modal-mapa__mapa');
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         iframeMapa.style.width = '100%';
         iframeMapa.style.height = '400px';
         iframeMapa.style.border = '0';
-        
+
         // Configurar el mapa según la sede
         if (sede === 'campana' || sede === 'cuenca') {
             // Usar la URL de iframe predefinida
@@ -49,13 +51,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mapaContenedor.appendChild(iframeMapa);
 
-        // Crear botón para cerrar el modal
+        // Crear el elemento div que funcionará como botón para cerrar el modal
         let btnCerrarModal = document.createElement('div');
+        // Añadir la clase CSS 'modal-mapa__cerrar' para dar estilo al botón de cierre
         btnCerrarModal.classList.add('modal-mapa__cerrar');
+        // Asignar un ID 'btnCerrarMapa' para poder referenciar este elemento específico más tarde
         btnCerrarModal.id = 'btnCerrarMapa';
 
+        // Crear un elemento <i> que contendrá el icono de cierre (X)
         let iconoCerrar = document.createElement('i');
+        // Añadir las clases de Font Awesome para mostrar el icono X ('times')
+        // 'fa-solid' define el estilo del icono y 'fa-times' especifica que es una X
         iconoCerrar.classList.add('fa-solid', 'fa-times');
+        // Insertar el elemento icono como hijo del botón de cierre
         btnCerrarModal.appendChild(iconoCerrar);
 
         // Agregar evento para cerrar el modal
@@ -66,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         contenidoModal.appendChild(mapaContenedor);
         contenidoModal.appendChild(btnCerrarModal);
         modal.appendChild(contenidoModal);
-        
+
         // Agregar el modal al contenedor
         contenedorModalMap.appendChild(modal);
 
@@ -79,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para cerrar el modal
     function cerrarModalMapa() {
         let modal = document.getElementById('modalMapa');
-        
+
         // Añadir una clase para animar la salida
         modal.classList.remove('modal-mapa--active');
-        
+
         // Eliminar el modal después de la animación
         setTimeout(() => {
             modal.remove();
@@ -91,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Asignar eventos de clic a las direcciones de las sedes
     if (sedeCampana) {
-        sedeCampana.addEventListener('click', function() {
+        sedeCampana.addEventListener('click', function () {
             desplegarModalMapa('campana');
         });
         // Agregar cursor pointer para indicar que es clickeable
@@ -99,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (sedeCuenca) {
-        sedeCuenca.addEventListener('click', function() {
+        sedeCuenca.addEventListener('click', function () {
             desplegarModalMapa('cuenca');
         });
         // Agregar cursor pointer para indicar que es clickeable
@@ -107,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Si el usuario presiona la tecla escape
-    window.addEventListener("keydown", function(event) {
+    window.addEventListener("keydown", function (event) {
         let modal = document.getElementById('modalMapa');
         if (event.key === 'Escape' && modal) {
             cerrarModalMapa();
@@ -115,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Si el usuario hace clic fuera del modal
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         let modal = document.getElementById('modalMapa');
         if (modal && event.target === modal) {
             cerrarModalMapa();
