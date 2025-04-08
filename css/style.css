@@ -209,8 +209,10 @@ body {
     border-radius: 5px;
     position: relative;
     z-index: 3;
-    overflow: hidden; /* Importante para contener el efecto shine */
+    overflow: hidden;
+    /* Importante para contener el efecto shine */
 }
+
 .main__cta::before {
     content: '';
     position: absolute;
@@ -218,12 +220,10 @@ body {
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
     transform: skewX(-25deg);
     animation: shine 5s infinite;
 }
@@ -242,23 +242,30 @@ body {
 .main__cta-text {
     margin-top: 0.5rem;
     font-size: 1rem;
-    color: transparent; /* Inicia con texto transparente */
+    color: transparent;
+    /* Inicia con texto transparente */
     text-align: center;
     position: relative;
-    overflow: hidden; /* Para ocultar el barrido fuera del texto */
+    overflow: hidden;
+    /* Para ocultar el barrido fuera del texto */
 }
 
 .main__cta-text::before {
-    content: 'Clase de prueba gratis'; /* El mismo texto */
+    content: 'Clase de prueba gratis';
+    /* El mismo texto */
     position: absolute;
     top: 0;
     left: 0;
-    width: 0; /* Comienza con ancho 0 */
+    width: 0;
+    /* Comienza con ancho 0 */
     height: 100%;
-    color: var(--secondary-font-light-color); /* Color final del texto */
-    white-space: nowrap; /* Evita saltos de línea */
+    color: var(--secondary-font-light-color);
+    /* Color final del texto */
+    white-space: nowrap;
+    /* Evita saltos de línea */
     overflow: hidden;
-    animation: textSweep 2s 1s forwards; /* 1s de retraso, luego 2s de animación */
+    animation: textSweep 2s 1s forwards;
+    /* 1s de retraso, luego 2s de animación */
 }
 
 
@@ -374,6 +381,17 @@ body {
 .section__activity-img {
     width: 100%;
 }
+
+.section__activity-text--cta {
+    display: inline-block;
+    /* Necesario para que el transform funcione correctamente */
+    animation-name: ctaPulse;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
 
 /* Estilos específicos para FUNCIONAL */
 
@@ -1102,7 +1120,7 @@ tr td[rowspan] {
     height: 400px;
     border-radius: 5px;
     overflow: hidden;
-    }
+}
 
 .modal-mapa__cerrar {
     position: absolute;
@@ -1203,7 +1221,7 @@ tr td[rowspan] {
         position: fixed;
         top: 3%;
         left: 0;
-        right: 0;        
+        right: 0;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -1516,6 +1534,9 @@ tr td[rowspan] {
 }
 
 /* ANIMACIONES */
+
+
+/* EFECTO TRASLACIÓN PARA EL NAVBAR FIXED */
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
@@ -1526,26 +1547,45 @@ tr td[rowspan] {
     }
 }
 
-/* Brillo botón CTA */
+/* EFECTO BRILLO BOTÓN MAIN CTA */
 
 @keyframes shine {
     0% {
         left: -100%;
     }
+
     20% {
         left: 100%;
     }
+
     100% {
         left: 100%;
     }
 }
 
-/*Efecto de barrido en el texto */
+/*EFECTO DE BARRIDO PARA TEXTO DE MAIN CTA */
 @keyframes textSweep {
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
+    }
+}
+
+/*EFECTO PULSE PARA CTA ACTIVITY TEXT */
+
+@keyframes ctaPulse {
+    from {
+        transform: scale3d(0.90, 0.90, 0.90);
+    }
+
+    50% {
+        transform: scale3d(0.95, 0.95, 0.95);
+    }
+
+    to {
+        transform: scale3d(0.90, 0.90, 0.90);
     }
 }
