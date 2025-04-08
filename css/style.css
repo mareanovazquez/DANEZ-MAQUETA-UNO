@@ -209,8 +209,26 @@ body {
     border-radius: 5px;
     position: relative;
     z-index: 3;
-
+    overflow: hidden; /* Importante para contener el efecto shine */
 }
+.main__cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 5s infinite;
+}
+
+
 
 .main__cta:hover {
     background: var(--primary-bg-color);
@@ -220,12 +238,29 @@ body {
     margin-left: -1px;
 }
 
+/* Animación para el texto del CTA con efecto de barrido */
 .main__cta-text {
     margin-top: 0.5rem;
     font-size: 1rem;
-    color: var(--secondary-font-light-color);
+    color: transparent; /* Inicia con texto transparente */
     text-align: center;
+    position: relative;
+    overflow: hidden; /* Para ocultar el barrido fuera del texto */
 }
+
+.main__cta-text::before {
+    content: 'Clase de prueba gratis'; /* El mismo texto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Comienza con ancho 0 */
+    height: 100%;
+    color: var(--secondary-font-light-color); /* Color final del texto */
+    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden;
+    animation: textSweep 2s 1s forwards; /* 1s de retraso, luego 2s de animación */
+}
+
 
 /* DIMENSIONES COMUNES DE LAS SECCIONES */
 .section__article {
@@ -1480,6 +1515,7 @@ tr td[rowspan] {
 
 }
 
+/* ANIMACIONES */
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
@@ -1487,5 +1523,29 @@ tr td[rowspan] {
 
     to {
         transform: translateY(1%);
+    }
+}
+
+/* Brillo botón CTA */
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/*Efecto de barrido en el texto */
+@keyframes textSweep {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
     }
 }
