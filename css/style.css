@@ -1582,7 +1582,7 @@ tr td[rowspan] {
     }
 
     50% {
-        transform: scale3d(0.95, 0.95, 0.95);
+        transform: scale3d(0.92, 0.92, 0.92);
     }
 
     to {
