@@ -359,8 +359,31 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 1s ease-out;
 }
 
+.section__activity-content.visible {
+    opacity: 1; /* Visible cuando tiene la clase 'visible' */
+}
+
+/* Transiciones escalonadas para los elementos hijos */
+.section__activity-content.visible .section__activity-title {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.section__activity-content.visible .section__activity-text {
+    animation: fadeIn 0.8s ease-out 0.2s forwards; /* Retraso de 0.2s */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .section__activity-title {
     font-size: 2rem;
     font-weight: 600;
