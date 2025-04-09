@@ -359,12 +359,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Inicialmente invisible */
+    opacity: 0;
+    /* Inicialmente invisible */
     transition: opacity 1s ease-out;
 }
 
 .section__activity-content.visible {
-    opacity: 1; /* Visible cuando tiene la clase 'visible' */
+    opacity: 1;
+    /* Visible cuando tiene la clase 'visible' */
 }
 
 
@@ -648,8 +650,13 @@ body {
 
 .schedule-container {
     overflow-x: auto;
-    font-size: 1rem;
     box-shadow: var(--box-shadow-dark);
+}
+
+/* Por defecto, ocultamos la columna de Profesor en dispositivos móviles */
+table thead th:last-child,
+table tbody td:last-child {
+    display: none;
 }
 
 table {
@@ -657,18 +664,19 @@ table {
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--primary-bg-color);
+    font-size: 0.9rem;
 }
 
 th {
     background-color: var(--nosotros-bg-color);
     color: var(--primary-font-light-color);
     text-align: left;
-    padding: 12px;
+    padding: 8px;
     font-weight: 600;
 }
 
 td {
-    padding: 10px;
+    padding: 8px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -690,11 +698,11 @@ tr td[rowspan] {
 
 .tag {
     display: inline-block;
-    padding: 4px 8px;
     border-radius: 4px;
     color: var(--primary-font-light-color);
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    padding: 3px 5px;
 }
 
 .tag-pilates {
@@ -1456,6 +1464,11 @@ tr td[rowspan] {
 
     .section--horarios .section__title {
         margin-top: 0;
+    }
+
+    table thead th:last-child,
+    table tbody td:last-child {
+        display: table-cell;
     }
 
     table {
