@@ -632,7 +632,7 @@ body {
 }
 
 /* GRILLA */
-.section--grilla {
+.section--horarios {
     margin-top: 30px;
     padding-top: 30px;
     margin-bottom: 30px;
@@ -642,7 +642,7 @@ body {
     margin-right: auto;
 }
 
-.section--grilla .section__title {
+.section--horarios .section__title {
     margin-top: 30px;
 }
 
@@ -1454,7 +1454,7 @@ tr td[rowspan] {
 
     /* GRILLA */
 
-    .section--grilla .section__title {
+    .section--horarios .section__title {
         margin-top: 0;
     }
 
