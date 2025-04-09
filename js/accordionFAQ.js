@@ -23,4 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    
+// Añadir al final del evento DOMContentLoaded existente
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        // Cerrar todos los acordeones abiertos
+        document.querySelectorAll('.faq__question--active').forEach(activeButton => {
+            // Simular un clic en el botón activo para cerrarlo
+            activeButton.click();
+            // O alternativamente, remover directamente las clases:
+            // activeButton.classList.remove('faq__question--active');
+            // activeButton.nextElementSibling.classList.remove('faq__answer--active');
+        });
+    }
+});
 })

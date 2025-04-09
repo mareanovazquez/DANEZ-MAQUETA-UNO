@@ -28,7 +28,6 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/style.css">
 
-
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,14 +52,19 @@
                 <div class="nav-mobile__toggle-line nav-mobile__toggle-line--three"></div>
             </div>
             <div class="nav-mobile__menu" id="mobileMenu">
-                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="index.html#nosotros">NOSOTROS</a>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link"
+                        href="../index.html#nosotros">NOSOTROS</a>
                 </div>
-                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="index.html#queHacemos">CLASES</a>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link"
+                        href="../index.html#queHacemos">CLASES</a>
                 </div>
-                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="index.html#staff">STAFF</a></div>
-                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="index.html#horarios">HORARIOS</a>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="../index.html#staff">STAFF</a>
                 </div>
-                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="index.html#contacto">CONTACTO</a>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link"
+                        href="../index.html#horarios">HORARIOS</a>
+                </div>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link"
+                        href="../index.html#contacto">CONTACTO</a>
                 </div>
                 <div class="nav-mobile__menu-item"> <a href="https://webapp.siguefit.com/" class="nav-mobile__link"
                         target="_blank">SIGUE FIT</a></div>
@@ -78,18 +82,19 @@
             <a href="../index.html" class="nav-desktop__link--faq-icon">
                 <img src="../img/logo-blanco-navbar.png" alt="Logo DANEZ Training" class="nav-desktop__logo--faq">
             </a>
-            <a class="nav-desktop__link--faq" href="index.html#nosotros">NOSOTROS</a>
-            <a class="nav-desktop__link--faq" href="index.html#queHacemos">CLASES</a>
-            <a class="nav-desktop__link--faq" href="index.html#staff">STAFF</a>
-            <a class="nav-desktop__link--faq" href="index.html#horarios">HORARIOS</a>
-            <a class="nav-desktop__link--faq" href="index.html#contacto">CONTACTO</a>
+            <a class="nav-desktop__link--faq" href="../index.html#nosotros">NOSOTROS</a>
+            <a class="nav-desktop__link--faq" href="../index.html#queHacemos">CLASES</a>
+            <a class="nav-desktop__link--faq" href="../index.html#staff">STAFF</a>
+            <a class="nav-desktop__link--faq" href="../index.html#horarios">HORARIOS</a>
+            <a class="nav-desktop__link--faq" href="../index.html#contacto">CONTACTO</a>
         </div>
     </nav>
 
     <div class="main-content">
         <section class="faq" id="faq">
             <h2 class="faq__title">Preguntas Frecuentes</h2>
-            <p class="faq__description">Aquí resolvemos las dudas más comunes sobre nuestras clases y servicios</p>
+            <p class="faq__description"> Antes de comenzar, quizás quieras despejar algunas dudas. Encontrá acá todo lo
+                que necesitás saber sobre nuestras clases y cómo funciona DANEZ.</p>
 
             <div class="faq__accordion">
                 <!-- Pregunta 1 -->
@@ -185,11 +190,11 @@
             <div class="footer__column">
                 <h3 class="footer__title">Navegación</h3>
                 <nav class="footer__nav">
-                    <a class="footer__link" href="index.html#nosotros">NOSOTROS</a>
-                    <a class="footer__link" href="index.html#queHacemos">CLASES</a>
-                    <a class="footer__link" href="index.html#staff">STAFF</a>
-                    <a class="footer__link" href="index.html#horarios">HORARIOS</a>
-                    <a class="footer__link" href="index.html#contacto">CONTACTO</a>
+                    <a class="footer__link" href="../index.html#nosotros">NOSOTROS</a>
+                    <a class="footer__link" href="../index.html#queHacemos">CLASES</a>
+                    <a class="footer__link" href="../index.html#staff">STAFF</a>
+                    <a class="footer__link" href="../index.html#horarios">HORARIOS</a>
+                    <a class="footer__link" href="../index.html#contacto">CONTACTO</a>
                     <a class="footer__link" href="reglamento.html">REGLAMENTO</a>
                 </nav>
             </div>
@@ -231,13 +236,6 @@
                             target="_blank">@daneztraining</a>
                     </p>
                 </div>
-                <div class="footer__faq">
-                    <div class="footer__faq-title">Preguntas frecuentes
-                        <a href="preguntas-frecuentes.html" class="footer__faq-button">
-                            <i class="fa-solid fa-circle-question footer__icon"></i>
-                        </a>
-                    </div>
-                </div>
                 <div class="footer__app">
                     <h4 class="footer__app-title">Reservá tus clases</h4>
                     <a href="https://webapp.siguefit.com/" class="footer__app-button" target="_blank">
@@ -261,11 +259,13 @@
             </a>
         </div>
     </section>
+    <section id="contenedorModalMap">
+    </section>
 
     <!-- Scripts de la página principal -->
     <script src="../js/menuToggle.js"></script>
-    <script src="../js/navBarFixed.js"></script>
     <script src="../js/accordionFAQ.js"></script>
+    <script src="../js/modalMap.js"></script>
 </body>
 
 </html>

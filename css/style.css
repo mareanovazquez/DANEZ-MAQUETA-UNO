@@ -1234,7 +1234,7 @@ tr td[rowspan] {
     padding: 18px 20px;
     border: none;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     font-family: var(--primary-font-family);
     cursor: pointer;
@@ -1281,8 +1281,8 @@ tr td[rowspan] {
 }
 
 .faq__answer-text {
+    font-size: 0.9rem;
     line-height: 1.6;
-    font-size: 1rem;
     color: var(--secondary-font-color);
     font-family: var(--text-font-family);
 }
