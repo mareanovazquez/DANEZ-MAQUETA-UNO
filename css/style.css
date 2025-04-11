@@ -380,6 +380,7 @@ body {
     font-size: 2rem;
     font-weight: 600;
     color: var(--activity-font-color);
+    text-align: center;
 }
 
 .section__activity-text {
@@ -387,6 +388,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: var(--secondary-font-family);
+    text-align: center;
 }
 
 .section__activity .section__activity-text a {
@@ -1539,10 +1541,12 @@ tr td[rowspan] {
         font-size: 2.5rem;
         font-weight: 600;
         color: var(--activity-font-color);
+        text-align: left;
     }
 
     .section__activity-text {
         font-size: 1.3rem;
+        text-align: left;
 
     }
 
