@@ -27,6 +27,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/faqSearchBox.css">
 
 
     <!-- Fuentes -->
@@ -90,6 +91,15 @@
         <section class="faq" id="faq">
             <h2 class="faq__title">Preguntas Frecuentes</h2>
             <p class="faq__description">Aquí resolvemos las dudas más comunes sobre nuestras clases y servicios</p>
+            <div class="faq__search-container">
+                <div class="faq__search-box">
+                    <i class="fa-solid fa-magnifying-glass faq__search-icon"></i>
+                    <input type="text" id="faqSearch" class="faq__search-input" placeholder="Buscar...">
+                    <button id="faqSearchClear" class="faq__search-clear" style="display: none;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
 
             <div class="faq__accordion">
                 <!-- Pregunta: ¿Dónde funciona DANEZ? -->
@@ -455,6 +465,7 @@
     <script src="../js/menuToggle.js"></script>
     <script src="../js/accordionFAQ.js"></script>
     <script src="../js/modalMap.js"></script>
+    <script src="../js/searchFAQ.js"></script>
 </body>
 
 </html>
