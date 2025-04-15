@@ -1,0 +1,53 @@
+/* Estilos para las palabras animadas de fondo */
+.background-words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background-word {
+    position: absolute;
+    font-family: var(--title-font-family);
+    font-size: 300px;
+    font-weight: 800;
+    white-space: nowrap;
+    opacity: 0.4;
+    letter-spacing: 2px;
+    will-change: transform; /* Optimiza para animaciones */
+}
+
+.background-word--pilates {
+    top: 25%;
+    color: var(--pilates-bg-color);
+    left: -30%; /* Comienza fuera de pantalla por la izquierda */
+}
+
+.background-word--funcional {
+    top: 50%;
+    color: var(--funcional-bg-color);
+    right: -50%; /* Comienza fuera de pantalla por la derecha */
+}
+
+.background-word--stretching {
+    top: 75%;
+    color: var(--stretching-bg-color);
+    left: -20%; /* Cambiado: ahora comienza fuera de pantalla por la izquierda */
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+.faq {
+    background-color: rgba(240, 248, 255, 0.85);
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 8px;
+}
