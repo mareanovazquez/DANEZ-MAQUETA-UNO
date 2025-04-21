@@ -27,7 +27,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/style.css">
-
+    
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,9 +55,10 @@
                 <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#nosotros">NOSOTROS</a></div>
                 <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#queHacemos">CLASES</a></div>
                 <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#staff">STAFF</a></div>
-                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="horarios">HORARIOS</a></div>
+                <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="sedes">SEDES</a></div>
                 <div class="nav-mobile__menu-item"><a class="nav-mobile__link" href="#contacto">CONTACTO</a></div>
-                <div class="nav-mobile__menu-item"><a href="./pages/preguntas-frecuentes.html" class="nav-mobile__link">PREGUNTAS FRECUENTES</a></div>
+                <div class="nav-mobile__menu-item"><a href="./pages/preguntas-frecuentes.html"
+                        class="nav-mobile__link">PREGUNTAS FRECUENTES</a></div>
                 <div class="nav-mobile__menu-item"> <a href="https://webapp.siguefit.com/" class="nav-mobile__link"
                         target="_blank">SIGUE FIT</a></div>
                 <div class="nav-mobile__social">
@@ -85,7 +86,7 @@
             <a class="nav-desktop__link" href="#nosotros">NOSOTROS</a>
             <a class="nav-desktop__link" href="#queHacemos">CLASES</a>
             <a class="nav-desktop__link" href="#staff">STAFF</a>
-            <a class="nav-desktop__link" href="#horarios">HORARIOS</a>
+            <a class="nav-desktop__link" href="#sedes">SEDES</a>
             <a class="nav-desktop__link" href="#contacto">CONTACTO</a>
         </div>
     </nav>
@@ -273,223 +274,65 @@
             </div>
         </article>
     </section>
+    <!-- SEDES -->
+    <section class="section section--sedes" id="sedes">
+        <article class="section__article">
+            <h2 class="section__title">SEDES</h2>
+            <div class="sedes-container">
+                <!-- Sede Campana -->
+                <div class="sede-card">
+                    <div class="sede-card__image-container">
+                        <img src="./img/sede-campana.jpg" alt="Sede Campana" class="sede-card__image">
+                        <div class="sede-card__overlay">
+                            <h3 class="sede-card__title">SEDE CAMPANA</h3>
+                        </div>
+                    </div>
+                    <div class="sede-card__content">
+                        <div class="sede-card__info">
+                            <p class="sede-card__address"><i class="fa-solid fa-location-dot"></i> Av. Campana 1644,
+                                CABA</p>
+                            <p class="sede-card__schedule"><i class="fa-regular fa-calendar"></i> Lunes a Viernes: 8:00 -
+                                21:00</p>
+                            <p class="sede-card__schedule"><i class="fa-regular fa-calendar"></i> Sábados: 9:00 - 13:00
+                            </p>
+                        </div>
+                        <div class="sede-card__activities">
+                            <span class="tag tag-pilates">Pilates</span>
+                            <span class="tag tag-funcional">Funcional</span>
+                            <span class="tag tag-stretching">Stretching</span>
+                        </div>
+                        <a href="#" class="sede-card__map-button" id="sedeCampanaMap">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
+                        </a>
+                    </div>
+                </div>
 
-    <section class="section section--horarios" id="horarios">
-        <div class="section__article">
-            <h2 class="section__title">HORARIOS</h2>
-            <div class="schedule-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Día</th>
-                            <th>Hora</th>
-                            <th>Disciplina</th>
-                            <th>Sede</th>
-                            <th>Profesor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Lunes -->
-                        <tr>
-                            <td rowspan="4">Lunes</td>
-                            <td>10:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-cuenca">CUENCA </span></td>
-                            <td>Maira</td>
-                        </tr>
-                        <tr>
-                            <td>11:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-cuenca">CUENCA </span></td>
-                            <td>Maira</td>
-                        </tr>
-                        <tr>
-                            <td>13:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-cuenca">CUENCA </span></td>
-                            <td>Daniela</td>
-                        </tr>
-                        <tr>
-                            <td>17:30</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-
-                        <!-- Martes -->
-                        <tr>
-                            <td rowspan="9">Martes</td>
-                            <td>08:00</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-                        <tr>
-                            <td>10:00</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-                        <tr>
-                            <td>13:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-cuenca">CUENCA </span></td>
-                            <td>Maira</td>
-                        </tr>
-                        <tr>
-                            <td>15:00</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-                        <tr>
-                            <td>17:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Lucia</td>
-                        </tr>
-                        <tr>
-                            <td>17:30</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Abru</td>
-                        </tr>
-                        <tr>
-                            <td>19:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-cuenca">CUENCA </span></td>
-                            <td>Sabr</td>
-                        </tr>
-                        <tr>
-                            <td>19:30</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Abru</td>
-                        </tr>
-                        <tr>
-                            <td>20:30</td>
-                            <td> <span class="tag tag-stretching">Stretching </span> </td>
-                            <td> <span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Pamela</td>
-                        </tr>
-
-                        <!-- Miércoles -->
-                        <tr>
-                            <td rowspan="6">Miércoles</td>
-                            <td>12:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Maximina</td>
-                        </tr>
-                        <tr>
-                            <td>13:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Maira</td>
-                        </tr>
-                        <tr>
-                            <td>15:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Maira</td>
-                        </tr>
-                        <tr>
-                            <td>17:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Maira</td>
-                        </tr>
-                        <tr>
-                            <td>17:30</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Abril</td>
-                        </tr>
-                        <tr>
-                            <td>19:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Valen</td>
-                        </tr>
-
-                        <!-- Jueves -->
-                        <tr>
-                            <td rowspan="6">Jueves</td>
-                            <td>10:00</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-                        <tr>
-                            <td>11:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Maxi</td>
-                        </tr>
-                        <tr>
-                            <td>15:00</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-                        <tr>
-                            <td>16:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-cuenca">CUENCA </span></td>
-                            <td>Sabr</td>
-                        </tr>
-                        <tr>
-                            <td>18:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Valen</td>
-                        </tr>
-                        <tr>
-                            <td>18:30</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-
-                        <!-- Viernes -->
-                        <tr>
-                            <td rowspan="4">Viernes</td>
-                            <td>10:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Maximina</td>
-                        </tr>
-                        <tr>
-                            <td>16:00</td>
-                            <td><span class="tag tag-pilates">Pilates Reformer</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Valentina</td>
-                        </tr>
-                        <tr>
-                            <td>18:30</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-                        <tr>
-                            <td>19:30</td>
-                            <td><span class="tag tag-stretching">Stretching</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Pamela</td>
-                        </tr>
-
-                        <!-- Sábado -->
-                        <tr>
-                            <td rowspan="1">Sábado</td>
-                            <td>10:00</td>
-                            <td><span class="tag tag-funcional">Funcional Training</span></td>
-                            <td><span class="sede sede-campana">CAMPANA </span></td>
-                            <td>Ezequiel</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- Sede Cuenca -->
+                <div class="sede-card">
+                    <div class="sede-card__image-container">
+                        <img src="./img/sede-cuenca.jpg" alt="Sede Cuenca" class="sede-card__image">
+                        <div class="sede-card__overlay">
+                            <h3 class="sede-card__title">SEDE CUENCA</h3>
+                        </div>
+                    </div>
+                    <div class="sede-card__content">
+                        <div class="sede-card__info">
+                            <p class="sede-card__address"><i class="fa-solid fa-location-dot"></i> Cuenca 2118, CABA</p>
+                            <p class="sede-card__schedule"><i class="fa-regular fa-clock"></i> Lunes a Viernes: 10:00 -
+                                20:00</p>
+                                <p class="sede-card__schedule"><i class="fa-regular fa-calendar"></i> Sábados: 9:00 - 13:00
+                                </p>
+                        </div>
+                        <div class="sede-card__activities">
+                            <span class="tag tag-pilates">Pilates</span>
+                        </div>
+                        <a href="#" class="sede-card__map-button" id="sedeCuencaMap">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </article>
     </section>
 
     <section class="section section--contacto" id="contacto">
@@ -542,7 +385,7 @@
                     <a class="footer__link" href="#nosotros">NOSOTROS</a>
                     <a class="footer__link" href="#queHacemos">CLASES</a>
                     <a class="footer__link" href="#staff">STAFF</a>
-                    <a class="footer__link" href="#horarios">HORARIOS</a>
+                    <a class="footer__link" href="#sedes">SEDES</a>
                     <a class="footer__link" href="#contacto">CONTACTO</a>
                     <a class="footer__link" href="reglamento.html">REGLAMENTO</a>
                 </nav>

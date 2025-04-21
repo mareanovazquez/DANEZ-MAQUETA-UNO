@@ -636,105 +636,124 @@ body {
     transform: scale(1.1);
 }
 
-/* GRILLA */
-.section--horarios {
+/* SEDES */
+/* Estilos para la sección de sedes */
+.section--sedes {
     margin-top: 30px;
     padding-top: 30px;
     margin-bottom: 30px;
     padding-bottom: 30px;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.section--horarios .section__title {
-    margin-top: 30px;
+.sedes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-.schedule-container {
-    overflow-x: auto;
-    box-shadow: var(--box-shadow-dark);
-}
-
-/* Por defecto, ocultamos la columna de Profesor en dispositivos móviles */
-table thead th:last-child,
-table tbody td:last-child {
-    display: none;
-}
-
-table {
+.sede-card {
     width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-bg-color);
-    font-size: 0.9rem;
-}
-
-th {
-    background-color: var(--nosotros-bg-color);
-    color: var(--primary-font-light-color);
-    text-align: left;
-    padding: 8px;
-    font-weight: 600;
-}
-
-td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-tr:hover {
+    max-width: 450px;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: var(--secondary-bg-color);
+    box-shadow: var(--box-shadow-dark);
+    transition: transform var(--transition-medium);
 }
 
-/* Excluir las celdas que contienen los días de la semana del efecto hover */
-tr:hover td:first-child[rowspan] {
-    background-color: var(--primary-bg-color);
-    /* O el color base de la tabla */
+.sede-card__image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
 }
 
-tr td[rowspan] {
-    font-weight: 600;
-    color: var(--primary-font-color);
-    border-right: 2px solid var(--border-color);
+.sede-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium);
 }
 
-.tag {
-    display: inline-block;
-    border-radius: 4px;
+.sede-card:hover .sede-card__image {
+    transform: scale(1.05);
+}
+
+.sede-card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 48, 73, 0.9), transparent);
+    padding: 20px;
+}
+
+.sede-card__title {
     color: var(--primary-font-light-color);
-    font-weight: 600;
-    font-size: 0.75rem;
-    padding: 3px 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
 }
 
-.tag-pilates {
-    background-color: var(--pilates-bg-color);
+.sede-card__content {
+    padding: 20px;
 }
 
-.tag-funcional {
-    background-color: var(--funcional-bg-color);
+.sede-card__info {
+    margin-bottom: 15px;
 }
 
-.tag-stretching {
-    background-color: var(--stretching-bg-color);
+.sede-card__address,
+.sede-card__schedule {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: var(--secondary-font-color);
 }
 
-.sede {
-    font-weight: 600;
-    padding: 6px 6px;
-    border-radius: 3px;
+.sede-card__address i,
+.sede-card__schedule i {
+    color: var(--hover-font-color);
+    margin-right: 10px;
+    width: 16px;
+    text-align: center;
+}
+
+.sede-card__activities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.sede-card__map-button {
     display: inline-block;
-}
+    border: 1px solid var(--primary-font-color);
 
-.sede-campana {
     color: var(--primary-font-color);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: all var(--transition-fast);
 
 }
 
-.sede-cuenca {
-    color: var(--primary-font-light-color);
+.sede-card__map-button:hover {
     background-color: var(--button-bg-color3);
+    color: var(--primary-font-light-color);
+
+}
+
+.sede-card__map-button i {
+    margin-right: 8px;
 }
 
 /* CONTACTO */
@@ -1378,7 +1397,8 @@ tr td[rowspan] {
     height: 100%;
     overflow: hidden;
     z-index: -1;
-    pointer-events: none; /* Hace que el elemento sea "transparente" a eventos del mouse (clicks, hover) */
+    pointer-events: none;
+    /* Hace que el elemento sea "transparente" a eventos del mouse (clicks, hover) */
 }
 
 .background-word {
@@ -1389,25 +1409,40 @@ tr td[rowspan] {
     white-space: nowrap;
     opacity: 0.3;
     letter-spacing: 2px;
-    will-change: transform; /* Optimiza para animaciones - correcto */
+    will-change: transform;
+    /* Optimiza para animaciones - correcto */
 }
 
 .background-word--pilates {
     top: 25%;
     color: var(--pilates-bg-color);
-    right: -20%; /* Comienza fuera de pantalla por la derecha */
+    right: -20%;
+    /* Comienza fuera de pantalla por la derecha */
 }
 
 .background-word--funcional {
     top: 50%;
     color: var(--funcional-bg-color);
-    left: -20%; /* Comienza fuera de pantalla por la izquierda */
+    left: -20%;
+    /* Comienza fuera de pantalla por la izquierda */
 }
 
 .background-word--stretching {
     top: 75%;
     color: var(--stretching-bg-color);
-    right: -10%; /* Comienza fuera de pantalla por la derecha */
+    right: -10%;
+    /* Comienza fuera de pantalla por la derecha */
+}
+
+@media (min-width: 768px) {
+    .sedes-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .sede-card {
+        flex: 0 0 calc(50% - 20px);
+    }
 }
 
 /* Estilos responsive - Media Queries */
@@ -1561,7 +1596,7 @@ tr td[rowspan] {
     }
 
     .nav-desktop__link--faq-icon img {
-        width:150px;
+        width: 150px;
     }
 
 
@@ -1752,29 +1787,32 @@ tr td[rowspan] {
         font-size: 1.2rem;
     }
 
-    /* GRILLA */
-
-    .section--horarios .section__title {
-        margin-top: 0;
+    /*SEDES*/
+    .section--sedes {
+        width: 80%;
     }
 
-    table thead th:last-child,
-    table tbody td:last-child {
-        display: table-cell;
+    .sedes-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
     }
 
-    table {
+    .sede-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .sede-card__image-container {
+        height: 250px;
+    }
+
+    .sede-card__title {
+        font-size: 1.8rem;
+    }
+
+    .sede-card__address,
+    .sede-card__schedule {
         font-size: 1rem;
-    }
-
-    th,
-    td {
-        padding: 20px;
-    }
-
-    .tag {
-        font-size: 1rem;
-        padding: 10px;
     }
 
     /* CONTACTO */

@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let sedeCuenca = document.getElementById('sedeCuenca');
     let contenedorModalMap = document.getElementById('contenedorModalMap');
 
+    // Seleccionar los nuevos botones de mapa en la sección de sedes
+let sedeCampanaMap = document.getElementById('sedeCampanaMap');
+let sedeCuencaMap = document.getElementById('sedeCuencaMap');
+
     // URLs de iframe de Google Maps para cada sede
     const mapasIframe = {
         'campana': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.097090688696!2d-58.46681692452988!3d-34.602799172374226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca10199d2c21%3A0x7e01d374eb4986e9!2sAv.%20Campana%201644%2C%20C1416%20CABA!5e0!3m2!1ses-419!2sar!4v1712193694867!5m2!1ses-419!2sar',
@@ -113,6 +117,21 @@ document.addEventListener('DOMContentLoaded', function () {
         // Agregar cursor pointer para indicar que es clickeable
         sedeCuenca.style.cursor = 'pointer';
     }
+
+    // Asignar eventos de clic a los nuevos botones de mapa en la sección de sedes
+if (sedeCampanaMap) {
+    sedeCampanaMap.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevenir comportamiento predeterminado del enlace
+        desplegarModalMapa('campana');
+    });
+}
+
+if (sedeCuencaMap) {
+    sedeCuencaMap.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevenir comportamiento predeterminado del enlace
+        desplegarModalMapa('cuenca');
+    });
+}
 
     // Si el usuario presiona la tecla escape
     window.addEventListener("keydown", function (event) {
