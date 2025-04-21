@@ -651,13 +651,13 @@ body {
 .sedes-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
 .sede-card {
-    width: 100%;
+    width: 90%;
     max-width: 450px;
     border-radius: 8px;
     overflow: hidden;
@@ -756,6 +756,26 @@ body {
     margin-right: 8px;
 }
 
+.tag {
+    display: inline-block;
+    border-radius: 4px;
+    color: var(--primary-font-light-color);
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 3px 5px;
+}
+
+.tag-pilates {
+    background-color: var(--pilates-bg-color);
+}
+
+.tag-funcional {
+    background-color: var(--funcional-bg-color);
+}
+
+.tag-stretching {
+    background-color: var(--stretching-bg-color);
+}
 /* CONTACTO */
 /* Estilos para el formulario de contacto */
 
@@ -1442,6 +1462,15 @@ body {
     
     .sede-card {
         flex: 0 0 calc(50% - 20px);
+    }
+
+    .tag {
+        display: inline-block;
+        border-radius: 4px;
+        color: var(--primary-font-light-color);
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 6px 10px;
     }
 }
 
