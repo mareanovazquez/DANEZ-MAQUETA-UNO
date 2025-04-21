@@ -1,0 +1,79 @@
+/* Estilos para el fondo de parallax de la sección staff */
+.section--staff {
+    position: relative;
+    overflow: hidden;
+}
+
+.staff-background-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con los clicks */
+    z-index: -1;
+}
+
+.background-shape {
+    position: absolute;
+    opacity: 0.22;
+    z-index: -1;
+    will-change: transform; /* Optimiza para animaciones */
+}
+
+/* Formas básicas */
+.shape--circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.shape--square {
+    width: 100px;
+    height: 100px;
+    background-color: currentColor;
+    transform: rotate(45deg);
+}
+
+.shape--triangle {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 140px solid currentColor;
+}
+
+.shape--diamond {
+    width: 100px;
+    height: 100px;
+    background-color: currentColor;
+    transform: rotate(45deg);
+}
+
+@media (min-width: 992px) {
+    .background-shape {
+        opacity: 0.1;
+    }
+    
+    .shape--circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .shape--square {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .shape--triangle {
+        border-left: 120px solid transparent;
+        border-right: 120px solid transparent;
+        border-bottom: 200px solid currentColor;
+    }
+    
+    .shape--diamond {
+        width: 160px;
+        height: 160px;
+    }
+}
