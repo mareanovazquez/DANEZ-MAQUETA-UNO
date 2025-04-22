@@ -10,38 +10,38 @@ document.addEventListener('DOMContentLoaded', function () {
         bgElementsContainer.className = 'staff-background-elements';
         staffSection.appendChild(bgElementsContainer);
         
-        // Crear los elementos de fondo
+        // Crear los elementos de fondo con sus respectivas posiciones y velocidades
         const shapes = [
-            { name: 'circle', class: 'shape--circle', color: 'var(--pilates-bg-color)' },
-            { name: 'square', class: 'shape--square', color: 'var(--funcional-bg-color)' },
-            { name: 'triangle', class: 'shape--triangle', color: 'var(--stretching-bg-color)' },
-            { name: 'diamond', class: 'shape--diamond', color: 'var(--button-bg-color2)' }
+            { name: 'circle', class: 'shape--circle', color: 'var(--pilates-bg-color)', left: '10%', top: '30%', speedX: 0.02, speedY: -0.01 },
+            { name: 'square', class: 'shape--square', color: 'var(--funcional-bg-color)', left: '40%', top: '50%', speedX: -0.03, speedY: 0.01 },
+            { name: 'triangle', class: 'shape--triangle', color: 'var(--stretching-bg-color)', left: '70%', top: '60%', speedX: 0.01, speedY: 0.02 },
+            { name: 'diamond', class: 'shape--diamond', color: 'var(--button-bg-color2)', left: '90%', top: '20%', speedX: -0.02, speedY: -0.03 },
+            { name: 'circle', class: 'shape--circle', color: 'var(--pilates-bg-color)', left: '29%', top: '44%', speedX: 0.015, speedY: -0.02 },
+            { name: 'square', class: 'shape--square', color: 'var(--funcional-bg-color)', left: '50%', top: '30%', speedX: -0.01, speedY: 0.025 },
+            { name: 'triangle', class: 'shape--triangle', color: 'var(--stretching-bg-color)', left: '75%', top: '40%', speedX: 0.03, speedY: 0.005 },
+            { name: 'diamond', class: 'shape--diamond', color: 'var(--button-bg-color2)', left: '85%', top: '70%', speedX: -0.015, speedY: 0.015 }
         ];
         
-        // Crear múltiples formas con posiciones aleatorias
-        for (let i = 0; i < 9; i++) {
-            const shapeIndex = i % shapes.length;
+        // Crear las formas y asignarles sus posiciones y velocidades
+        for (let i = 0; i < shapes.length; i++) {
             const shape = document.createElement('div');
             
-            shape.className = `background-shape ${shapes[shapeIndex].class}`;
-            shape.style.color = shapes[shapeIndex].color;
+            shape.className = `background-shape ${shapes[i].class}`;
+            shape.style.color = shapes[i].color;
             
-            // Asignar posiciones iniciales aleatorias
-            const x = Math.random() * 100; // posición X aleatoria (0-100%)
-            const y = 20 + (i * 20) % 60; // distribuir verticalmente (20-80%)
+            // Asignar posiciones específicas
+            shape.style.left = shapes[i].left;
+            shape.style.top = shapes[i].top;
             
-            shape.style.left = `${x}%`;
-            shape.style.top = `${y}%`;
-            
-            // Asignar velocidad y dirección de movimiento aleatoria
-            shape.dataset.speedX = (Math.random() * 0.05 - 0.025).toFixed(3); // entre -0.025 y 0.025
-            shape.dataset.speedY = (Math.random() * 0.05 - 0.025).toFixed(3); // entre -0.025 y 0.025
+            // Asignar velocidades específicas
+            shape.dataset.speedX = shapes[i].speedX.toFixed(3); // velocidad X controlada
+            shape.dataset.speedY = shapes[i].speedY.toFixed(3); // velocidad Y controlada
             
             bgElementsContainer.appendChild(shape);
         }
     }
     
-    // Función para mover los elementos con efecto parallax
+    // Función para mover los elementos con efecto parallax (y rotación)
     function moveShapes() {
         const scrollPosition = window.scrollY;
         const shapes = document.querySelectorAll('.background-shape');
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const offsetX = scrollPosition * speedX;
             const offsetY = scrollPosition * speedY;
             
-            // Aplicar la transformación sin cambiar la posición base
-            shape.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+            // Aplicar la transformación de movimiento y rotación
+            shape.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${scrollPosition * 0.05}deg)`;
         });
     }
     
