@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Crear los elementos de fondo con sus respectivas posiciones y velocidades
         const shapes = [
             { name: 'circle', class: 'shape--circle', color: 'var(--pilates-bg-color)', left: '10%', top: '30%', speedX: 0.02, speedY: -0.01 },
-            { name: 'square', class: 'shape--square', color: 'var(--funcional-bg-color)', left: '40%', top: '50%', speedX: -0.03, speedY: 0.01 },
-            { name: 'triangle', class: 'shape--triangle', color: 'var(--stretching-bg-color)', left: '70%', top: '60%', speedX: 0.01, speedY: 0.02 },
-            { name: 'diamond', class: 'shape--diamond', color: 'var(--button-bg-color2)', left: '90%', top: '20%', speedX: -0.02, speedY: -0.03 },
-            { name: 'circle', class: 'shape--circle', color: 'var(--pilates-bg-color)', left: '29%', top: '44%', speedX: 0.015, speedY: -0.02 },
-            { name: 'square', class: 'shape--square', color: 'var(--funcional-bg-color)', left: '50%', top: '30%', speedX: -0.01, speedY: 0.025 },
-            { name: 'triangle', class: 'shape--triangle', color: 'var(--stretching-bg-color)', left: '75%', top: '40%', speedX: 0.03, speedY: 0.005 },
-            { name: 'diamond', class: 'shape--diamond', color: 'var(--button-bg-color2)', left: '85%', top: '70%', speedX: -0.015, speedY: 0.015 }
+            { name: 'square', class: 'shape--square', color: 'var(--funcional-bg-color)', left: '20%', top: '35%', speedX: -0.03, speedY: 0.01 },
+            { name: 'triangle', class: 'shape--triangle', color: 'var(--button-bg-color)', left: '70%', top: '60%', speedX: 0.01, speedY: 0.02 },
+            { name: 'diamond', class: 'shape--diamond', color: 'var(--stretching-bg-color2)', left: '90%', top: '20%', speedX: -0.02, speedY: -0.03 },
+            { name: 'circle', class: 'shape--circle', color: 'var(--funcional-bg-color)', left: '29%', top: '44%', speedX: 0.015, speedY: -0.02 },
+            { name: 'square', class: 'shape--square', color: 'var(--pilates-bg-color)', left: '50%', top: '30%', speedX: -0.01, speedY: 0.025 },
+            { name: 'triangle', class: 'shape--triangle', color: 'var(--stretching-bg-color)', left: '-12%', top: '60%', speedX: 0.03, speedY: 0.005 },
+            { name: 'diamond', class: 'shape--diamond', color: 'var(--button-bg-color2)', left: '85%', top: '80%', speedX: -0.015, speedY: 0.015 }
         ];
         
         // Crear las formas y asignarles sus posiciones y velocidades
