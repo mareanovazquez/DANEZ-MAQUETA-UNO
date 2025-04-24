@@ -18,21 +18,13 @@
 .parallax-row {
     position: absolute;
     white-space: nowrap;
-    font-size: 200px;
-    opacity: 0.04;
+    font-size: 10rem;
+    opacity: 0.1;
     font-weight: 700;
     letter-spacing: 2px;
     width: 150%; /* Más ancho que el contenedor para permitir movimiento */
-    color: var(--);
 }
 
-/* .parallax-row--right {
-    animation: moveRight 80s linear infinite;
-}
-
-.parallax-row--left {
-    animation: moveLeft 80s linear infinite;
-} */
 
 .parallax-row--pilates {
     top: 5%;
@@ -65,21 +57,3 @@
     color: var(--stretching-bg-color);
 }
 
-/* @keyframes moveRight {
-    0% {
-        transform: translateX(-25%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes moveLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-25%);
-    }
-}
- */

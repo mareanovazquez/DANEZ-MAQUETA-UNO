@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             parallaxRows.forEach((row, index) => {
                 const direction = row.classList.contains('parallax-row--right') ? 1 : -1;
                 // Velocidades muy pronunciadas para que se note claramente el efecto
-                const speed = 0.8 + (index * 0.3);
+                const speed = 0.08 + (index * 0.1);
                 
                 // Calculamos la posición basada en el scroll con un offset inicial
                 const offset = direction * -25; // Porcentaje de offset inicial
