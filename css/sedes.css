@@ -1,4 +1,6 @@
-.section--sedes {
+@import url(./variables.css);
+
+.parallax-wrapper {
     position: relative;
     overflow: hidden;
     padding: 80px 0;
@@ -16,47 +18,54 @@
 .parallax-row {
     position: absolute;
     white-space: nowrap;
-    font-size: 20px;
-    opacity: 0.4;
+    font-size: 200px;
+    opacity: 0.04;
     font-weight: 700;
     letter-spacing: 2px;
     width: 150%; /* Más ancho que el contenedor para permitir movimiento */
-    color: var(--primary-font-color);
+    color: var(--);
 }
 
-.parallax-row--right {
+/* .parallax-row--right {
     animation: moveRight 80s linear infinite;
 }
 
 .parallax-row--left {
     animation: moveLeft 80s linear infinite;
-}
+} */
 
-.parallax-row:nth-child(1) {
+.parallax-row--pilates {
     top: 5%;
+    color: var(--primary-font-color);
 }
 
-.parallax-row:nth-child(2) {
+.parallax-row--funcional {
     top: 20%;
+    color: var(--funcional-bg-color);
 }
 
-.parallax-row:nth-child(3) {
+.parallax-row--stretching {
     top: 35%;
+    color: var(--stretching-bg-color);
 }
 
-.parallax-row:nth-child(4) {
+.parallax-row--pilates2 {
     top: 50%;
+    color: var(--primary-font-color);
 }
 
-.parallax-row:nth-child(5) {
+.parallax-row--funcional2 {
     top: 65%;
+    color: var(--funcional-bg-color);
+    left: -100%;
 }
 
-.parallax-row:nth-child(6) {
+.parallax-row--stretching2 {
     top: 80%;
+    color: var(--stretching-bg-color);
 }
 
-@keyframes moveRight {
+/* @keyframes moveRight {
     0% {
         transform: translateX(-25%);
     }
@@ -73,3 +82,4 @@
         transform: translateX(-25%);
     }
 }
+ */
