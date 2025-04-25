@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         // Obtener la posición de la sección de sedes para activar el parallax solo cuando está visible
-        const sedesSection = document.querySelector('.parallax-wrapper');
-        const sedesBounds = sedesSection.getBoundingClientRect();
+        const parallaxWrapper = document.querySelector('.parallax-wrapper');
+        const parallaxWrapperBounds = parallaxWrapper.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         
         // Solo activar el parallax cuando la sección está visible
-        if (sedesBounds.top < windowHeight && sedesBounds.bottom > 0) {
+        if (parallaxWrapperBounds.top < windowHeight && parallaxWrapperBounds.bottom > 0) {
             const scrollPosition = window.scrollY;
             
             // Calcular la posición relativa al elemento
-            const sectionTop = sedesSection.offsetTop;
+            const sectionTop = parallaxWrapper.offsetTop;
             const relativeScroll = scrollPosition - sectionTop + windowHeight;
             
             // Aplicar diferentes velocidades a cada fila
