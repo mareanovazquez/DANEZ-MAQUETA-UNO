@@ -1843,6 +1843,10 @@ body {
         color: var(--primary-font-color);
     }
 
+    .section--staff {
+        margin-bottom: 80px;
+    }
+
     .staff {
         flex-direction: row;
         justify-content: space-evenly;
@@ -1878,6 +1882,7 @@ body {
     /*SEDES*/
     .section--sedes {
         width: 80%;
+        margin-top: 80px;
     }
 
     .sedes-container {
