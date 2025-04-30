@@ -161,20 +161,6 @@ body {
     border-bottom: 2px solid var(--hover-font-color);
 }
 
-/* Estilos para los enlaces activos en el menú desktop */
-.nav-desktop__link--active {
-    color: var(--hover-font-color);
-    border-bottom: 2px solid var(--hover-font-color);
-    margin-top: 2px;
-}
-
-/* Modificación para el menú fijo en la parte superior */
-.nav-desktop--fixed .nav-desktop__link--active {
-    color: var(--hover-font-color);
-    border-bottom: 2px solid var(--hover-font-color);
-    margin-top: 2px;
-}
-
 
 /* Sección principal */
 .main {
@@ -471,7 +457,8 @@ body {
     opacity: 0.1;
     font-weight: 700;
     letter-spacing: 2px;
-    width: 150%; /* Más ancho que el contenedor para permitir movimiento */
+    width: 150%;
+    /* Más ancho que el contenedor para permitir movimiento */
 }
 
 
@@ -836,6 +823,7 @@ body {
 .tag-stretching {
     background-color: var(--stretching-bg-color);
 }
+
 /* CONTACTO */
 /* Estilos para el formulario de contacto */
 
@@ -1150,7 +1138,6 @@ body {
 .footer__app-button:hover {
     background-color: var(--button-bg-color2);
     color: var(--primary-font-color);
-    transform: translateY(-2px);
     box-shadow: var(--box-shadow-light);
 }
 
@@ -1518,7 +1505,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+
     .sede-card {
         flex: 0 0 calc(50% - 20px);
     }
@@ -1614,6 +1601,20 @@ body {
         color: var(--primary-font-color);
     }
 
+    /* Estilos para los enlaces activos en el menú desktop */
+    .nav-desktop__link--active {
+        color: var(--hover-font-color);
+        border-bottom: 2px solid var(--hover-font-color);
+        margin-top: 2px;
+    }
+
+    /* Modificación para el menú fijo en la parte superior */
+    .nav-desktop--fixed .nav-desktop__link--active {
+        color: var(--hover-font-color);
+        border-bottom: 2px solid var(--hover-font-color);
+        margin-top: 2px;
+    }
+
     .nav-desktop--fixed .nav-desktop__link--icon {
         display: inline-block;
         font-family: var(--logo-font-family);
@@ -1638,6 +1639,9 @@ body {
         border-bottom: 2px solid var(--hover-font-color);
         margin-top: 2px;
     }
+
+
+
 
     /* NAVBAR PREGUNTAS FRECUENTES */
     .nav-desktop--faq {

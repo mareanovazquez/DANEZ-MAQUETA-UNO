@@ -13,30 +13,35 @@
     --secondary-font-color: #093a53;
     --primary-font-light-color: #f0f8ff; 
     --secondary-font-light-color: #f4f6ff;
-    --activity-font-color: #eb8317;
+    /* --activity-font-color: #eb8317; */
+    /* --activity-font-color: #feab2b; */
+    /* --activity-font-color: #fcba54; Arena */
+    /* --activity-font-color: #e18d92; salmón */
+    --activity-font-color: #e5adb1;
+    
 
     /* HOVER FONT COLOR */
-    --hover-font-color: #eb8317;
-    --hover-font-color2: #f3c623;
+    --hover-font-color: #e5adb1;
+    --hover-font-color2: #e18d92;
 
     /* BACKGROUND */
     --primary-bg-color: #f0f8ff;  /* Fondo principal */
     --secondary-bg-color: #f8f9fa;  /* Fondo secundario */
-    --hover-bg-color: #eb8317; /* Fondo al pasar el mouse */
-    --hover-bg-color2: #f3c623;
+    --hover-bg-color: #e5adb1; /* Fondo al pasar el mouse */
+    --hover-bg-color2: #e18d92;
     --navbar-bg-color:#FFF8E3;
     --pilates-bg-color: #10375c;
-    --funcional-bg-color: #eb8317;
+    --funcional-bg-color: #e5adb1;
     --stretching-bg-color: #81C784;
     --nosotros-bg-color: #003049;
 
     /* BORDER */
     --border-color: #ced4da;
-    --hover-border-color: #eb8317;
+    --hover-border-color: #e5adb1;
 
     /* BUTTON */
-    --button-bg-color: #eb8317;
-    --button-bg-color2: #f3c623;
+    --button-bg-color: #e5adb1;
+    --button-bg-color2: #e18d92;
     --button-bg-color3: #003049;
     --button-text-color: #f0f8ff;
 
