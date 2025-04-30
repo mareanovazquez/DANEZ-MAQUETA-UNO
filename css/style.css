@@ -193,13 +193,14 @@ body {
     padding: 12px 24px;
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--button-text-color);
-    background: var(--button-bg-color);
+    color: var(--primary-font-color);
+    background: var(--button-bg-color2);
     text-decoration: none;
     border-radius: 5px;
     position: relative;
     z-index: 3;
     overflow: hidden;
+    border: 1px solid var(--button-bg-color);
     /* Importante para contener el efecto shine */
 }
 
@@ -221,11 +222,11 @@ body {
 
 
 .main__cta:hover {
-    background: var(--primary-bg-color);
-    border: 1px solid var(--button-bg-color);
-    color: var(--primary-font-color);
+    background: var(--button-bg-color3);
+    border: 1px solid var(--primary-font-color);
+    color: var(--primary-font-light-color);
     transition: var(--transition-fast);
-    margin-left: -1px;
+    
 }
 
 /* Animación para el texto del CTA con efecto de barrido */
