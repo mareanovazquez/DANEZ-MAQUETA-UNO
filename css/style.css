@@ -385,19 +385,12 @@ body {
 
 .section__activity-text--cta {
     text-align: right;
-    /* Necesario para que el transform funcione correctamente */
-    /* nimation-name: ctaPulse;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both; */
     align-self: flex-end;  /* Agregar esta línea */
     border: 1px solid var(--primary-font-color);
     border-radius: 3px;
     padding: 10px;
     font-size: 0.9rem;
     cursor:pointer;
-
 }
 
 .section__activity--pilates .section__activity-text--cta {
@@ -2095,19 +2088,3 @@ body {
         width: 100%;
     }
 }
-
-/*EFECTO PULSE PARA CTA ACTIVITY TEXT */
-
-/* @keyframes ctaPulse {
-    from {
-        transform: scale3d(0.80, 0.80, 0.80);
-    }
-
-    50% {
-        transform: scale3d(0.82, 0.82, 0.82);
-    }
-
-    to {
-        transform: scale3d(0.80, 0.80, 0.80);
-    }
-} */
