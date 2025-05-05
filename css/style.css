@@ -226,7 +226,7 @@ body {
     border: 1px solid var(--primary-font-color);
     color: var(--primary-font-light-color);
     transition: var(--transition-fast);
-    
+
 }
 
 /* Animación para el texto del CTA con efecto de barrido */
@@ -384,31 +384,41 @@ body {
 }
 
 .section__activity-text--cta {
-    display: inline-block;
+    text-align: right;
     /* Necesario para que el transform funcione correctamente */
-    animation-name: ctaPulse;
+    /* nimation-name: ctaPulse;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-fill-mode: both;
+    animation-fill-mode: both; */
+    align-self: flex-end;  /* Agregar esta línea */
+    border: 1px solid var(--primary-font-color);
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 0.9rem;
+    cursor:pointer;
+
 }
 
+.section__activity--pilates .section__activity-text--cta {
+    border: 1px solid var(--button-bg-color);
+}
 
 /* Estilos específicos para FUNCIONAL */
 
 .section__activity--funcional {
     background-color: var(--funcional-bg-color);
-    color: var(--primary-font-light-color);
+    color: var(--primary-font-color);
 }
 
 .section__activity--funcional .section__activity-title {
     color: var(--primary-font-color);
 }
 
-.section__activity--funcional .section__activity-text {
+/* .section__activity--funcional .section__activity-text {
     color: var(--primary-font-light-color);
 }
-
+ */
 .section__activity--funcional .section__activity-text a {
     color: var(--primary-font-color);
 }
@@ -659,6 +669,7 @@ body {
 
 .staff__tag--stretching {
     background-color: var(--stretching-bg-color);
+    color: var(--primary-font-light-color);
 }
 
 .staff__social {
@@ -921,8 +932,8 @@ body {
 }
 
 .contact-form__button {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
+    background-color: var(--button-bg-color2);
+    color: var(--primary-font-color);
     border: none;
     border-radius: 5px;
     padding: 12px 24px;
@@ -931,12 +942,13 @@ body {
     font-size: 1rem;
     cursor: pointer;
     align-self: flex-start;
+    border: 1px solid var(--button-bg-color2);
 }
 
 .contact-form__button:hover {
-    background-color: var(--button-bg-color);
+    background-color: var(--primary-font-color);
     border: 1px solid var(--primary-font-color);
-    color: var(--primary-font-color);
+    color: var(--primary-font-light-color);
     transition: var(--transition-medium);
 }
 
@@ -1045,6 +1057,7 @@ body {
 .toast--error {
     background-color: #ff4444;
 }
+
 /* FOOTER */
 .footer {
     background-color: var(--nosotros-bg-color);
@@ -1819,6 +1832,14 @@ body {
     .section__activity-text {
         font-size: 1.3rem;
         text-align: left;
+    }
+
+    .section__activity-text--cta
+    {font-size: 1rem;}
+
+    .section__activity-text a {
+        font-size: 1rem;
+        text-align: left;
 
     }
 
@@ -1840,7 +1861,7 @@ body {
 
     .section__activity--funcional {
         background-color: var(--funcional-bg-color);
-        color: var(--primary-font-light-color);
+        color: var(--primary-font-color);
     }
 
     .section__activity--funcional .section__activity-title {
@@ -1848,7 +1869,8 @@ body {
     }
 
     .section__activity--funcional .section__activity-text a {
-        color: var(--primary-font-color);
+        font-weight: 800;
+
     }
 
     .section__activity-content {
@@ -2076,16 +2098,16 @@ body {
 
 /*EFECTO PULSE PARA CTA ACTIVITY TEXT */
 
-@keyframes ctaPulse {
+/* @keyframes ctaPulse {
     from {
-        transform: scale3d(0.90, 0.90, 0.90);
+        transform: scale3d(0.80, 0.80, 0.80);
     }
 
     50% {
-        transform: scale3d(0.92, 0.92, 0.92);
+        transform: scale3d(0.82, 0.82, 0.82);
     }
 
     to {
-        transform: scale3d(0.90, 0.90, 0.90);
+        transform: scale3d(0.80, 0.80, 0.80);
     }
-}
+} */

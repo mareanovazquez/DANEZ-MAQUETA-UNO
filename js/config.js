@@ -1,4 +1,3 @@
-// config.js
 const firebaseConfig = {
     apiKey: "AIzaSyDxUujSje0ekWYU5wEtj3dPOkYIwh81y_M",
     authDomain: "mensajes-danez.firebaseapp.com",
