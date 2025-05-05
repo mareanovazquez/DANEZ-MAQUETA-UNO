@@ -1,4 +1,4 @@
-// formHandler.js
+// form-handler.js
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     
@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
         db.collection("mensajes").add(formData)
             .then(function(docRef) {
                 console.log("Documento escrito con ID: ", docRef.id);
-                alert("Mensaje enviado correctamente!");
+                showToast("¡Mensaje enviado correctamente!", "success");
                 form.reset();
             })
             .catch(function(error) {
                 console.error("Error al agregar documento: ", error);
-                alert("Error al enviar el mensaje. Por favor, intenta nuevamente.");
+                showToast("Error al enviar el mensaje. Por favor, intenta nuevamente.", "error");
             });
     });
 });

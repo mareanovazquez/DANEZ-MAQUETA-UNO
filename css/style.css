@@ -1016,6 +1016,35 @@ body {
     color: var(--primary-font-color);
 }
 
+/* TOAST MESSAGE */
+
+/* Estilos para toast messages */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: var(--primary-font-color);
+    color: var(--primary-font-light-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.toast--show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast--success {
+    background-color: var(--pilates-bg-color);
+}
+
+.toast--error {
+    background-color: #ff4444;
+}
 /* FOOTER */
 .footer {
     background-color: var(--nosotros-bg-color);
