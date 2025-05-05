@@ -382,8 +382,8 @@
                 </div>
 
                 <div class="contact-form__group">
-                    <label for="tipoConsulta" class="contact-form__label"></label>
-                    <select id="tipoConsulta" name="tipoConsulta" class="contact-form__select" required>
+                    <label for="activityType" class="contact-form__label"></label>
+                    <select id="activityType" name="activityType" class="contact-form__select" required>
                         <option value="" disabled selected>¿Qué actividad te interesa?</option>
                         <option value="funcional">Funcional</option>
                         <option value="pilates">Pilates</option>
@@ -497,6 +497,13 @@
             </a>
         </div>
     </section>
+    <!-- Firebase JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Tus scripts - IMPORTANTE: el orden importa -->
+    <script src="./js/config.js"></script>
+    <script src="./js/formHandler.js"></script>
 
     <script src="./js/menuToggle.js"></script>
     <script src="./js/navBarFixed.js"></script>
@@ -506,6 +513,7 @@
     <script src="./js/parallaxContacto.js"></script>
     <script src="./js/modalMap.js"></script>
     <script src="./js/parallaxWrapper.js"></script>
+
 </body>
 
 </html>
