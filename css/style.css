@@ -742,7 +742,8 @@ body {
     left: 0;
     width: 100%;
     background: linear-gradient(to top, rgba(0, 48, 73, 0.9), transparent);
-    padding: 20px;
+    padding-bottom: 20px;
+
 }
 
 .sede-card__title {
@@ -750,6 +751,15 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.sede-card__subtitle {
+    color: var(--primary-font-light-color);
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 4px;
     text-align: center;
 }
 
@@ -1648,15 +1658,15 @@ body {
 
     /* Estilos para los enlaces activos en el menú desktop */
     .nav-desktop__link--active {
-        color: var(--hover-font-color);
+        color: var(--hover-font-color2);
         border-bottom: 2px solid var(--hover-font-color);
         margin-top: 2px;
     }
 
     /* Modificación para el menú fijo en la parte superior */
     .nav-desktop--fixed .nav-desktop__link--active {
-        color: var(--hover-font-color);
-        border-bottom: 2px solid var(--hover-font-color);
+        color: var(--hover-font-color2);
+        text-shadow: .05rem .05rem 0 var(--primary-font-color);        border-bottom: 2px solid var(--hover-font-color);
         margin-top: 2px;
     }
 
