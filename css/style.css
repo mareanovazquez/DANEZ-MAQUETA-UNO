@@ -1648,12 +1648,15 @@ body {
         /* Sombra para resaltar */
         animation: slideDown 1.2s ease;
         /* Duración, transición y tipo de animación */
-        font-family: var(--primary-font-family);
         padding-left: 40px;
+        
     }
 
     .nav-desktop--fixed .nav-desktop__link {
         color: var(--primary-font-color);
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
     }
 
     /* Estilos para los enlaces activos en el menú desktop */
@@ -1665,8 +1668,7 @@ body {
 
     /* Modificación para el menú fijo en la parte superior */
     .nav-desktop--fixed .nav-desktop__link--active {
-        color: var(--hover-font-color2);
-        text-shadow: .05rem .05rem 0 var(--primary-font-color);        border-bottom: 2px solid var(--hover-font-color);
+        color: var(--activity-navbar-font-color);
         margin-top: 2px;
     }
 
