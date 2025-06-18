@@ -376,6 +376,7 @@ body {
     padding: 10px;
     font-size: 0.9rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .section__activity-img {
@@ -391,7 +392,7 @@ body {
 }
 
 .section__activity--funcional .section__activity-title,
-.section__activity--funcional .section__activity-text a {
+.section__activity--funcional .section__activity-text {
     color: var(--primary-font-color);
 }
 
@@ -425,9 +426,13 @@ body {
     color: var(--primary-font-light-color);
 }
 
-.section__activity--stretching .section__activity-title,
-.section__activity--stretching .section__activity-text a {
+.section__activity--stretching .section__activity-title {
     color: var(--primary-font-color);
+}
+
+.section__activity--stretching .section__activity-text {
+    color: var(--primary-font-ligth-color);
+    text-decoration: none;
 }
 
 .section__activity--stretching .section__activity-text--cta {
