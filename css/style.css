@@ -951,6 +951,11 @@ body {
     background-color: var(--background-color-hover-whastapp);
 }
 
+.whatsapp-text {
+    text-decoration: none;
+    color: var(--background-color-hover-whastapp);
+    font-weight: 600;
+}
 /* ========================================
    BACK TO TOP BUTTON
    ======================================== */
@@ -1293,7 +1298,7 @@ body {
 .faq {
     width: 85%;
     margin: 40px auto;
-    background-color: rgba(240, 248, 255, 0.45);
+    background-color: rgba(240, 248, 255, 0.65);
     position: relative;
     z-index: 2;
     padding: 20px;
@@ -1413,8 +1418,9 @@ body {
 
 .faq__question.faq__question--active {
     border-left: 3px solid var(--hover-border-color);
-    color: var(--hover-font-color);
-}
+    color: var(--primary-font-color);
+    font-weight: 300;
+        }
 
 .faq__icon {
     font-size: 1rem;
@@ -1423,6 +1429,7 @@ body {
 
 .faq__question--active .faq__icon {
     transform: rotate(180deg);
+    color: var(--hover-border-color);
 }
 
 .faq__answer {
@@ -1430,12 +1437,7 @@ body {
     padding: 0 20px;
     max-height: 0;
     overflow: hidden;
-    transition: all var(--transition-medium);
-}
-
-.faq__answer.faq__answer--active {
-    padding: 20px;
-    max-height: 1000px;
+    transition: max-height var(--transition-medium);
 }
 
 .faq__answer-text {
@@ -1443,6 +1445,20 @@ body {
     line-height: 1.6;
     color: var(--secondary-font-color);
     font-family: var(--text-font-family);
+    /* Agregar padding al contenido en lugar del contenedor */
+    padding: 20px 0;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity var(--transition-medium), transform var(--transition-medium);
+}
+
+.faq__answer.faq__answer--active {
+    max-height: 1000px;
+}
+
+.faq__answer.faq__answer--active .faq__answer-text {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .faq__no-results {
@@ -1546,10 +1562,6 @@ body {
         width: 100%;
     }
 }
-
-/* ========================================
-   DESKTOP STYLES (992px+)
-   ======================================== */
 
 @media (min-width: 768px) {
     .sedes-container {
