@@ -1,6 +1,13 @@
+/* ========================================
+   CSS OPTIMIZADO - MOBILE FIRST APPROACH
+   ======================================== */
+
 @import url('./reset.css');
 @import url('./variables.css');
 
+/* ========================================
+   ESTILOS BASE (MOBILE FIRST)
+   ======================================== */
 
 html {
     scroll-behavior: smooth;
@@ -13,16 +20,17 @@ body {
     font-size: 16px;
 }
 
-/* Navegación desktop (oculta en móvil) */
-.nav-desktop {
-    display: none;
-}
+/* ========================================
+   NAVEGACIÓN
+   ======================================== */
 
+/* Desktop navigation - hidden by default */
+.nav-desktop,
 .nav-desktop--faq {
     display: none;
 }
 
-/* Header y navegación móvil */
+/* Mobile navigation */
 .header .nav-mobile {
     background-color: var(--secondary-bg-color);
     color: var(--primary-font-color);
@@ -33,7 +41,6 @@ body {
     z-index: 10000;
 }
 
-/* Bloque de marca */
 .nav-mobile__brand {
     display: inline-block;
     position: absolute;
@@ -49,7 +56,6 @@ body {
     width: 120px;
 }
 
-/* Botón toggle del menú */
 .nav-mobile__toggle {
     width: 28px;
     height: 30px;
@@ -58,7 +64,6 @@ body {
     background-color: var(--secondary-bg-color);
     position: relative;
     z-index: 100000;
-    /* Mayor que el del menú */
 }
 
 .nav-mobile__toggle-line {
@@ -85,12 +90,6 @@ body {
     transform: rotate(-45deg) translate(7px, -8px);
 }
 
-/* Footer link (oculto en móvil) */
-.footer__link {
-    display: none;
-}
-
-/* Menú móvil */
 .nav-mobile__menu {
     background-color: var(--secondary-bg-color);
     width: 100%;
@@ -100,22 +99,13 @@ body {
     text-align: left;
     margin: auto;
     z-index: 99999;
-    /* Aumentamos el z-index para asegurar que esté por encima de todo */
     position: fixed;
-    /* Cambiamos de absolute a fixed */
     font-family: var(--primary-font-family);
     left: -100%;
-    /* Comienza fuera de la pantalla */
     top: 60px;
     display: block;
-    /* Para que funcione la transición */
     opacity: 0;
-    /* Inicialmente invisible */
     transition: left var(--transition-medium), opacity var(--transition-medium);
-}
-
-.nav-mobile__menu-item {
-    padding-left: 20px;
 }
 
 .nav-mobile__menu.nav-mobile__menu--active {
@@ -123,21 +113,33 @@ body {
     opacity: 1;
 }
 
-.nav-mobile__link {
+.nav-mobile__menu-item {
+    padding-left: 20px;
+}
+
+/* Shared navigation link styles */
+.nav-mobile__link,
+.nav-desktop__link,
+.nav-desktop__link--faq {
     text-decoration: none;
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.nav-mobile__link {
     font-size: 1.2rem;
     color: var(--primary-font-color);
 }
 
-.nav-mobile__link:hover {
+.nav-mobile__link:hover,
+.nav-mobile__link--active {
     color: var(--hover-font-color);
     border-bottom: 2px solid var(--hover-font-color);
-    transition: var(--transition-fast);
 }
 
 .nav-mobile__social {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
     align-items: end;
 }
@@ -147,22 +149,17 @@ body {
     text-decoration: none;
     padding-right: 20px;
     font-size: 2rem;
+    transition: var(--transition-fast);
 }
 
 .nav-mobile__social-link:hover {
     color: var(--hover-font-color);
-    transition: var(--transition-fast);
 }
 
+/* ========================================
+   MAIN SECTION
+   ======================================== */
 
-/* Estilos para los enlaces activos en el menú móvil */
-.nav-mobile__link--active {
-    color: var(--hover-font-color);
-    border-bottom: 2px solid var(--hover-font-color);
-}
-
-
-/* Sección principal */
 .main {
     height: 100vh;
     display: flex;
@@ -187,21 +184,31 @@ body {
     filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.7));
 }
 
-.main__cta {
+/* Shared button base styles */
+.main__cta,
+.contact-form__button,
+.footer__app-button,
+.sede-card__map-button {
     display: inline-block;
-    margin-top: -2.5rem;
     padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--primary-font-color);
-    background: var(--button-bg-color2);
+    font-family: var(--primary-font-family);
+    font-weight: 600;
     text-decoration: none;
     border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.main__cta {
+    margin-top: -2.5rem;
+    font-size: 1.1rem;
+    color: var(--primary-font-color);
+    background: var(--button-bg-color2);
     position: relative;
     z-index: 3;
     overflow: hidden;
-    border: 1px solid var(--button-bg-color);
-    /* Importante para contener el efecto shine */
+    border-color: var(--button-bg-color);
 }
 
 .main__cta::before {
@@ -219,54 +226,62 @@ body {
     animation: shine 5s infinite;
 }
 
-
-
 .main__cta:hover {
     background: var(--button-bg-color3);
-    border: 1px solid var(--primary-font-color);
+    border-color: var(--primary-font-color);
     color: var(--primary-font-light-color);
-    transition: var(--transition-fast);
-
 }
 
-/* Animación para el texto del CTA con efecto de barrido */
 .main__cta-text {
     margin-top: 0.5rem;
     font-size: 1rem;
     color: transparent;
-    /* Inicia con texto transparente */
     text-align: center;
     position: relative;
     overflow: hidden;
-    /* Para ocultar el barrido fuera del texto */
 }
 
 .main__cta-text::before {
     content: 'Clase de prueba gratis';
-    /* El mismo texto */
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
-    /* Comienza con ancho 0 */
     height: 100%;
     color: var(--secondary-font-light-color);
-    /* Color final del texto */
     white-space: nowrap;
-    /* Evita saltos de línea */
     overflow: hidden;
     animation: textSweep 2s 1s forwards;
-    /* 1s de retraso, luego 2s de animación */
 }
 
+/* ========================================
+   SECTIONS - SHARED STYLES
+   ======================================== */
 
-/* DIMENSIONES COMUNES DE LAS SECCIONES */
 .section__article {
     width: 100%;
-    ;
 }
 
-/* SECCIÓN NOSOTROS */
+.section__title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    margin-bottom: 1rem;
+    font-family: var(--title-font-family);
+}
+
+.section__text {
+    font-size: 1.4rem;
+    color: var(--primary-font-color);
+    font-family: var(--text-font-family);
+    padding: 30px;
+}
+
+/* ========================================
+   NOSOTROS SECTION
+   ======================================== */
+
 .section__article--nosotros {
     width: 100%;
     height: 100vh;
@@ -298,8 +313,7 @@ body {
 .section__text--nosotros {
     text-align: center;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     letter-spacing: 0.5px;
     line-height: 1.25;
     font-size: 1.5rem;
@@ -307,31 +321,17 @@ body {
 
 .section--nosotros {
     margin-top: 30px;
-
-}
-
-/* SECCIÓN QUÉ HACEMOS */
-.section__title {
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: 800;
-    color: var(--primary-font-color);
-    margin-bottom: 1rem;
-    font-family: var(--title-font-family);
-}
-
-.section__text {
-    font-size: 1.4rem;
-    color: var(--primary-font-color);
-    font-family: var(--text-font-family);
-    padding: 30px;
 }
 
 .section--que-hacemos {
     margin: -30px 0 30px 0;
 }
 
-/* ACTIVIDADES - CONTENEDOR GENERAL */
+/* ========================================
+   ACTIVITIES SECTION
+   ======================================== */
+
+/* Shared activity styles */
 .section__activity {
     display: flex;
     flex-direction: column;
@@ -341,7 +341,6 @@ body {
     padding: 50px;
 }
 
-/* CONTENIDO DE ACTIVIDAD */
 .section__activity-content {
     display: flex;
     flex-direction: column;
@@ -355,7 +354,6 @@ body {
     opacity: 1;
 }
 
-/* TÍTULOS Y TEXTOS */
 .section__activity-title {
     font-size: 2rem;
     font-weight: 600;
@@ -370,7 +368,6 @@ body {
     text-align: center;
 }
 
-/* CTA - CLASE DE PRUEBA */
 .section__activity-text--cta {
     text-align: right;
     align-self: center;
@@ -381,16 +378,13 @@ body {
     cursor: pointer;
 }
 
-/* IMÁGENES */
 .section__activity-img {
     border-radius: 5px;
     width: 100%;
     margin: 10px 0;
 }
 
-/* ============ ESTILOS ESPECÍFICOS POR ACTIVIDAD ============ */
-
-/* FUNCIONAL */
+/* Activity specific colors */
 .section__activity--funcional {
     background-color: var(--funcional-bg-color);
     color: var(--primary-font-color);
@@ -405,10 +399,8 @@ body {
 .section__activity--funcional .section__activity-text--cta:hover a {
     background-color: var(--hover-bg-color1);
     color: var(--primary-font-light-color);
-    transition: var(--transition-fast);
 }
 
-/* PILATES */
 .section__activity--pilates {
     background-color: var(--pilates-bg-color);
     color: var(--primary-font-light-color);
@@ -426,11 +418,8 @@ body {
 .section__activity--pilates .section__activity-text--cta:hover a {
     background-color: var(--hover-bg-color);
     color: var(--primary-font-color);
-    transition: var(--transition-fast);
-
 }
 
-/* STRETCHING */
 .section__activity--stretching {
     background-color: var(--stretching-bg-color);
     color: var(--primary-font-light-color);
@@ -449,11 +438,13 @@ body {
 .section__activity--stretching .section__activity-text--cta:hover a {
     background-color: var(--hover-bg-color1);
     color: var(--primary-font-light-color);
-    transition: var(--transition-fast);
     border-color: var(--stretching-bg-color);
 }
 
-/* PARALLAX BACKGROUND STAFF - SEDES */
+/* ========================================
+   PARALLAX WRAPPER
+   ======================================== */
+
 .parallax-wrapper {
     position: relative;
     overflow: hidden;
@@ -477,9 +468,7 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
     width: 150%;
-    /* Más ancho que el contenedor para permitir movimiento */
 }
-
 
 .parallax-row--pilates {
     top: 5%;
@@ -512,9 +501,10 @@ body {
     color: var(--stretching-bg-color);
 }
 
+/* ========================================
+   STAFF SECTION
+   ======================================== */
 
-
-/* Estilos para la sección de staff */
 .section--staff {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -533,20 +523,22 @@ body {
     gap: 20px;
 }
 
-/* Estilos generales de la card */
-.staff__card {
-    width: 250px;
-    height: 350px;
+/* Shared card styles */
+.staff__card,
+.sede-card {
     border-radius: 5px;
     box-shadow: var(--box-shadow-dark);
     overflow: hidden;
     background: var(--secondary-bg-color);
     position: relative;
     text-align: center;
+}
+
+.staff__card {
+    width: 250px;
+    height: 350px;
     perspective: 1000px;
-    /* Para efecto 3D */
     z-index: 1;
-    /* Un z-index bajo para que no interfiera con el menú */
 }
 
 .staff__image {
@@ -571,7 +563,6 @@ body {
     color: var(--primary-font-light-color);
 }
 
-/* Efecto Flip */
 .staff__card-inner {
     width: 100%;
     height: 100%;
@@ -607,26 +598,21 @@ body {
     text-align: left;
 }
 
-/* Nuevo contenedor para imagen y nombre */
 .staff__header {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
 }
 
-/* Ajustes para la imagen dentro del contenedor */
 .staff__header .staff__image {
     width: 80px;
     height: 80px;
     border-radius: 5px;
     margin-bottom: 5px;
-    object-fit: cover;
 }
 
-/* Ajustes para el nombre dentro del contenedor */
 .staff__header .staff__fullname {
     margin-top: 5px;
     text-align: left;
@@ -658,26 +644,30 @@ body {
     justify-content: center;
 }
 
-.staff__tag {
+/* Shared tag styles */
+.staff__tag,
+.tag {
     padding: 5px 10px;
     font-size: 0.8rem;
     border-radius: 5px;
     font-family: var(--primary-font-family);
     font-weight: 600;
+    color: var(--primary-font-light-color);
 }
 
-.staff__tag--funcional {
+.staff__tag--funcional,
+.tag-funcional {
     background-color: var(--funcional-bg-color);
 }
 
-.staff__tag--pilates {
+.staff__tag--pilates,
+.tag-pilates {
     background-color: var(--pilates-bg-color);
-    color: var(--primary-font-light-color);
 }
 
-.staff__tag--stretching {
+.staff__tag--stretching,
+.tag-stretching {
     background-color: var(--stretching-bg-color);
-    color: var(--primary-font-light-color);
 }
 
 .staff__social {
@@ -703,16 +693,14 @@ body {
     transform: scale(1.1);
 }
 
-/* SEDES */
-/* Estilos para la sección de sedes */
+/* ========================================
+   SEDES SECTION
+   ======================================== */
+
 .section--sedes {
-    margin-top: 30px;
-    padding-top: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin: 30px auto;
+    padding: 30px 0;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .sedes-container {
@@ -727,9 +715,6 @@ body {
     width: 90%;
     max-width: 450px;
     border-radius: 8px;
-    overflow: hidden;
-    background-color: var(--secondary-bg-color);
-    box-shadow: var(--box-shadow-dark);
     transition: transform var(--transition-medium);
 }
 
@@ -758,7 +743,6 @@ body {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 48, 73, 0.9), transparent);
     padding-bottom: 20px;
-
 }
 
 .sede-card__title {
@@ -809,24 +793,15 @@ body {
 }
 
 .sede-card__map-button {
-    display: inline-block;
-    border: 1px solid var(--primary-font-color);
-
+    border-color: var(--primary-font-color);
     color: var(--primary-font-color);
-    text-decoration: none;
-    padding: 8px 12px;
     font-size: 0.8rem;
-    border-radius: 5px;
-    font-weight: 600;
     text-align: center;
-    transition: all var(--transition-fast);
-
 }
 
 .sede-card__map-button:hover {
     background-color: var(--button-bg-color3);
     color: var(--primary-font-light-color);
-
 }
 
 .sede-card__map-button i {
@@ -834,42 +809,26 @@ body {
 }
 
 .tag {
-    display: inline-block;
-    border-radius: 4px;
-    color: var(--primary-font-light-color);
-    font-weight: 600;
     font-size: 0.75rem;
     padding: 3px 5px;
-}
-
-.tag-pilates {
-    background-color: var(--pilates-bg-color);
-}
-
-.tag-funcional {
-    background-color: var(--funcional-bg-color);
-}
-
-.tag-stretching {
-    background-color: var(--stretching-bg-color);
+    border-radius: 4px;
 }
 
 .sede-container__address {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     margin-bottom: 10px;
 }
 
-/* CONTACTO */
-/* Estilos para el formulario de contacto */
+/* ========================================
+   CONTACTO SECTION
+   ======================================== */
 
 .section--contacto {
     margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 0;
     background-image: url('../img/bg-contacto.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -878,12 +837,7 @@ body {
 
 .section--contacto .section__title {
     margin-top: 30px;
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: 800;
     color: var(--primary-font-light-color);
-    margin-bottom: 1rem;
-    font-family: var(--title-font-family);
     padding-bottom: 20px;
 }
 
@@ -915,9 +869,10 @@ body {
     font-size: 1rem;
 }
 
+/* Shared form input styles */
 .contact-form__input,
-.contact-form__textarea {
-    width: 90%;
+.contact-form__textarea,
+.contact-form__select {
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -927,15 +882,13 @@ body {
     transition: border-color var(--transition-fast);
 }
 
+.contact-form__input,
+.contact-form__textarea {
+    width: 90%;
+}
+
 .contact-form__select {
     width: 95%;
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-family: var(--primary-font-family);
-    font-size: 1rem;
-    color: var(--secondary-font-color);
-    transition: border-color var(--transition-fast);
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23003049' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -959,29 +912,20 @@ body {
 .contact-form__button {
     background-color: var(--button-bg-color2);
     color: var(--primary-font-color);
-    border: none;
-    border-radius: 5px;
-    padding: 12px 24px;
-    font-family: var(--primary-font-family);
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
+    border-color: var(--button-bg-color2);
     align-self: flex-start;
-    border: 1px solid var(--button-bg-color2);
 }
 
 .contact-form__button:hover {
     background-color: var(--primary-font-color);
-    border: 1px solid var(--primary-font-color);
+    border-color: var(--primary-font-color);
     color: var(--primary-font-light-color);
-    transition: var(--transition-medium);
 }
 
-.contact-form__button:active {
-    transform: translateY(0);
-}
+/* ========================================
+   WHATSAPP BUTTON
+   ======================================== */
 
-/* BOTÓN WHATSAPP */
 .whatsapp-section__link {
     position: fixed;
     width: 50px;
@@ -999,20 +943,18 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: var(--transition-fast);
 }
 
 .whatsapp-section__link:hover {
     opacity: 1;
     background-color: var(--background-color-hover-whastapp);
-    color: var(--primary-font-light-color);
-    transition: var(--transition-fast);
 }
 
-.whatsapp-section__icon {
-    color: var(--primary-font-light-color);
-}
+/* ========================================
+   BACK TO TOP BUTTON
+   ======================================== */
 
-/* BOTÓN VOLVER ARRIBA */
 .back-to-top__container {
     display: inline-block;
     width: 40px;
@@ -1035,27 +977,28 @@ body {
     height: 100%;
     border-radius: 50%;
     text-decoration: none;
+    transition: var(--transition-medium);
+}
+
+.back-to-top__link:hover {
+    background: var(--hover-bg-color);
 }
 
 .back-to-top__icon {
     font-size: 1rem;
     color: var(--primary-font-light-color);
-}
-
-.back-to-top__link:hover {
-    background: var(--hover-bg-color);
     transition: var(--transition-medium);
 }
 
 .back-to-top__icon:hover {
     transform: translateY(-3px);
-    transition: var(--transition-medium);
     color: var(--primary-font-color);
 }
 
-/* TOAST MESSAGE */
+/* ========================================
+   TOAST MESSAGES
+   ======================================== */
 
-/* Estilos para toast messages */
 .toast {
     position: fixed;
     bottom: 20px;
@@ -1083,7 +1026,10 @@ body {
     background-color: #ff4444;
 }
 
-/* FOOTER */
+/* ========================================
+   FOOTER
+   ======================================== */
+
 .footer {
     background-color: var(--nosotros-bg-color);
     color: var(--primary-font-light-color);
@@ -1113,19 +1059,23 @@ body {
     display: inline-block;
 }
 
-/* Estilos para navegación */
 .footer__nav {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.footer__link {
-    display: block;
+/* Shared footer link styles */
+.footer__link,
+.footer__contact-link {
     color: var(--primary-font-light-color);
     text-decoration: none;
-    font-size: 1rem;
     transition: var(--transition-fast);
+}
+
+.footer__link {
+    display: block;
+    font-size: 1rem;
     padding-left: 5px;
     font-weight: 500;
 }
@@ -1135,7 +1085,10 @@ body {
     border-left: 2px solid var(--hover-font-color);
 }
 
-/* Estilos para sedes */
+.footer__contact-link:hover {
+    color: var(--hover-font-color);
+}
+
 .footer__sede {
     margin-bottom: 20px;
 }
@@ -1151,9 +1104,19 @@ body {
 .footer__sede-hours {
     margin-bottom: 5px;
     font-size: 0.95rem;
+    transition: var(--transition-fast);
 }
 
-/* Estilos para contacto */
+.footer__sede-address:hover {
+    color: var(--hover-font-color);
+    cursor: pointer;
+}
+
+.footer__sede-address i {
+    margin-right: 5px;
+    color: var(--hover-font-color);
+}
+
 .footer__contact {
     margin-bottom: 25px;
 }
@@ -1172,17 +1135,21 @@ body {
     text-align: center;
 }
 
-.footer__contact-link {
-    color: var(--primary-font-light-color);
-    text-decoration: none;
-    transition: var(--transition-fast);
+.footer__faq {
+    margin-bottom: 20px;
 }
 
-.footer__contact-link:hover {
+.footer__faq-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__faq-button {
     color: var(--hover-font-color);
+    text-decoration: none;
 }
 
-/* Estilos para la App */
 .footer__app {
     margin-top: 20px;
 }
@@ -1193,14 +1160,9 @@ body {
 }
 
 .footer__app-button {
-    display: inline-block;
     background-color: var(--hover-font-color);
     color: var(--primary-font-light-color);
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: var(--transition-fast);
+    border-color: var(--hover-font-color);
 }
 
 .footer__app-button:hover {
@@ -1209,7 +1171,6 @@ body {
     box-shadow: var(--box-shadow-light);
 }
 
-/* Estilos para la parte inferior del footer */
 .footer__bottom {
     margin-top: 30px;
     padding-top: 20px;
@@ -1236,11 +1197,13 @@ body {
     text-decoration: underline;
 }
 
-/* MODAL MAPAS  */
-#contendorModalMap {
+/* ========================================
+   MODAL MAPS
+   ======================================== */
+
+#contenedorModalMap {
     position: fixed;
     z-index: 10001;
-    /* Asegúrate de que esté por encima de otros elementos */
 }
 
 .modal-mapa {
@@ -1316,25 +1279,10 @@ body {
     transform: scale(1.1);
 }
 
-/* Efecto de zoom con cursor específico para las direcciones */
-.footer__sede-address {
-    position: relative;
-    transition: color var(--transition-fast);
-}
+/* ========================================
+   FAQ SECTION
+   ======================================== */
 
-.footer__sede-address:hover {
-    color: var(--hover-font-color);
-}
-
-/* Añadir un pequeño icono de ubicación junto a la dirección */
-.footer__sede-address i {
-    margin-right: 5px;
-    color: var(--hover-font-color);
-}
-
-/* PREGUNTAS FRECUENTES */
-
-/* Sección principal FAQ para dar espacio al contenido */
 .main-content {
     min-height: 70vh;
     padding: 60px 0 30px 0;
@@ -1366,89 +1314,6 @@ body {
     font-size: 1.2rem;
     color: var(--secondary-font-color);
     margin-bottom: 40px;
-    font-family: var(--text-font-family);
-}
-
-/* Contenedor de acordeón */
-.faq__accordion {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Cada elemento del acordeón */
-.faq__item {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow-light);
-    transition: box-shadow var(--transition-fast);
-}
-
-.faq__item:hover {
-    box-shadow: var(--box-shadow-dark);
-}
-
-/* Botón de pregunta */
-.faq__question {
-    width: 100%;
-    background-color: var(--secondary-bg-color);
-    color: var(--primary-font-color);
-    padding: 18px 20px;
-    border: none;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: var(--primary-font-family);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-left: 3px solid transparent;
-    transition: all var(--transition-fast);
-}
-
-.faq__question:hover {
-    background-color: var(--primary-bg-color);
-    border-left: 3px solid var(--hover-border-color);
-}
-
-.faq__question.faq__question--active {
-    border-left: 3px solid var(--hover-border-color);
-    color: var(--hover-font-color);
-}
-
-/* Icono del acordeón */
-.faq__icon {
-    font-size: 1rem;
-    transition: transform var(--transition-fast);
-}
-
-.faq__question--active .faq__icon {
-    transform: rotate(180deg);
-}
-
-/* Contenedor de respuesta */
-.faq__answer {
-    background-color: var(--primary-bg-color);
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all var(--transition-medium);
-}
-
-.faq__answer.faq__answer--active {
-    padding: 20px;
-    max-height: 1000px;
-    /* Altura máxima para la animación */
-}
-
-.faq__answer-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--secondary-font-color);
     font-family: var(--text-font-family);
 }
 
@@ -1485,10 +1350,6 @@ body {
     color: var(--primary-font-color);
 }
 
-.faq__search-input:focus {
-    outline: none;
-}
-
 .faq__search-clear {
     background: none;
     border: none;
@@ -1496,14 +1357,92 @@ body {
     color: var(--primary-font-color);
     padding: 5px;
     opacity: 0.6;
+    transition: var(--transition-fast);
 }
 
 .faq__search-clear:hover {
     opacity: 1;
 }
 
+.faq__accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq__item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-light);
+    transition: box-shadow var(--transition-fast);
+}
+
+.faq__item:hover {
+    box-shadow: var(--box-shadow-dark);
+}
+
 .faq__item--hidden {
     display: none;
+}
+
+.faq__question {
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-font-color);
+    padding: 18px 20px;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--primary-font-family);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 3px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.faq__question:hover {
+    background-color: var(--primary-bg-color);
+    border-left: 3px solid var(--hover-border-color);
+}
+
+.faq__question.faq__question--active {
+    border-left: 3px solid var(--hover-border-color);
+    color: var(--hover-font-color);
+}
+
+.faq__icon {
+    font-size: 1rem;
+    transition: transform var(--transition-fast);
+}
+
+.faq__question--active .faq__icon {
+    transform: rotate(180deg);
+}
+
+.faq__answer {
+    background-color: var(--primary-bg-color);
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition-medium);
+}
+
+.faq__answer.faq__answer--active {
+    padding: 20px;
+    max-height: 1000px;
+}
+
+.faq__answer-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--secondary-font-color);
+    font-family: var(--text-font-family);
 }
 
 .faq__no-results {
@@ -1521,7 +1460,14 @@ body {
     display: block;
 }
 
-/* ESTILOS PARA LAS PALABRAS DE FONDO FAQs*/
+.faq__highlight {
+    background-color: rgba(235, 131, 23, 0.2);
+    padding: 2px 0;
+}
+
+/* ========================================
+   FAQ BACKGROUND WORDS
+   ======================================== */
 
 .background-words {
     position: absolute;
@@ -1532,7 +1478,6 @@ body {
     overflow: hidden;
     z-index: -1;
     pointer-events: none;
-    /* Hace que el elemento sea "transparente" a eventos del mouse (clicks, hover) */
 }
 
 .background-word {
@@ -1544,29 +1489,67 @@ body {
     opacity: 0.3;
     letter-spacing: 2px;
     will-change: transform;
-    /* Optimiza para animaciones - correcto */
 }
 
 .background-word--pilates {
     top: 25%;
     color: var(--pilates-bg-color);
     right: -20%;
-    /* Comienza fuera de pantalla por la derecha */
 }
 
 .background-word--funcional {
     top: 50%;
     color: var(--funcional-bg-color);
     left: -20%;
-    /* Comienza fuera de pantalla por la izquierda */
 }
 
 .background-word--stretching {
     top: 75%;
     color: var(--stretching-bg-color);
     right: -10%;
-    /* Comienza fuera de pantalla por la derecha */
 }
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(1%);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes textSweep {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   DESKTOP STYLES (992px+)
+   ======================================== */
 
 @media (min-width: 768px) {
     .sedes-container {
@@ -1579,35 +1562,27 @@ body {
     }
 
     .tag {
-        display: inline-block;
-        border-radius: 4px;
-        color: var(--primary-font-light-color);
-        font-weight: 600;
         font-size: 1rem;
         padding: 6px 10px;
     }
 }
 
-/* Estilos responsive - Media Queries */
-/* Entre 992px y 1199px - Bootstrap breakpoints LG y superiores */
 @media (min-width: 992px) {
+
+    /* ========================================
+       NAVIGATION - DESKTOP OVERRIDES
+       ======================================== */
 
     .header .nav-mobile {
         display: none;
     }
 
     .nav-desktop {
-        /* organización del contenido */
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
-
-        /* Asegura que esté por encima de otros elementos */
         z-index: 9999;
-
-        /* estilos del contenido */
         height: 50px;
         position: relative;
         margin-top: -50px;
@@ -1618,17 +1593,13 @@ body {
     .nav-desktop__items {
         width: 80%;
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
 
     .nav-desktop__link {
-        text-decoration: none;
         color: var(--primary-font-light-color);
-        font-family: var(--primary-font-family);
         font-size: 1rem;
-        font-weight: 600;
         position: relative;
     }
 
@@ -1640,10 +1611,14 @@ body {
         color: var(--hover-font-color);
         border-bottom: 2px solid var(--hover-font-color);
         margin-top: 2px;
-        /* Añade una línea debajo en el estado de hover */
     }
 
-    /* Estilo cuando .nav-desktop está fijo en la parte superior */
+    .nav-desktop__link--active {
+        color: var(--hover-font-color2);
+        border-bottom: 2px solid var(--hover-font-color);
+        margin-top: 2px;
+    }
+
     .nav-desktop--fixed {
         height: 60px;
         margin-top: 0;
@@ -1656,13 +1631,9 @@ body {
         margin-right: auto;
         border-radius: 5px;
         background-color: var(--secondary-bg-color);
-        /* Puedes ajustar el color de fondo según tu diseño */
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
-        /* Sombra para resaltar */
         animation: slideDown 1.2s ease;
-        /* Duración, transición y tipo de animación */
         padding-left: 40px;
-
     }
 
     .nav-desktop--fixed .nav-desktop__link {
@@ -1672,14 +1643,6 @@ body {
         font-size: 1.1rem;
     }
 
-    /* Estilos para los enlaces activos en el menú desktop */
-    .nav-desktop__link--active {
-        color: var(--hover-font-color2);
-        border-bottom: 2px solid var(--hover-font-color);
-        margin-top: 2px;
-    }
-
-    /* Modificación para el menú fijo en la parte superior */
     .nav-desktop--fixed .nav-desktop__link--active {
         color: var(--activity-navbar-font-color);
         margin-top: 2px;
@@ -1693,11 +1656,8 @@ body {
         letter-spacing: 2px;
         position: absolute;
         left: 10px;
-        /* Ajusta este valor según sea necesario */
         top: 50%;
-        /* Centra verticalmente */
         transform: translateY(-50%);
-        /* Ajusta para centrar verticalmente */
     }
 
     .nav-desktop--fixed .nav-desktop__link--icon img {
@@ -1710,24 +1670,14 @@ body {
         margin-top: 2px;
     }
 
-
-
-
-    /* NAVBAR PREGUNTAS FRECUENTES */
+    /* FAQ NAVBAR */
     .nav-desktop--faq {
-        /* organización del contenido */
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-        /* Asegura que esté por encima de otros elementos */
+        margin: 10px auto 0;
         z-index: 9999;
-        /* estilos del contenido */
-
         height: 50px;
         position: fixed;
         top: 3%;
@@ -1743,17 +1693,13 @@ body {
     .nav-desktop__items--faq {
         width: 100%;
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
 
     .nav-desktop__link--faq {
-        text-decoration: none;
         color: var(--primary-font-light-color);
-        font-family: var(--primary-font-family);
         font-size: 1rem;
-        font-weight: 600;
         position: relative;
     }
 
@@ -1761,38 +1707,31 @@ body {
         width: 150px;
     }
 
-
     .nav-desktop__link--faq:not(:first-child):hover {
         color: var(--hover-font-color);
         border-bottom: 2px solid var(--hover-font-color);
         margin-top: 2px;
-        /* Añade una línea debajo en el estado de hover */
     }
 
+    /* ========================================
+       MAIN SECTION - DESKTOP OVERRIDES
+       ======================================== */
+
     .main {
-        height: 100vh;
-        display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-
         padding-left: 30px;
-
         background-color: #112626;
-        /* Fondo oscuro */
     }
 
     .main__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
         padding-left: 30px;
     }
 
     .main__logo {
         max-width: 90%;
-        /* Tamaño posiblemente menor en pantallas grandes */
         margin-left: -20px;
     }
 
@@ -1800,59 +1739,35 @@ body {
         margin-top: -4rem;
     }
 
-    /* SECCIÓN NOSOTROS */
-    .section__article--nosotros {
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-        background:
-            linear-gradient(to right,
-                rgba(0, 48, 73, 0) 0%,
-                rgba(0, 48, 73, 0.5) 50%,
-                rgba(0, 48, 73, 1) 100%),
-            url('../img/nosotros.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: var(--primary-font-light-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: -30px;
-    }
+    /* ========================================
+       NOSOTROS SECTION - DESKTOP OVERRIDES
+       ======================================== */
 
     .section__nosotros-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: flex-end;
     }
 
     .section__text--nosotros {
         padding-right: 40px;
         width: 50%;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0;
         font-size: 2rem;
         text-align: right;
     }
 
-    /* SECCIÓN QUÉ HACEMOS */
-    /* Estilo común para los contenedores de actividades */
+    /* ========================================
+       ACTIVITIES SECTION - DESKTOP OVERRIDES
+       ======================================== */
+
     .section__activity {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         background-color: var(--pilates-bg-color);
-        box-shadow: var(--activity-box-shadow);
-        padding: 50px;
     }
 
     .section__activity-title {
         font-size: 2.5rem;
-        font-weight: 600;
-        color: var(--activity-font-color);
         text-align: left;
     }
 
@@ -1869,7 +1784,6 @@ body {
     .section__activity-text a {
         font-size: 1rem;
         text-align: left;
-
     }
 
     .section__activity--pilates {
@@ -1899,7 +1813,6 @@ body {
 
     .section__activity--funcional .section__activity-text a {
         font-weight: 800;
-
     }
 
     .section__activity-content {
@@ -1907,15 +1820,12 @@ body {
         align-items: flex-start;
     }
 
-
     .section__activity-img {
         width: 50%;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0;
     }
 
     .section__activity--stretching {
-        flex-direction: row;
         background-color: var(--stretching-bg-color);
         color: var(--primary-font-light-color);
     }
@@ -1928,18 +1838,22 @@ body {
         color: var(--primary-font-color);
     }
 
+    /* ========================================
+       STAFF SECTION - DESKTOP OVERRIDES
+       ======================================== */
+
     .section--staff {
         margin-bottom: 80px;
+    }
+
+    .section--staff .section__title {
+        margin-top: 0;
     }
 
     .staff {
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
-    }
-
-    .section--staff .section__title {
-        margin-top: 0;
     }
 
     .staff__card {
@@ -1964,7 +1878,10 @@ body {
         font-size: 1.2rem;
     }
 
-    /*SEDES*/
+    /* ========================================
+       SEDES SECTION - DESKTOP OVERRIDES
+       ======================================== */
+
     .section--sedes {
         width: 80%;
         margin-top: 80px;
@@ -1993,7 +1910,10 @@ body {
         font-size: 1rem;
     }
 
-    /* CONTACTO */
+    /* ========================================
+       CONTACTO SECTION - DESKTOP OVERRIDES
+       ======================================== */
+
     .section--contacto .section__title {
         margin-top: 0;
     }
@@ -2016,7 +1936,6 @@ body {
 
     .contact-form__select {
         width: 93%;
-
     }
 
     .contact-form__button {
@@ -2024,7 +1943,10 @@ body {
         padding: 14px 28px;
     }
 
-    /* FOOTER */
+    /* ========================================
+       FOOTER - DESKTOP OVERRIDES
+       ======================================== */
+
     .footer__container {
         flex-direction: row;
         justify-content: space-between;
@@ -2046,7 +1968,10 @@ body {
         padding: 20px 5%;
     }
 
-    /* MODAL MAPAS */
+    /* ========================================
+       MODAL MAPS - DESKTOP OVERRIDES
+       ======================================== */
+
     .modal-mapa__contenido {
         width: 80%;
         padding: 30px;
@@ -2060,7 +1985,10 @@ body {
         height: 450px;
     }
 
-    /* PREGUNTAS FRECUENTES */
+    /* ========================================
+       FAQ SECTION - DESKTOP OVERRIDES
+       ======================================== */
+
     .faq {
         width: 70%;
         padding: 40px 0;
@@ -2080,46 +2008,5 @@ body {
 
     .faq__answer-text {
         font-size: 1.1rem;
-    }
-}
-
-/* ANIMACIONES */
-
-
-/* EFECTO TRASLACIÓN PARA EL NAVBAR FIXED */
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(1%);
-    }
-}
-
-/* EFECTO BRILLO BOTÓN MAIN CTA */
-
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
-
-    20% {
-        left: 100%;
-    }
-
-    100% {
-        left: 100%;
-    }
-}
-
-/*EFECTO DE BARRIDO PARA TEXTO DE MAIN CTA */
-@keyframes textSweep {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
     }
 }
