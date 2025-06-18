@@ -385,16 +385,24 @@ body {
 
 .section__activity-text--cta {
     text-align: right;
-    align-self: flex-end;  /* Agregar esta línea */
+    align-self: center;
     border: 1px solid var(--primary-font-color);
     border-radius: 3px;
     padding: 10px;
     font-size: 0.9rem;
-    cursor:pointer;
+    cursor: pointer;
 }
+
+/* Estilos específicos para PILATES */
 
 .section__activity--pilates .section__activity-text--cta {
     border: 1px solid var(--button-bg-color);
+}
+
+.section__activity--pilates .section__activity-text--cta:hover {
+    background-color: var(--hover-bg-color);
+    color: var(--primary-font-color);
+    transition:  0.3s;
 }
 
 /* Estilos específicos para FUNCIONAL */
@@ -408,10 +416,10 @@ body {
     color: var(--primary-font-color);
 }
 
-/* .section__activity--funcional .section__activity-text {
-    color: var(--primary-font-light-color);
+.section__activity--funcional .section__activity-text--cta:hover {
+    background-color: var(--hover-bg-color2);
 }
- */
+
 .section__activity--funcional .section__activity-text a {
     color: var(--primary-font-color);
 }
@@ -434,6 +442,13 @@ body {
     color: var(--primary-font-color);
 }
 
+.section__activity--stretching .section__activity-text--cta {
+    border-color: var(--primary-font-light-color);
+}
+
+.section__activity--stretching .section__activity-text--cta:hover {
+    background-color: var(--hover-bg-color3);
+}
 .section__activity--stretching .section__activity-text a {
     color: var(--primary-font-color);
 }
@@ -1649,7 +1664,7 @@ body {
         animation: slideDown 1.2s ease;
         /* Duración, transición y tipo de animación */
         padding-left: 40px;
-        
+
     }
 
     .nav-desktop--fixed .nav-desktop__link {
@@ -1848,8 +1863,10 @@ body {
         text-align: left;
     }
 
-    .section__activity-text--cta
-    {font-size: 1rem;}
+    .section__activity-text--cta {
+        font-size: 1rem;
+        align-self: flex-end;
+    }
 
     .section__activity-text a {
         font-size: 1rem;

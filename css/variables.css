@@ -24,8 +24,10 @@
     /* BACKGROUND */
     --primary-bg-color: #f0f8ff;  /* Fondo principal */
     --secondary-bg-color: #f8f9fa;  /* Fondo secundario */
-    --hover-bg-color: #FFD284; /* Fondo al pasar el mouse */
+    --hover-bg-color: #FFD284;
+    --hover-bg-color1: #003049;
     --hover-bg-color2: #fcba54;
+    --hover-bg-color3: #40B645; /* Fondo al pasar el mouse en botones */
     --navbar-bg-color:#FFF8E3;
     --pilates-bg-color: #10375c;
     --funcional-bg-color: #FFD284;
