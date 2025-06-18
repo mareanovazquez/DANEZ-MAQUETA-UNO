@@ -1018,6 +1018,7 @@ body {
     color: var(--primary-font-light-color);
     padding: 12px 24px;
     border-radius: 5px;
+    border: 2px solid var(--border-color);
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 1000;
