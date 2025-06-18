@@ -311,7 +311,7 @@ body {
 }
 
 /* SECCIÓN QUÉ HACEMOS */
-.section .section__article .section__title {
+.section__title {
     font-size: 2.5rem;
     text-align: center;
     font-weight: 800;
@@ -328,61 +328,49 @@ body {
 }
 
 .section--que-hacemos {
-    margin-top: -30px;
-    margin-bottom: 30px;
+    margin: -30px 0 30px 0;
 }
 
-/* Estilo común para los contenedores de actividades */
+/* ACTIVIDADES - CONTENEDOR GENERAL */
 .section__activity {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--pilates-bg-color);
     box-shadow: var(--activity-box-shadow);
     padding: 50px;
-    color: var(--primary-font-light-color);
 }
 
-/* Estilo común para el contenido de las actividades */
+/* CONTENIDO DE ACTIVIDAD */
 .section__activity-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    /* Inicialmente invisible */
     transition: opacity 1s ease-out;
 }
 
 .section__activity-content.visible {
     opacity: 1;
-    /* Visible cuando tiene la clase 'visible' */
 }
 
+/* TÍTULOS Y TEXTOS */
 .section__activity-title {
     font-size: 2rem;
     font-weight: 600;
-    color: var(--activity-font-color);
     text-align: center;
+    color: var(--activity-font-color);
 }
 
 .section__activity-text {
     font-size: 1.2rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     font-family: var(--secondary-font-family);
     text-align: center;
 }
 
-.section__activity .section__activity-text a {
-    color: var(--activity-font-color);
-}
-
-.section__activity-img {
-    width: 100%;
-}
-
+/* CTA - CLASE DE PRUEBA */
 .section__activity-text--cta {
     text-align: right;
     align-self: center;
@@ -393,52 +381,63 @@ body {
     cursor: pointer;
 }
 
-/* Estilos específicos para PILATES */
-
-.section__activity--pilates .section__activity-text--cta {
-    border: 1px solid var(--button-bg-color);
+/* IMÁGENES */
+.section__activity-img {
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
 }
 
-.section__activity--pilates .section__activity-text--cta:hover {
-    background-color: var(--hover-bg-color);
-    color: var(--primary-font-color);
-    transition:  0.3s;
-}
+/* ============ ESTILOS ESPECÍFICOS POR ACTIVIDAD ============ */
 
-/* Estilos específicos para FUNCIONAL */
-
+/* FUNCIONAL */
 .section__activity--funcional {
     background-color: var(--funcional-bg-color);
     color: var(--primary-font-color);
 }
 
-.section__activity--funcional .section__activity-title {
-    color: var(--primary-font-color);
-}
-
-.section__activity--funcional .section__activity-text--cta:hover {
-    background-color: var(--hover-bg-color2);
-}
-
+.section__activity--funcional .section__activity-title,
 .section__activity--funcional .section__activity-text a {
     color: var(--primary-font-color);
 }
 
-.section__activity-img {
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.section__activity--funcional .section__activity-text--cta:hover,
+.section__activity--funcional .section__activity-text--cta:hover a {
+    background-color: var(--hover-bg-color1);
+    color: var(--primary-font-light-color);
+    transition: var(--transition-fast);
 }
 
-/* Estilos específicos para STRETCHING */
+/* PILATES */
+.section__activity--pilates {
+    background-color: var(--pilates-bg-color);
+    color: var(--primary-font-light-color);
+}
 
+.section__activity--pilates a {
+    color: var(--activity-font-color);
+}
+
+.section__activity--pilates .section__activity-text--cta {
+    border-color: var(--button-bg-color);
+}
+
+.section__activity--pilates .section__activity-text--cta:hover,
+.section__activity--pilates .section__activity-text--cta:hover a {
+    background-color: var(--hover-bg-color);
+    color: var(--primary-font-color);
+    transition: var(--transition-fast);
+
+}
+
+/* STRETCHING */
 .section__activity--stretching {
     background-color: var(--stretching-bg-color);
     color: var(--primary-font-light-color);
 }
 
-.section__activity--stretching .section__activity-title {
+.section__activity--stretching .section__activity-title,
+.section__activity--stretching .section__activity-text a {
     color: var(--primary-font-color);
 }
 
@@ -446,11 +445,12 @@ body {
     border-color: var(--primary-font-light-color);
 }
 
-.section__activity--stretching .section__activity-text--cta:hover {
-    background-color: var(--hover-bg-color3);
-}
-.section__activity--stretching .section__activity-text a {
-    color: var(--primary-font-color);
+.section__activity--stretching .section__activity-text--cta:hover,
+.section__activity--stretching .section__activity-text--cta:hover a {
+    background-color: var(--hover-bg-color1);
+    color: var(--primary-font-light-color);
+    transition: var(--transition-fast);
+    border-color: var(--stretching-bg-color);
 }
 
 /* PARALLAX BACKGROUND STAFF - SEDES */
@@ -473,7 +473,7 @@ body {
     position: absolute;
     white-space: nowrap;
     font-size: 10rem;
-    opacity: 0.1;
+    opacity: 0.2;
     font-weight: 700;
     letter-spacing: 2px;
     width: 150%;
@@ -874,7 +874,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
-
 }
 
 .section--contacto .section__title {
@@ -889,7 +888,7 @@ body {
 }
 
 .contact-form__container {
-    width: 85%;
+    width: 75%;
     margin: 0 auto 40px;
     padding: 20px;
     background-color: var(--secondary-bg-color);
@@ -917,7 +916,6 @@ body {
 }
 
 .contact-form__input,
-
 .contact-form__textarea {
     width: 90%;
     padding: 12px;
@@ -2003,7 +2001,6 @@ body {
     .contact-form__container {
         width: 50%;
         padding: 30px;
-        margin: 0 auto 40px;
     }
 
     .contact-form__label {
