@@ -511,62 +511,67 @@ body {
    ======================================== */
 
 .section--staff {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.section--staff .section__title {
-    margin-top: 30px;
+    margin: 30px 0;
+    padding: 30px 0;
 }
 
 .staff {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
+    width: 100%;
 }
 
-/* Shared card styles */
-.staff__card,
-.sede-card {
+/* Contenedores de filas */
+.staff__main-row,
+.staff__secondary-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.staff__main-row {
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   STAFF CARDS - BASE STYLES
+   ======================================== */
+
+.staff__card {
     border-radius: 5px;
     box-shadow: var(--box-shadow-dark);
     overflow: hidden;
     background: var(--secondary-bg-color);
     position: relative;
     text-align: center;
-}
-
-.staff__card {
-    width: 250px;
-    height: 350px;
     perspective: 1000px;
     z-index: 1;
+    /* Base size - será sobrescrito por modificadores */
+    width: 250px;
+    height: 350px;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.staff__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Card modifiers */
+.staff__card--main {
+    width: 280px;
+    height: 380px;
 }
 
-.staff__name {
-    width: 100%;
-    height: 30px;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(180deg, rgba(0, 48, 73, 0) 10%, rgba(0, 48, 73, 0.85710780894389) 82%);
-    padding: 15px 10px 15px 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: var(--primary-font-family);
-    color: var(--primary-font-light-color);
+.staff__card--secondary {
+    width: 220px;
+    height: 300px;
+    transform: scale(0.9);
+    box-shadow: var(--box-shadow-light);
 }
+
+/* ========================================
+   CARD FLIP ANIMATION
+   ======================================== */
 
 .staff__card-inner {
     width: 100%;
@@ -587,14 +592,10 @@ body {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 5px;
-}
-
-.staff__card-front {
     background: var(--secondary-bg-color);
 }
 
 .staff__card-back {
-    background: var(--secondary-bg-color);
     transform: rotateY(-180deg);
     display: flex;
     flex-direction: column;
@@ -602,6 +603,35 @@ body {
     padding-top: 20px;
     text-align: left;
 }
+
+/* ========================================
+   CARD CONTENT - FRONT
+   ======================================== */
+
+.staff__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff__name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 48, 73, 0) 10%,
+            rgba(0, 48, 73, 0.85) 82%);
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: var(--primary-font-family);
+    color: var(--primary-font-light-color);
+}
+
+/* ========================================
+   CARD CONTENT - BACK
+   ======================================== */
 
 .staff__header {
     display: flex;
@@ -642,6 +672,16 @@ body {
     color: var(--primary-font-color);
 }
 
+.staff__detail-label--title {
+    font-weight: 800;
+}
+
+.staff__detail a {
+    text-decoration: none;
+    color: var(--primary-font-color);
+    
+}
+
 .staff__tags {
     display: flex;
     gap: 5px;
@@ -649,9 +689,7 @@ body {
     justify-content: center;
 }
 
-/* Shared tag styles */
-.staff__tag,
-.tag {
+.staff__tag {
     padding: 5px 10px;
     font-size: 0.8rem;
     border-radius: 5px;
@@ -660,18 +698,15 @@ body {
     color: var(--primary-font-light-color);
 }
 
-.staff__tag--funcional,
-.tag-funcional {
+.staff__tag--funcional {
     background-color: var(--funcional-bg-color);
 }
 
-.staff__tag--pilates,
-.tag-pilates {
+.staff__tag--pilates {
     background-color: var(--pilates-bg-color);
 }
 
-.staff__tag--stretching,
-.tag-stretching {
+.staff__tag--stretching {
     background-color: var(--stretching-bg-color);
 }
 
@@ -696,6 +731,64 @@ body {
 .staff__social-link:hover {
     color: var(--hover-font-color);
     transform: scale(1.1);
+}
+
+/* ========================================
+   HOVER EFFECTS
+   ======================================== */
+
+.staff__card--main:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.staff__card--secondary:hover {
+    transform: scale(0.92);
+    box-shadow: var(--box-shadow-dark);
+}
+
+/* ========================================
+   SECONDARY CARD OVERRIDES
+   ======================================== */
+
+.staff__card--secondary .staff__header {
+    margin: 10px auto;
+}
+
+.staff__card--secondary .staff__header .staff__image {
+    width: 60px;
+    height: 60px;
+}
+
+.staff__card--secondary .staff__header .staff__fullname {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.staff__card--secondary .staff__details {
+    margin: 15px auto;
+}
+
+.staff__card--secondary .staff__detail {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.staff__card--secondary .staff__tags {
+    margin-top: 8px;
+}
+
+.staff__card--secondary .staff__tag {
+    padding: 3px 8px;
+    font-size: 0.7rem;
+}
+
+.staff__card--secondary .staff__social {
+    margin-top: 8px;
+}
+
+.staff__card--secondary .staff__social-icon {
+    font-size: 1rem;
 }
 
 /* ========================================
@@ -961,6 +1054,7 @@ body {
     color: var(--background-color-hover-whastapp);
     font-weight: 600;
 }
+
 /* ========================================
    BACK TO TOP BUTTON
    ======================================== */
@@ -1426,7 +1520,7 @@ body {
     border-left: 3px solid var(--hover-border-color);
     color: var(--primary-font-color);
     font-weight: 300;
-        }
+}
 
 .faq__icon {
     font-size: 1rem;
@@ -1582,6 +1676,34 @@ body {
     .tag {
         font-size: 1rem;
         padding: 6px 10px;
+    }
+
+    /* Fila principal - Staff destacado en horizontal */
+    .staff__main-row {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    /* Filas secundarias - 2 cards por fila */
+    .staff__secondary-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 900px;
+    }
+    
+    /* Cards secundarias - 2 por fila con flex-basis */
+    .staff__card--secondary {
+        flex: 0 0 calc(25% - 20px);
+        max-width: 240px;
+        /* Mantener el scale para diferenciación visual */
+        transform: scale(0.95);
+    }
+    
+    .staff__card--secondary:hover {
+        transform: scale(0.97);
     }
 }
 
@@ -1868,32 +1990,88 @@ body {
         margin-top: 0;
     }
 
+    /* Contenedor principal de staff */
     .staff {
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        gap: 60px;
     }
-
-    .staff__card {
+    
+    /* Filas principales y secundarias */
+    .staff__main-row {
+        gap: 60px;
+        margin-bottom: 40px;
+    }
+    
+    .staff__secondary-row {
+        gap: 30px;
+        max-width: 1200px;
+    }
+    
+    /* ========================================
+       CARDS PRINCIPALES (Main)
+       ======================================== */
+    
+    .staff__card--main {
         width: 350px;
         height: 490px;
     }
-
-    .staff__header .staff__image {
+    
+    .staff__card--main .staff__header .staff__image {
         width: 120px;
         height: 120px;
     }
-
-    .staff__header .staff__fullname {
+    
+    .staff__card--main .staff__header .staff__fullname {
         font-size: 2rem;
     }
-
-    .staff__details {
+    
+    .staff__card--main .staff__details {
         margin: 40px auto;
     }
-
-    .staff__detail {
+    
+    .staff__card--main .staff__detail {
         font-size: 1.2rem;
+    }
+    
+    /* ========================================
+       CARDS SECUNDARIAS (Secondary) - 4 por fila
+       ======================================== */
+    
+    .staff__card--secondary {
+        flex: 0 0 calc(25% - 25px);
+        width: 250px;
+        height: 340px;
+        max-width: none;
+        transform: scale(1);
+    }
+    
+    .staff__card--secondary:hover {
+        transform: scale(1.02);
+    }
+    
+    .staff__card--secondary .staff__header .staff__image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .staff__card--secondary .staff__header .staff__fullname {
+        font-size: 1.1rem;
+    }
+    
+    .staff__card--secondary .staff__detail {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    .staff__card--secondary .staff__tag {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .staff__card--secondary .staff__social-icon {
+        font-size: 1.1rem;
     }
 
     /* ========================================
@@ -2026,5 +2204,17 @@ body {
 
     .faq__answer-text {
         font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .staff__secondary-row {
+        gap: 40px;
+    }
+
+    .staff__card--secondary {
+        flex: 0 0 calc(25% - 30px);
+        width: 270px;
+        height: 360px;
     }
 }
