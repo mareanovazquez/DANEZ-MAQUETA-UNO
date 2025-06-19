@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
         db.collection("mensajes").add(formData)
             .then(function () {
                 // Mostramos una notificación de éxito al usuario
-                showToast("¡Mensaje enviado correctamente!", "success");
+                showToast("¡Gracias por escribirnos!", "success");
                 // Limpiamos los campos del formulario
                 form.reset();
             })
             .catch(function (error) {
                 // Mostramos una notificación de error al usuario
-                showToast("Error al enviar el mensaje. Por favor, intenta nuevamente.", "error");
+                showToast("Error al enviar el mensaje. Por favor, intenta nuevamente más tarde.", "error");
             });
     });
 });
