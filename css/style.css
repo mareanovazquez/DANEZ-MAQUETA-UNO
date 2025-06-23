@@ -816,6 +816,7 @@ body {
     transition: transform var(--transition-medium);
     box-shadow: var(--box-shadow-dark);
     border: 1px solid var(--border-color);
+    background-color: var(--secondary-bg-color);
 }
 
 .sede-card__image-container {
