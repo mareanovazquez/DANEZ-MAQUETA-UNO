@@ -1704,6 +1704,29 @@ body {
     }
 }
 
+@media (min-width: 480px){
+
+    .staff__secondary-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    }
+
+    .staff__card--secondary {
+    width: 200px;
+    height: 300px;
+    transform: scale(1);
+    box-shadow: var(--box-shadow-light);
+}
+
+
+
+
+}
 @media (min-width: 768px) {
 
     .section__article--nosotros {
