@@ -160,11 +160,11 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg-mobile.png');
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 .main__content {
@@ -175,7 +175,7 @@ body {
 }
 
 .main__logo {
-    max-width: 80%;
+    max-width: 60%;
     height: auto;
     filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.7));
 }
@@ -197,7 +197,7 @@ body {
 
 .main__cta {
     margin-top: -2.5rem;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     color: var(--primary-font-color);
     background: var(--button-bg-color2);
     position: relative;
@@ -234,6 +234,7 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding-bottom: 20px;
 }
 
 .main__cta-text::before {
@@ -1706,6 +1707,16 @@ body {
 
 @media (min-width: 480px){
 
+    .main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
+    background-size: cover;
+    background-position: top;
+}
     .staff__secondary-row {
     display: flex;
     flex-direction: row;
