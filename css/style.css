@@ -183,8 +183,7 @@ body {
 /* Shared button base styles */
 .main__cta,
 .contact-form__button,
-.footer__app-button,
-.sede-card__map-button {
+.footer__app-button {
     display: inline-block;
     padding: 12px 24px;
     font-family: var(--primary-font-family);
@@ -813,8 +812,10 @@ body {
 .sede-card {
     width: 90%;
     max-width: 450px;
-    border-radius: 8px;
+    border-radius: 5px;
     transition: transform var(--transition-medium);
+    box-shadow: var(--box-shadow-dark);
+    border: 1px solid var(--border-color);
 }
 
 .sede-card__image-container {
@@ -829,11 +830,14 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-medium);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-.sede-card:hover .sede-card__image {
+
+.sede-card:hover .sede-card__image:hover {
     transform: scale(1.05);
-}
+    }
 
 .sede-card__overlay {
     position: absolute;
@@ -862,7 +866,7 @@ body {
 }
 
 .sede-card__content {
-    padding: 20px;
+    padding: 10px;
 }
 
 .sede-card__info {
@@ -872,15 +876,15 @@ body {
 .sede-card__address,
 .sede-card__schedule {
     margin: 8px 0;
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     color: var(--secondary-font-color);
 }
 
 .sede-card__address i,
 .sede-card__schedule i {
     color: var(--hover-font-color);
-    margin-right: 10px;
-    width: 16px;
+    margin-right: 5px;
+    width: 14px;
     text-align: center;
 }
 
@@ -892,11 +896,21 @@ body {
 }
 
 .sede-card__map-button {
+    display: inline-block;
+    padding: 10px 10px;
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: var(--transition-fast);
     border-color: var(--primary-font-color);
     color: var(--primary-font-color);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-align: center;
 }
+
 
 .sede-card__map-button:hover {
     background-color: var(--button-bg-color3);
@@ -904,13 +918,29 @@ body {
 }
 
 .sede-card__map-button i {
-    margin-right: 8px;
-}
+    margin-right: 0;
+    }
 
 .tag {
     font-size: 0.75rem;
     padding: 3px 5px;
     border-radius: 4px;
+    font-weight: 600;
+}
+
+.tag-pilates {
+    background-color: var(--pilates-bg-color);
+    color: var(--primary-font-light-color);
+}
+
+.tag-funcional {
+    background-color: var(--funcional-bg-color);
+    color: var(--primary-font-color);
+}
+
+.tag-stretching {
+    background-color: var(--stretching-bg-color);
+    color: var(--primary-font-light-color);
 }
 
 .sede-container__address {
@@ -2122,6 +2152,7 @@ body {
         flex-direction: row;
         justify-content: space-between;
         gap: 40px;
+        flex-wrap: nowrap;
     }
 
     .sede-card {
@@ -2134,6 +2165,10 @@ body {
 
     .sede-card__title {
         font-size: 1.8rem;
+    }
+
+    .sede-card__content {
+        padding: 20px;
     }
 
     .sede-card__address,
