@@ -836,7 +836,7 @@ body {
 }
 
 
-.sede-card:hover .sede-card__image:hover {
+.sede-card:hover .sede-card__image {
     transform: scale(1.05);
     }
 
