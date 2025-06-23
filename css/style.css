@@ -554,13 +554,13 @@ body {
 
 /* Card modifiers */
 .staff__card--main {
-    width: 280px;
-    height: 380px;
+    width: 290px;
+    height: 390px;
 }
 
 .staff__card--secondary {
-    width: 220px;
-    height: 300px;
+    width: 260px;
+    height: 330px;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-light);
 }
