@@ -282,11 +282,11 @@ body {
     height: 100vh;
     margin: 0;
     background:
-    linear-gradient(to top,
-        rgba(0, 48, 73, 1) 0%,
-        rgba(0, 48, 73, 0.5) 50%,
-        rgba(0, 48, 73, 0) 100%),
-    url('../img/nosotros-mobile.jpg');
+        linear-gradient(to top,
+            rgba(0, 48, 73, 1) 0%,
+            rgba(0, 48, 73, 0.5) 50%,
+            rgba(0, 48, 73, 0) 100%),
+        url('../img/nosotros-mobile.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -449,7 +449,7 @@ body {
 .parallax-wrapper {
     position: relative;
     overflow: hidden;
-    padding: 80px 0;
+    padding: 20px 0;
 }
 
 .parallax-background {
@@ -464,8 +464,8 @@ body {
 .parallax-row {
     position: absolute;
     white-space: nowrap;
-    font-size: 10rem;
-    opacity: 0.2;
+    font-size: 25rem;
+    opacity: 0.3;
     font-weight: 700;
     letter-spacing: 2px;
     width: 150%;
@@ -494,7 +494,7 @@ body {
 .parallax-row--funcional2 {
     top: 65%;
     color: var(--funcional-bg-color);
-    left: -100%;
+    left: -300%;
 }
 
 .parallax-row--stretching2 {
@@ -509,6 +509,15 @@ body {
 .section--staff {
     margin: 30px 0;
     padding: 30px 0;
+}
+
+.section-title {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    margin-bottom: 1rem;
+    font-family: var(--title-font-family);
 }
 
 .staff {
@@ -675,7 +684,7 @@ body {
 .staff__detail a {
     text-decoration: none;
     color: var(--primary-font-color);
-    
+
 }
 
 .staff__tags {
@@ -838,7 +847,7 @@ body {
 
 .sede-card:hover .sede-card__image {
     transform: scale(1.05);
-    }
+}
 
 .sede-card__overlay {
     position: absolute;
@@ -920,7 +929,7 @@ body {
 
 .sede-card__map-button i {
     margin-right: 0;
-    }
+}
 
 .tag {
     font-size: 0.75rem;
@@ -1698,38 +1707,39 @@ body {
 @media (min-width: 768px) {
 
     .section__article--nosotros {
-    background:
-        linear-gradient(to right,
-            rgba(0, 48, 73, 0) 0%,
-            rgba(0, 48, 73, 0.5) 50%,
-            rgba(0, 48, 73, 1) 100%),
-        url('../img/nosotros-desktop.png');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: -30px;
-}
+        background:
+            linear-gradient(to right,
+                rgba(0, 48, 73, 0) 0%,
+                rgba(0, 48, 73, 0.5) 50%,
+                rgba(0, 48, 73, 1) 100%),
+            url('../img/nosotros-desktop.png');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: -30px;
+    }
 
-.section__nosotros-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
-}
+    .section__nosotros-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+    }
 
-.section__text--nosotros {
-    text-align: right;
-    width: 50%;
-    margin-right: 20px;
-    letter-spacing: 0.5px;
-    line-height: 1.25;
-    font-size: 1.4rem;
-}
+    .section__text--nosotros {
+        text-align: right;
+        width: 50%;
+        margin-right: 20px;
+        letter-spacing: 0.5px;
+        line-height: 1.25;
+        font-size: 1.4rem;
+    }
+
     .sedes-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -1744,13 +1754,18 @@ body {
         padding: 6px 10px;
     }
 
+    /* Staff section overrides for desktop */
+    .parallax-row {
+    font-size: 10rem;
+    opacity: 0.3;
+   }
     /* Fila principal - Staff destacado en horizontal */
     .staff__main-row {
         flex-direction: row;
         justify-content: center;
         gap: 40px;
     }
-    
+
     /* Filas secundarias - 2 cards por fila */
     .staff__secondary-row {
         flex-direction: row;
@@ -1759,7 +1774,7 @@ body {
         gap: 20px;
         max-width: 900px;
     }
-    
+
     /* Cards secundarias - 2 por fila con flex-basis */
     .staff__card--secondary {
         flex: 0 0 calc(25% - 20px);
@@ -1767,7 +1782,7 @@ body {
         /* Mantener el scale para diferenciación visual */
         transform: scale(0.95);
     }
-    
+
     .staff__card--secondary:hover {
         transform: scale(0.97);
     }
@@ -2056,6 +2071,10 @@ body {
         margin-top: 0;
     }
 
+    .section-title--staff {
+        display: none;
+    }
+
     /* Contenedor principal de staff */
     .staff {
         flex-direction: row;
@@ -2063,48 +2082,48 @@ body {
         flex-wrap: wrap;
         gap: 60px;
     }
-    
+
     /* Filas principales y secundarias */
     .staff__main-row {
         gap: 60px;
         margin-bottom: 40px;
     }
-    
+
     .staff__secondary-row {
         gap: 30px;
         max-width: 1200px;
     }
-    
+
     /* ========================================
        CARDS PRINCIPALES (Main)
        ======================================== */
-    
+
     .staff__card--main {
         width: 350px;
         height: 490px;
     }
-    
+
     .staff__card--main .staff__header .staff__image {
         width: 120px;
         height: 120px;
     }
-    
+
     .staff__card--main .staff__header .staff__fullname {
         font-size: 2rem;
     }
-    
+
     .staff__card--main .staff__details {
         margin: 40px auto;
     }
-    
+
     .staff__card--main .staff__detail {
         font-size: 1.2rem;
     }
-    
+
     /* ========================================
        CARDS SECUNDARIAS (Secondary) - 4 por fila
        ======================================== */
-    
+
     .staff__card--secondary {
         flex: 0 0 calc(25% - 25px);
         width: 250px;
@@ -2112,30 +2131,30 @@ body {
         max-width: none;
         transform: scale(1);
     }
-    
+
     .staff__card--secondary:hover {
         transform: scale(1.02);
     }
-    
+
     .staff__card--secondary .staff__header .staff__image {
         width: 80px;
         height: 80px;
     }
-    
+
     .staff__card--secondary .staff__header .staff__fullname {
         font-size: 1.1rem;
     }
-    
+
     .staff__card--secondary .staff__detail {
         font-size: 1rem;
         margin-bottom: 4px;
     }
-    
+
     .staff__card--secondary .staff__tag {
         padding: 4px 10px;
         font-size: 0.8rem;
     }
-    
+
     .staff__card--secondary .staff__social-icon {
         font-size: 1.1rem;
     }
@@ -2147,6 +2166,10 @@ body {
     .section--sedes {
         width: 80%;
         margin-top: 80px;
+    }
+
+    .section-title--sedes {
+        display: none;
     }
 
     .sedes-container {
