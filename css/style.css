@@ -1705,39 +1705,41 @@ body {
     }
 }
 
-@media (min-width: 480px){
+@media (min-width: 480px) {
 
     .main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
-    background-size: cover;
-    background-position: top;
-}
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
+        background-size: cover;
+        background-position: top;
+    }
+
     .staff__secondary-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap;
     }
 
     .staff__card--secondary {
-    width: 200px;
-    height: 300px;
-    transform: scale(1);
-    box-shadow: var(--box-shadow-light);
-}
+        width: 200px;
+        height: 300px;
+        transform: scale(1);
+        box-shadow: var(--box-shadow-light);
+    }
 
 
 
 
 }
+
 @media (min-width: 768px) {
 
     .section__article--nosotros {
@@ -1790,9 +1792,10 @@ body {
 
     /* Staff section overrides for desktop */
     .parallax-row {
-    font-size: 10rem;
-    opacity: 0.3;
-   }
+        font-size: 10rem;
+        opacity: 0.3;
+    }
+
     /* Fila principal - Staff destacado en horizontal */
     .staff__main-row {
         flex-direction: row;
@@ -1806,15 +1809,26 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        max-width: 900px;
+        margin-bottom: 40px;
     }
 
-    /* Cards secundarias - 2 por fila con flex-basis */
+    /* Primera fila: max-width para 4 cards */
+    .staff__secondary-row:first-of-type {
+        max-width: 1000px;
+    }
+
+    /* Segunda fila: max-width ampliado para 5 cards */
+    .staff__secondary-row:last-of-type {
+        max-width: 1250px;
+        /* Más ancho para que quepan 5 */
+    }
+
+    /* TODAS las cards secundarias del mismo tamaño */
     .staff__card--secondary {
-        flex: 0 0 calc(25% - 20px);
-        max-width: 240px;
-        /* Mantener el scale para diferenciación visual */
-        transform: scale(0.95);
+        width: 220px;
+        height: 330px;
+        flex: 0 0 220px;
+        /* Tamaño fijo, no porcentual */
     }
 
     .staff__card--secondary:hover {
@@ -2123,9 +2137,22 @@ body {
         margin-bottom: 40px;
     }
 
-    .staff__secondary-row {
-        gap: 30px;
-        max-width: 1200px;
+    .staff__secondary-row:first-of-type {
+        max-width: 1100px;
+        gap: 25px;
+    }
+
+    .staff__secondary-row:last-of-type {
+        max-width: 1375px;
+        /* Ampliado para 5 cards */
+        gap: 25px;
+    }
+
+    .staff__card--secondary {
+        width: 250px;
+        height: 340px;
+        flex: 0 0 250px;
+        /* Tamaño fijo más grande */
     }
 
     /* ========================================
@@ -2336,13 +2363,27 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .staff__secondary-row {
-        gap: 40px;
+
+    .staff__secondary-row:first-of-type {
+        max-width: 1200px;
+        gap: 30px;
+    }
+
+    .staff__secondary-row:last-of-type {
+        max-width: 1500px;
+        /* Ampliado para 5 cards */
+        gap: 30px;
     }
 
     .staff__card--secondary {
-        flex: 0 0 calc(25% - 30px);
         width: 270px;
         height: 360px;
+        flex: 0 0 270px;
+        /* Tamaño fijo final */
+    }
+
+        .section--sedes {
+        width: 70%;
+        margin-top: 80px;
     }
 }
