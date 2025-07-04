@@ -162,9 +162,9 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia.png');
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 .main__content {
@@ -1718,9 +1718,9 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-bg.jpg');
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia.png');
         background-size: cover;
-        background-position: top;
+        background-position: center;
     }
 
     .staff__secondary-row {
