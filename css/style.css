@@ -1718,9 +1718,10 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia.png');
-        background-size: cover;
-        background-position: center;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia-editado.png');
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: 70% center;
     }
 
     .staff__secondary-row {
