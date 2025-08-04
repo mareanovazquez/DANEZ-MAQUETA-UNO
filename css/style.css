@@ -287,9 +287,9 @@ body {
             rgba(0, 48, 73, 1) 0%,
             rgba(0, 48, 73, 0.5) 50%,
             rgba(0, 48, 73, 0) 100%),
-        url('../img/nosotros-mobile.png');
+        url('../img/nosotros.png');
     background-size: cover;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     color: var(--primary-font-light-color);
     display: flex;
@@ -1754,7 +1754,7 @@ body {
                 rgba(0, 48, 73, 0) 0%,
                 rgba(0, 48, 73, 0.5) 50%,
                 rgba(0, 48, 73, 1) 100%),
-            url('../img/nosotros-desktop.png');
+            url('../img/nosotros.png');
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
