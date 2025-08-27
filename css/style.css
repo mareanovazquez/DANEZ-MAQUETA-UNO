@@ -162,7 +162,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia.png');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia.webp');
     background-size: cover;
     background-position: center;
 }
@@ -287,9 +287,9 @@ body {
             rgba(0, 48, 73, 1) 0%,
             rgba(0, 48, 73, 0.5) 50%,
             rgba(0, 48, 73, 0) 100%),
-        url('../img/nosotros.png');
+        url('../img/nosotros-mobile.png');
     background-size: cover;
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     color: var(--primary-font-light-color);
     display: flex;
@@ -1718,7 +1718,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia-editado.png');
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia-editado.webp');
         background-size:cover;
         background-repeat: no-repeat;
         background-position: 70% center;
