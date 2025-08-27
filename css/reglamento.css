@@ -93,6 +93,16 @@
             font-weight: 500;
         }
 
+        .reglamento__important ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.reglamento__important li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
         .reglamento__footer {
             text-align: center;
             font-size: 1.1rem;
