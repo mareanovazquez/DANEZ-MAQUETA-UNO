@@ -7,13 +7,14 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: var(--font-size-base);
 }
 
 body {
     background-color: var(--primary-bg-color);
     color: var(--primary-font-color);
     font-family: var(--primary-font-family);
-    font-size: 16px;
+
 }
 
 /* ========================================
@@ -314,7 +315,8 @@ body {
     letter-spacing: 0.5px;
     line-height: 1.25;
     font-size: 1.1rem;
-font-weight: 600;}
+    font-weight: 600;
+}
 
 .section--nosotros {
     margin-top: 30px;
@@ -1298,10 +1300,11 @@ font-weight: 600;}
     text-decoration: none;
 }
 
-.footer__faq-button:hover  {
+.footer__faq-button:hover {
     color: var(--hover-font-color2);
     transition: 0.3s ease;
 }
+
 .footer__app {
     margin-top: 20px;
 }
@@ -1719,7 +1722,7 @@ font-weight: 600;}
         justify-content: center;
         align-items: center;
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia-editado.webp');
-        background-size:cover;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: 70% center;
     }
