@@ -288,14 +288,14 @@ body {
             rgba(0, 48, 73, 1) 0%,
             rgba(0, 48, 73, 0.5) 50%,
             rgba(0, 48, 73, 0) 100%),
-        url('../img/nosotros-mobile.png');
+        url('../img/nosotros-bg-mobile.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: var(--primary-font-light-color);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     margin-top: -30px;
 }
@@ -305,8 +305,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
-}
+    }
 
 .section__text--nosotros {
     text-align: center;
@@ -314,7 +313,7 @@ body {
     margin: 0 auto;
     letter-spacing: 0.5px;
     line-height: 1.25;
-    font-size: 1.1rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -1757,9 +1756,9 @@ body {
                 rgba(0, 48, 73, 0) 0%,
                 rgba(0, 48, 73, 0.5) 50%,
                 rgba(0, 48, 73, 1) 100%),
-            url('../img/nosotros.png');
+            url('../img/nosotros-bg-mobile.png');
         background-size: cover;
-        background-position: top;
+        background-position: center;
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
@@ -1773,16 +1772,13 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 100px;
-    }
+            }
 
     .section__text--nosotros {
-        text-align: right;
-        width: 50%;
-        margin-right: 20px;
+        text-align: left;
         letter-spacing: 0.5px;
         line-height: 1.25;
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .sedes-container {
@@ -2021,6 +2017,22 @@ body {
        NOSOTROS SECTION - DESKTOP OVERRIDES
        ======================================== */
 
+       .section__article--nosotros {
+        background:
+            linear-gradient(to right,
+                rgba(0, 48, 73, 0) 0%,
+                rgba(0, 48, 73, 0.5) 50%,
+                rgba(0, 48, 73, 1) 100%),
+            url('../img/nosotros-bg-desktop.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: -30px;
+    }
     .section__nosotros-container {
         align-items: flex-end;
     }
@@ -2029,8 +2041,9 @@ body {
         padding-right: 40px;
         width: 50%;
         margin: 0;
-        font-size: 2rem;
+        font-size: 2.3rem;
         text-align: right;
+        font-weight: 500;
     }
 
     /* ========================================
