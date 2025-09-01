@@ -619,7 +619,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+    }
 
 .staff__name {
     position: absolute;
@@ -643,11 +643,17 @@ body {
 .staff__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 90%;
     margin: 0 auto;
 }
 
+.staff__fullname--container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
 .staff__header .staff__image {
     width: 80px;
     height: 80px;
@@ -658,7 +664,7 @@ body {
 .staff__header .staff__fullname {
     margin-top: 5px;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 800;
 }
 
@@ -668,10 +674,10 @@ body {
 }
 
 .staff__detail {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: var(--secondary-font-family);
     color: var(--secondary-font-color);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .staff__detail-label {
@@ -692,8 +698,8 @@ body {
 .staff__tags {
     display: flex;
     gap: 5px;
-    margin-top: 10px;
-    justify-content: center;
+    margin-top: 5px;
+    justify-content: flex-start;
 }
 
 .staff__tag {
@@ -764,6 +770,8 @@ body {
 
 .staff__card--secondary .staff__header {
     margin: 10px auto;
+    gap: 5px;
+
 }
 
 .staff__card--secondary .staff__header .staff__image {
@@ -772,7 +780,7 @@ body {
 }
 
 .staff__card--secondary .staff__header .staff__fullname {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 5px;
 }
 
@@ -781,8 +789,8 @@ body {
 }
 
 .staff__card--secondary .staff__detail {
-    font-size: 0.9rem;
-    margin-bottom: 3px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .staff__card--secondary .staff__tags {
@@ -790,8 +798,8 @@ body {
 }
 
 .staff__card--secondary .staff__tag {
-    padding: 3px 8px;
-    font-size: 0.7rem;
+    padding: 4px 8px;
+    font-size: 0.9rem;
 }
 
 .staff__card--secondary .staff__social {
