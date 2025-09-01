@@ -163,7 +163,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia.webp');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-mobile.webp');
     background-size: cover;
     background-position: center;
 }
@@ -1720,7 +1720,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-ia-editado.webp');
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-desktop.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 70% center;
