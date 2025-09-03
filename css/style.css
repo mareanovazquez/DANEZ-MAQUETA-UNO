@@ -303,7 +303,7 @@ body {
     width: 90%;
     margin-left:auto;
     margin-right: auto;
-    background-color: var(--nosotros-bg-color);
+    background-color: rgba(0, 48, 73, 0.7);
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 5px;
@@ -311,7 +311,7 @@ body {
 
 .section__text--nosotros {
     text-align: center;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     letter-spacing: 0.5px;
     line-height: 1.25;
@@ -364,8 +364,10 @@ body {
 .section__activity-text {
     font-size: 1.2rem;
     margin: 10px 0;
-    font-family: var(--secondary-font-family);
+    font-family: var(--text-font-family);
     text-align: center;
+    font-weight: 500;
+    
 }
 
 .section__activity-text--cta {
@@ -2031,7 +2033,7 @@ body {
 
     .section__nosotros-container {
         align-items: flex-start;
-        background-color: var(--nosotros-bg-color);
+        background-color: rgba(0, 48, 73, 0.7);
         width: 40%;
         padding-bottom: 30px;
         padding-top: 30px;
@@ -2049,7 +2051,6 @@ body {
         text-align: left;
         font-weight: 400;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        background-color: var(--nosotros-bg-color);
         width: 80%;
         border-left: 3px solid var(--funcional-bg-color);
 
