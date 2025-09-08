@@ -1467,6 +1467,7 @@ body {
     transform: scale(1.1);
 }
 
+
 /* ========================================
    FAQ SECTION
    ======================================== */
@@ -1707,6 +1708,23 @@ body {
     color: var(--stretching-bg-color);
     right: -10%;
 }
+ /* ========================================
+   ANIMACIONES BASE REUTILIZABLES
+   ======================================== */
+
+/* Clase genérica para elementos que se van a animar */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 /* ========================================
    ANIMATIONS

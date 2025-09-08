@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Seleccionar todos los elementos que queremos animar
-    const elementosActividad = document.querySelectorAll('.section__activity-content');
+    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+    
+    // Si no hay elementos, salir silenciosamente
+    if (elementsToAnimate.length === 0) {
+        return;
+    }
     
     // Crear un observador de intersección
-    const observador = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
         // Para cada elemento observado
         entries.forEach(entry => {
             // Si el elemento es visible en el viewport
@@ -12,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.classList.add('visible');
                 
                 // Dejar de observar el elemento una vez que se ha animado
-                observador.unobserve(entry.target);
+                observer.unobserve(entry.target);
             }
         });
     }, {
@@ -22,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Observar cada elemento
-    elementosActividad.forEach(elemento => {
-        observador.observe(elemento);
+    elementsToAnimate.forEach(elemento => {
+        observer.observe(elemento);
     });
     
     // Función para comprobar si un elemento está en el viewport (fallback)
@@ -38,23 +43,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Verificar elementos que ya están visibles al cargar la página
-    elementosActividad.forEach(elemento => {
+    elementsToAnimate.forEach(elemento => {
         if (estaEnViewport(elemento)) {
             elemento.classList.add('visible');
-            observador.unobserve(elemento);
+            observer.unobserve(elemento);
         }
     });
     
     // Para navegadores que no soportan IntersectionObserver
     if (!('IntersectionObserver' in window)) {
         // Desconectar el observador si existe
-        if (observador) {
-            observador.disconnect();
+        if (observer) {
+            observer.disconnect();
         }
         
         // Función para verificar elementos en el viewport durante el scroll
         function verificarElementosVisibles() {
-            elementosActividad.forEach(elemento => {
+            elementsToAnimate.forEach(elemento => {
                 if (estaEnViewport(elemento) && !elemento.classList.contains('visible')) {
                     elemento.classList.add('visible');
                 }
