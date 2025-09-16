@@ -158,84 +158,84 @@ body {
    ======================================== */
 
 /* Estilos base para el main con video en mobile */
-        .main {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        /* Video de fondo para mobile */
-        .main__video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
+/* Video de fondo para mobile */
+.main__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
 
-        /* Overlay oscuro sobre el video */
-        .main__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%);
-            z-index: -1;
-        }
+/* Overlay oscuro sobre el video */
+.main__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%);
+    z-index: -1;
+}
 
-        /* Contenido del main */
-        .main__content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            position: relative;
-            z-index: 3;
-            padding-bottom: 60px;
-        }
+/* Contenido del main */
+.main__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    padding-bottom: 60px;
+}
 
-        .main__logo {
-            max-width: 60%;
-            height: auto;
-            filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.7));
-        }
+.main__logo {
+    max-width: 60%;
+    height: auto;
+    filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.7));
+}
 
-        .main__cta {
-            display: inline-block;
-            padding: 12px 24px;
-            font-family: var(--primary-font-family);
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 5px;
-            border: 1px solid;
-            cursor: pointer;
-            transition: var(--transition-fast);
-            margin-top: -2.5rem;
-            font-size: 1rem;
-            color: var(--primary-font-color);
-            background: var(--button-bg-color2);
-            position: relative;
-            z-index: 3;
-            overflow: hidden;
-            border-color: var(--button-bg-color);
-        }
+.main__cta {
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    margin-top: -2.5rem;
+    font-size: 1rem;
+    color: var(--primary-font-color);
+    background: var(--button-bg-color2);
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    border-color: var(--button-bg-color);
+}
 
-        .main__cta-text {
-            margin-top: 0.5rem;
-            font-size: 1rem;
-            color: transparent;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 20px;
-        }
+.main__cta-text {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: transparent;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
 
 .main__cta::before {
     content: '';
@@ -322,7 +322,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     background-color: rgba(0, 48, 73, 0.7);
     padding-top: 20px;
@@ -388,7 +388,7 @@ body {
     font-family: var(--text-font-family);
     text-align: center;
     font-weight: 500;
-    
+
 }
 
 .section__activity-text--cta {
@@ -1089,6 +1089,10 @@ body {
     color: var(--primary-font-color);
     border-color: var(--button-bg-color2);
     align-self: flex-start;
+    border-radius: 5px;
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    padding: 6px 12px;
 }
 
 .contact-form__button:hover {
@@ -1344,18 +1348,25 @@ body {
 
 .footer__app-title {
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .footer__app-button {
     background-color: var(--hover-font-color);
-    color: var(--primary-font-light-color);
+    color: var(--primary-font-color);
     border-color: var(--hover-font-color);
+    padding: 4px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
 
 .footer__app-button:hover {
-    background-color: var(--button-bg-color2);
-    color: var(--primary-font-color);
+    background-color: var(--pilates-bg-color);
+    border-color: var(--button-bg-color);
+    border-width: 1px;
+    border-style: solid;
+    color: var(--primary-font-ligth-color);
     box-shadow: var(--box-shadow-light);
 }
 
@@ -1708,7 +1719,8 @@ body {
     color: var(--stretching-bg-color);
     right: -10%;
 }
- /* ========================================
+
+/* ========================================
    ANIMACIONES BASE REUTILIZABLES
    ======================================== */
 
@@ -1803,7 +1815,7 @@ body {
 @media (min-width: 768px) {
 
     .section__article--nosotros {
-        background-image:url('../img/nosotros-bg-mobile.webp');
+        background-image: url('../img/nosotros-bg-mobile.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1814,7 +1826,7 @@ body {
         margin-top: -30px;
     }
 
-    
+
     .section__text--nosotros {
         text-align: center;
         letter-spacing: 0.5px;
@@ -2032,41 +2044,41 @@ body {
        MAIN SECTION - DESKTOP OVERRIDES
        ======================================== */
 
-     .main__video {
-                display: none;
-            }
-            
-            .main__overlay {
-                display: none;
-            }
-            
-            .main {
-                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-desktop.webp');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: 70% center;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                padding-left: 30px;
-                background-color: #112626;
-            }
+    .main__video {
+        display: none;
+    }
 
-            .main__content {
-                align-items: flex-start;
-                padding-left: 30px;
-                padding-bottom: 0;
-            }
+    .main__overlay {
+        display: none;
+    }
 
-            .main__logo {
-                max-width: 90%;
-                margin-left: -20px;
-            }
+    .main {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-desktop.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 70% center;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 30px;
+        background-color: #112626;
+    }
 
-            .main__cta {
-                margin-top: -4rem;
-            }
-        
+    .main__content {
+        align-items: flex-start;
+        padding-left: 30px;
+        padding-bottom: 0;
+    }
+
+    .main__logo {
+        max-width: 90%;
+        margin-left: -20px;
+    }
+
+    .main__cta {
+        margin-top: -4rem;
+    }
+
 
     /* ========================================
        NOSOTROS SECTION - DESKTOP OVERRIDES
@@ -2377,6 +2389,7 @@ body {
     .contact-form__button {
         font-size: 1.1rem;
         padding: 14px 28px;
+        ;
     }
 
     /* ========================================
