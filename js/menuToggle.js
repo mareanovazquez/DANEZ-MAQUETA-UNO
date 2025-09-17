@@ -38,3 +38,11 @@ window.addEventListener('keydown', (event) => {
         }
     }
 });
+
+//Cierra el menú al hacer clic afuera del menú
+document.addEventListener('click', (event) => {
+    if (!mobileMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+        mobileMenu.classList.remove("nav-mobile__menu--active");
+        toggleButton.classList.remove("on");
+    }
+});
