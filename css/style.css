@@ -613,7 +613,15 @@ body {
     transition: transform var(--transition-medium);
 }
 
-.staff__card:hover .staff__card-inner {
+/* En desktop, usamos hover para el flip */
+@media (hover: hover) and (pointer: fine) {
+    .staff__card:hover .staff__card-inner {
+        transform: rotateY(-180deg);
+    }
+}
+
+/* En dispositivos táctiles, usamos una clase para controlar el flip */
+.staff__card-flipped .staff__card-inner {
     transform: rotateY(-180deg);
 }
 
