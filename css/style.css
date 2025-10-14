@@ -157,7 +157,11 @@ body {
    MAIN SECTION
    ======================================== */
 
-/* Estilos base para el main con video en mobile */
+/* ========================================
+   MAIN SECTION
+   ======================================== */
+
+/* Estilos base para el main con video */
 .main {
     height: 100vh;
     display: flex;
@@ -168,7 +172,7 @@ body {
     overflow: hidden;
 }
 
-/* Video de fondo para mobile */
+/* Videos de fondo - estilos compartidos */
 .main__video {
     position: absolute;
     top: 0;
@@ -177,6 +181,15 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -2;
+}
+
+/* En mobile: mostrar solo video mobile */
+.main__video--mobile {
+    display: block;
+}
+
+.main__video--desktop {
+    display: none;
 }
 
 /* Overlay oscuro sobre el video */
@@ -257,7 +270,6 @@ body {
     border-color: var(--primary-font-color);
     color: var(--primary-font-light-color);
 }
-
 
 .main__cta-text::before {
     content: 'Clase de prueba gratis';
@@ -1786,7 +1798,7 @@ body {
 
 @media (min-width: 480px) {
 
-    .main {
+  /*   .main {
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -1796,7 +1808,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 70% center;
-    }
+    } */
 
     .staff__secondary-row {
         display: flex;
@@ -2048,28 +2060,30 @@ body {
         margin-top: 2px;
     }
 
-    /* ========================================
+     /* ========================================
        MAIN SECTION - DESKTOP OVERRIDES
        ======================================== */
 
-    .main__video {
+    /* En desktop: ocultar video mobile y mostrar video desktop */
+    .main__video--mobile {
         display: none;
     }
 
+    .main__video--desktop {
+        display: block;
+    }
+
+    /* Mantener el overlay en desktop */
     .main__overlay {
-        display: none;
+        display: block;
     }
 
     .main {
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%), url('../img/main-desktop.webp');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 70% center;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         padding-left: 30px;
-        background-color: #112626;
+        /* Removemos el background-image para que se vea el video */
     }
 
     .main__content {
@@ -2079,7 +2093,7 @@ body {
     }
 
     .main__logo {
-        max-width: 90%;
+        max-width: 70%;
         margin-left: -20px;
     }
 
