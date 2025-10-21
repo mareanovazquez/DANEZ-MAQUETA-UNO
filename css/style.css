@@ -1,5 +1,5 @@
-@import url('./reset.css');
-@import url('./variables.css');
+@import url("./reset.css");
+@import url("./variables.css");
 
 /* ========================================
    ESTILOS BASE (MOBILE FIRST)
@@ -14,7 +14,6 @@ body {
     background-color: var(--primary-bg-color);
     color: var(--primary-font-color);
     font-family: var(--primary-font-family);
-
 }
 
 /* ========================================
@@ -102,7 +101,9 @@ body {
     top: 60px;
     display: block;
     opacity: 0;
-    transition: left var(--transition-medium), opacity var(--transition-medium);
+    transition:
+        left var(--transition-medium),
+        opacity var(--transition-medium);
 }
 
 .nav-mobile__menu.nav-mobile__menu--active {
@@ -199,7 +200,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 40%, transparent 70%);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.5) 40%,
+        transparent 70%
+    );
     z-index: -1;
 }
 
@@ -251,16 +257,18 @@ body {
 }
 
 .main__cta::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.3) 50%,
-            rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
     transform: skewX(-25deg);
     animation: shine 5s infinite;
 }
@@ -272,7 +280,7 @@ body {
 }
 
 .main__cta-text::before {
-    content: 'Clase de prueba gratis';
+    content: "Clase de prueba gratis";
     position: absolute;
     top: 0;
     left: 0;
@@ -316,7 +324,7 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-image: url('../img/nosotros-bg-mobile.webp');
+    background-image: url("../img/nosotros-bg-mobile.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -400,7 +408,6 @@ body {
     font-family: var(--text-font-family);
     text-align: center;
     font-weight: 500;
-
 }
 
 .section__activity-text--cta {
@@ -550,7 +557,6 @@ body {
     padding: 30px 0;
 }
 
-
 .staff {
     display: flex;
     flex-direction: column;
@@ -589,7 +595,9 @@ body {
     /* Base size - será sobrescrito por modificadores */
     width: 250px;
     height: 350px;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
 }
 
 /* Card modifiers */
@@ -663,9 +671,11 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(180deg,
-            rgba(0, 48, 73, 0) 10%,
-            rgba(0, 48, 73, 0.85) 82%);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 48, 73, 0) 10%,
+        rgba(0, 48, 73, 0.85) 82%
+    );
     padding: 15px 10px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -730,7 +740,6 @@ body {
 .staff__detail a {
     text-decoration: none;
     color: var(--primary-font-color);
-
 }
 
 .staff__tags {
@@ -809,7 +818,6 @@ body {
 .staff__card--secondary .staff__header {
     margin: 10px auto;
     gap: 5px;
-
 }
 
 .staff__card--secondary .staff__header .staff__image {
@@ -892,7 +900,6 @@ body {
     border-top-right-radius: 5px;
 }
 
-
 .sede-card:hover .sede-card__image {
     transform: scale(1.05);
 }
@@ -934,7 +941,7 @@ body {
 .sede-card__address,
 .sede-card__schedule {
     margin: 8px 0;
-    font-size: 0.90rem;
+    font-size: 0.9rem;
     color: var(--secondary-font-color);
 }
 
@@ -968,7 +975,6 @@ body {
     font-size: 0.75rem;
     text-align: center;
 }
-
 
 .sede-card__map-button:hover {
     background-color: var(--button-bg-color3);
@@ -1016,7 +1022,7 @@ body {
 .section--contacto {
     margin-top: 30px;
     padding: 30px 0;
-    background-image: url('../img/bg-contacto.webp');
+    background-image: url("../img/bg-contacto.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -1430,7 +1436,9 @@ body {
     z-index: 10000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--transition-medium), visibility var(--transition-medium);
+    transition:
+        opacity var(--transition-medium),
+        visibility var(--transition-medium);
 }
 
 .modal-mapa--active {
@@ -1489,7 +1497,6 @@ body {
     background-color: var(--primary-font-color);
     transform: scale(1.1);
 }
-
 
 /* ========================================
    FAQ SECTION
@@ -1656,7 +1663,9 @@ body {
     padding: 20px 0;
     transform: translateY(-10px);
     opacity: 0;
-    transition: opacity var(--transition-medium), transform var(--transition-medium);
+    transition:
+        opacity var(--transition-medium),
+        transform var(--transition-medium);
 }
 
 .faq__answer.faq__answer--active {
@@ -1740,15 +1749,15 @@ body {
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
 }
 
 .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
-
 
 /* ========================================
    ANIMATIONS
@@ -1789,8 +1798,7 @@ body {
 }
 
 @media (min-width: 480px) {
-
-  /*   .main {
+    /*   .main {
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -1818,16 +1826,11 @@ body {
         transform: scale(1);
         box-shadow: var(--box-shadow-light);
     }
-
-
-
-
 }
 
 @media (min-width: 768px) {
-
     .section__article--nosotros {
-        background-image: url('../img/nosotros-bg-mobile.webp');
+        background-image: url("../img/nosotros-bg-mobile.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1837,7 +1840,6 @@ body {
         align-items: flex-end;
         margin-top: -30px;
     }
-
 
     .section__text--nosotros {
         text-align: center;
@@ -1907,7 +1909,6 @@ body {
 }
 
 @media (min-width: 992px) {
-
     /* ========================================
        NAVIGATION - DESKTOP OVERRIDES
        ======================================== */
@@ -1970,7 +1971,9 @@ body {
         margin-right: auto;
         border-radius: 5px;
         background-color: var(--secondary-bg-color);
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px 0px, rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
+        box-shadow:
+            rgba(0, 0, 0, 0.19) 0px 10px 20px 0px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px 0px;
         animation: slideDown 1.2s ease;
         padding-left: 40px;
     }
@@ -2052,7 +2055,7 @@ body {
         margin-top: 2px;
     }
 
-     /* ========================================
+    /* ========================================
        MAIN SECTION - DESKTOP OVERRIDES
        ======================================== */
 
@@ -2093,13 +2096,12 @@ body {
         margin-top: -4rem;
     }
 
-
     /* ========================================
        NOSOTROS SECTION - DESKTOP OVERRIDES
        ======================================== */
 
     .section__article--nosotros {
-        background-image: url('../img/nosotros-bg-desktop.webp');
+        background-image: url("../img/nosotros-bg-desktop.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -2132,7 +2134,6 @@ body {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         width: 80%;
         border-left: 3px solid var(--funcional-bg-color);
-
     }
 
     /* ========================================
@@ -2230,7 +2231,7 @@ body {
         margin-top: 0;
     }
 
-    .section-title--staff {
+    .section__title--staff {
         display: none;
     }
 
@@ -2340,7 +2341,7 @@ body {
         margin-top: 80px;
     }
 
-    .section-title--sedes {
+    .section__title--sedes {
         display: none;
     }
 
@@ -2403,7 +2404,6 @@ body {
     .contact-form__button {
         font-size: 1.1rem;
         padding: 14px 28px;
-        ;
     }
 
     /* ========================================
@@ -2475,7 +2475,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-
     .staff__secondary-row:first-of-type {
         max-width: 1200px;
         gap: 30px;
