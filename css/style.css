@@ -466,7 +466,7 @@ body {
 }
 
 .section__activity--stretching .section__activity-text {
-    color: var(--primary-font-ligth-color);
+    color: var(--primary-font-light-color);
     text-decoration: none;
 }
 
@@ -550,14 +550,6 @@ body {
     padding: 30px 0;
 }
 
-.section-title {
-    font-size: 4rem;
-    text-align: center;
-    font-weight: 800;
-    color: var(--primary-font-color);
-    margin-bottom: 1rem;
-    font-family: var(--title-font-family);
-}
 
 .staff {
     display: flex;
@@ -1386,7 +1378,7 @@ body {
     border-color: var(--button-bg-color);
     border-width: 1px;
     border-style: solid;
-    color: var(--primary-font-ligth-color);
+    color: var(--primary-font-light-color);
     box-shadow: var(--box-shadow-light);
 }
 
