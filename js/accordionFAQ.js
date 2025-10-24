@@ -14,28 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Toggle clase activa en la respuesta
             answer.classList.toggle('faq__answer--active');
             
-            // Cerrar otras respuestas abiertas (comportamiento de acordeón)
-            buttons.forEach(otherButton => {
-                if (otherButton !== this) {
-                    otherButton.classList.remove('faq__question--active');
-                    otherButton.nextElementSibling.classList.remove('faq__answer--active');
-                }
-            });
         });
     });
 
-    
-// Añadir al final del evento DOMContentLoaded existente
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        // Cerrar todos los acordeones abiertos
-        document.querySelectorAll('.faq__question--active').forEach(activeButton => {
-            // Simular un clic en el botón activo para cerrarlo
-            activeButton.click();
-            // O alternativamente, remover directamente las clases:
-            // activeButton.classList.remove('faq__question--active');
-            // activeButton.nextElementSibling.classList.remove('faq__answer--active');
-        });
-    }
-});
-})
+    })

@@ -1105,18 +1105,19 @@ body {
 .contact-form__button {
     background-color: var(--button-bg-color2);
     color: var(--primary-font-color);
-    border-color: var(--button-bg-color2);
+    border: none;
     align-self: flex-start;
     border-radius: 5px;
     font-family: var(--primary-font-family);
     font-weight: 600;
     padding: 6px 12px;
-}
+   }
 
 .contact-form__button:hover {
     background-color: var(--primary-font-color);
     border-color: var(--primary-font-color);
     color: var(--primary-font-light-color);
+        transition: 0.3s;
 }
 
 /* ========================================
