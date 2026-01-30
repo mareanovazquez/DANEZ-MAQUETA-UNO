@@ -17,7 +17,7 @@ body {
 }
 
 /* ========================================
-   NAVEGACIÓN
+   NAVEGACIÃ“N
    ======================================== */
 
 /* Desktop navigation - hidden by default */
@@ -592,7 +592,7 @@ body {
     text-align: center;
     perspective: 1000px;
     z-index: 1;
-    /* Base size - será sobrescrito por modificadores */
+    /* Base size - serÃ¡ sobrescrito por modificadores */
     width: 250px;
     height: 350px;
     transition:
@@ -632,7 +632,7 @@ body {
     }
 }
 
-/* En dispositivos táctiles, usamos una clase para controlar el flip */
+/* En dispositivos tÃ¡ctiles, usamos una clase para controlar el flip */
 .staff__card-flipped .staff__card-inner {
     transform: rotateY(-180deg);
 }
@@ -1746,7 +1746,7 @@ body {
    ANIMACIONES BASE REUTILIZABLES
    ======================================== */
 
-/* Clase genérica para elementos que se van a animar */
+/* Clase genÃ©rica para elementos que se van a animar */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
@@ -1797,6 +1797,72 @@ body {
         width: 100%;
     }
 }
+
+/* ========================================
+   VIDEO LOADING OVERLAY
+   ======================================== */
+
+.video-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.video-loading--hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.video-loading__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.video-loading__logo {
+    max-width: 200px;
+    width: 60%;
+    height: auto;
+    filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.7));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.video-loading__spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(235, 131, 23, 0.2);
+    border-top-color: var(--button-bg-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 @media (min-width: 480px) {
     /*   .main {
@@ -1893,15 +1959,15 @@ body {
     /* Segunda fila: max-width ampliado para 5 cards */
     .staff__secondary-row:last-of-type {
         max-width: 1250px;
-        /* Más ancho para que quepan 5 */
+        /* MÃ¡s ancho para que quepan 5 */
     }
 
-    /* TODAS las cards secundarias del mismo tamaño */
+    /* TODAS las cards secundarias del mismo tamaÃ±o */
     .staff__card--secondary {
         width: 220px;
         height: 330px;
         flex: 0 0 220px;
-        /* Tamaño fijo, no porcentual */
+        /* TamaÃ±o fijo, no porcentual */
     }
 
     .staff__card--secondary:hover {
@@ -2097,6 +2163,19 @@ body {
         margin-top: -4rem;
     }
 
+    /* Video loading - Desktop overrides */
+    .video-loading__logo {
+        max-width: 300px;
+        width: 80%;
+    }
+
+    .video-loading__spinner {
+        width: 60px;
+        height: 60px;
+        border-width: 5px;
+    }
+
+
     /* ========================================
        NOSOTROS SECTION - DESKTOP OVERRIDES
        ======================================== */
@@ -2265,7 +2344,7 @@ body {
         width: 250px;
         height: 340px;
         flex: 0 0 250px;
-        /* Tamaño fijo más grande */
+        /* TamaÃ±o fijo mÃ¡s grande */
     }
 
     /* ========================================
@@ -2491,7 +2570,7 @@ body {
         width: 270px;
         height: 360px;
         flex: 0 0 270px;
-        /* Tamaño fijo final */
+        /* TamaÃ±o fijo final */
     }
 
     .section--sedes {
