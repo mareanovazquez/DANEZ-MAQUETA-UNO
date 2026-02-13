@@ -741,19 +741,21 @@ body {
 }
 
 .staff__detail-label {
-    color: var(--primary-font-color);
+    color: var(--secondary-font-color);
     text-transform: uppercase;
     margin-bottom: 5px;
     font-size: 0.9rem;
 }
 
 .staff__detail-text{
+    color: var(--primary-font-color);
     font-weight: 700;
     font-size: 1.2rem;
     margin-left: 25px;
 }
 
 .staff__detail-label--title {
+    
     font-weight: 800;
     margin-left: 20px;
 }
