@@ -608,7 +608,7 @@ body {
 
 .staff__card--secondary {
     width: 260px;
-    height: 330px;
+    height: 390px;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-light);
 }
@@ -649,14 +649,14 @@ body {
 }
 
 .staff__card-back {
-    transform: rotateY(-180deg); 
+    transform: rotateY(-180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
     text-align: left;
     border-top: 10px solid;
-    border-image: linear-gradient(90deg, #10375c 10%, #81C784 90%) 1;
+    border-image: linear-gradient(90deg,rgba(16, 55, 92, 1) 0%, rgba(129, 199, 132, 1) 50%, rgba(255, 210, 132, 1) 100%)1;
 }
 
 /* ========================================
@@ -850,7 +850,7 @@ body {
    ======================================== */
 
 .staff__card--secondary .staff__header {
-    margin: 10px auto;
+    margin: -5px auto 10px auto;
     gap: 5px;
 }
 
@@ -1922,8 +1922,8 @@ body {
     }
 
     .staff__card--secondary {
-        width: 200px;
-        height: 300px;
+                max-width: 250px;
+        height: 410px;
         transform: scale(1);
         box-shadow: var(--box-shadow-light);
     }
@@ -1998,10 +1998,9 @@ body {
 
     /* TODAS las cards secundarias del mismo tamaÃ±o */
     .staff__card--secondary {
-        width: 220px;
-        height: 330px;
-        flex: 0 0 220px;
-        /* TamaÃ±o fijo, no porcentual */
+        max-width:250px;
+        height: 400px;
+       
     }
 
     .staff__card--secondary:hover {
@@ -2374,13 +2373,6 @@ body {
         gap: 25px;
     }
 
-    .staff__card--secondary {
-        width: 250px;
-        height: 340px;
-        flex: 0 0 250px;
-        /* TamaÃ±o fijo mÃ¡s grande */
-    }
-
     /* ========================================
        CARDS PRINCIPALES (Main)
        ======================================== */
@@ -2410,7 +2402,7 @@ body {
     .staff__card--secondary {
         flex: 0 0 calc(25% - 25px);
         width: 250px;
-        height: 340px;
+        height: 400px;
         max-width: none;
         transform: scale(1);
     }
@@ -2598,7 +2590,7 @@ body {
 
     .staff__card--secondary {
         width: 270px;
-        height: 360px;
+        height: 420px;
         flex: 0 0 270px;
         /* TamaÃ±o fijo final */
     }
