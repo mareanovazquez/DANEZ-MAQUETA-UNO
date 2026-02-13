@@ -603,7 +603,7 @@ body {
 /* Card modifiers */
 .staff__card--main {
     width: 290px;
-    height: 390px;
+    height: 420px;
 }
 
 .staff__card--secondary {
@@ -632,7 +632,7 @@ body {
     }
 }
 
-/* En dispositivos tÃ¡ctiles, usamos una clase para controlar el flip */
+/* En dispositivos táctiles, usamos una clase para controlar el flip */
 .staff__card-flipped .staff__card-inner {
     transform: rotateY(-180deg);
 }
@@ -649,7 +649,7 @@ body {
 }
 
 .staff__card-back {
-    transform: rotateY(-180deg);
+    /* transform: rotateY(-180deg); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -719,6 +719,15 @@ body {
     font-weight: 800;
 }
 
+.staff__header--data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+    gap: 5px;
+    }
+
 .staff__details {
     width: 90%;
     margin: 15px auto;
@@ -728,27 +737,40 @@ body {
     font-size: 1.2rem;
     font-family: var(--secondary-font-family);
     color: var(--secondary-font-color);
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .staff__detail-label {
-    font-weight: bold;
     color: var(--primary-font-color);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.staff__detail-text{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 25px;
 }
 
 .staff__detail-label--title {
     font-weight: 800;
+    margin-left: 20px;
+}
+.staff__detail-label--artist {
+    font-style: italic;
+    margin-left: 20px;
 }
 
 .staff__detail a {
     text-decoration: none;
     color: var(--primary-font-color);
-}
+    }
 
 .staff__tags {
     display: flex;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
     justify-content: flex-start;
 }
 
@@ -801,6 +823,13 @@ body {
     color: var(--hover-font-color);
     transform: scale(1.1);
 }
+
+.staff__detail i {
+    color: var(--activity-navbar-font-color);
+    font-size: 1.2rem;
+    
+    margin-right: 5px;
+    }
 
 /* ========================================
    HOVER EFFECTS
@@ -2368,10 +2397,6 @@ body {
 
     .staff__card--main .staff__header .staff__fullname {
         font-size: 2rem;
-    }
-
-    .staff__card--main .staff__details {
-        margin: 40px auto;
     }
 
     .staff__card--main .staff__detail {
