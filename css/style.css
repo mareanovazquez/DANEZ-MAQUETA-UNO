@@ -607,8 +607,8 @@ body {
 }
 
 .staff__card--secondary {
-    width: 260px;
-    height: 390px;
+    width: 300px;
+    height: 400px;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-light);
 }
@@ -872,7 +872,8 @@ body {
 
 .staff__card--secondary .staff__detail {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .staff__card--secondary .staff__tags {
@@ -2000,8 +2001,8 @@ body {
 
     /* TODAS las cards secundarias del mismo tamaÃ±o */
     .staff__card--secondary {
-        max-width:250px;
-        height: 400px;
+        max-width:260px;
+        height: 410px;
        
     }
 
