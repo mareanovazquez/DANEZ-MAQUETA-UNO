@@ -17,7 +17,7 @@ body {
 }
 
 /* ========================================
-   NAVEGACIÃ“N
+   NAVEGACIÓN
    ======================================== */
 
 /* Desktop navigation - hidden by default */
@@ -645,6 +645,7 @@ body {
     backface-visibility: hidden;
     border-radius: 5px;
     background: var(--secondary-bg-color);
+    
 }
 
 .staff__card-back {
@@ -654,6 +655,8 @@ body {
     align-items: center;
     padding-top: 20px;
     text-align: left;
+    border-top: 10px solid;
+    border-image: linear-gradient(90deg, #10375c 10%, #81C784 90%) 1;
 }
 
 /* ========================================
@@ -756,10 +759,12 @@ body {
     font-family: var(--primary-font-family);
     font-weight: 600;
     color: var(--primary-font-light-color);
+    text-transform: uppercase;
 }
 
 .staff__tag--funcional {
     background-color: var(--funcional-bg-color);
+    color: var(--primary-font-color);
 }
 
 .staff__tag--pilates {
