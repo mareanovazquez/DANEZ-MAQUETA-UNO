@@ -565,6 +565,29 @@ body {
     width: 100%;
 }
 
+.staff__title--founders
+ {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    
+}
+
+.staff__title--instructors
+ {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    
+}
+
+
 /* Contenedores de filas */
 .staff__main-row,
 .staff__secondary-row {
@@ -2347,9 +2370,7 @@ body {
         margin-top: 0;
     }
 
-    .section__title--staff {
-        display: none;
-    }
+   
 
     /* Contenedor principal de staff */
     .staff {
