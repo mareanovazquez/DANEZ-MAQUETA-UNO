@@ -20,7 +20,7 @@ Sitio web responsive desarrollado con HTML5, CSS3 y JavaScript vanilla para most
 - Navegación suave entre secciones
 - Galería interactiva del staff con tarjetas flip
 - Sistema de mapas interactivo para ubicaciones
-- Formulario de contacto integrado con Firebase
+- Formulario de contacto integrado con Formspree
 - Página de preguntas frecuentes con búsqueda
 - Efectos parallax y animaciones
 
@@ -38,7 +38,6 @@ DANEZ-MAQUETA-UNO/
 │   ├── reset.css          # Reset de estilos
 │   └── reglamento.css     # Estilos específicos del reglamento
 ├── js/
-│   ├── config.js          # Configuración de Firebase
 │   ├── formHandler.js     # Manejo del formulario de contacto
 │   ├── menuToggle.js      # Navegación móvil
 │   ├── navBarFixed.js     # Barra de navegación fija
@@ -80,7 +79,7 @@ DANEZ-MAQUETA-UNO/
 - Responsive design mobile-first
 - Efectos parallax en secciones específicas
 - Animaciones CSS y JavaScript
-- Integración con Firebase para formularios
+- Integración con Formspree para formularios
 - Modal de mapas para ubicaciones
 - Sistema de toast notifications
 
@@ -89,7 +88,7 @@ DANEZ-MAQUETA-UNO/
 - **HTML5**: Estructura semántica
 - **CSS3**: Estilos modernos con variables custom, flexbox y grid
 - **JavaScript ES6+**: Funcionalidades interactivas
-- **Firebase**: Backend para formularios de contacto
+- **Formspree**: Servicio para formularios de contacto
 - **Font Awesome**: Iconografía
 - **Google Fonts**: Tipografías (Arvo, Hind, Lato, Montserrat, Sora, Space Grotesk)
 
