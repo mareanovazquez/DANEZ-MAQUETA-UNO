@@ -784,8 +784,7 @@ body {
 }
 .staff__detail-label--artist {
     font-style: italic;
-    margin-left: 20px;
-}
+    }
 
 .staff__detail a {
     text-decoration: none;
