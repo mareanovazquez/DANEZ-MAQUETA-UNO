@@ -1,29 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const video = document.querySelector('.main__video');
+    const videos = document.querySelectorAll('.main__video');
     const loadingOverlay = document.getElementById('videoLoading');
-    
-    // Si no hay video o loading overlay, salir
-    if (!video || !loadingOverlay) return;
-    
-    // Función para ocultar el loading
+
+    if (!videos.length || !loadingOverlay) return;
+
+    let hidden = false;
+
     function hideLoading() {
+        if (hidden) return;
+        hidden = true;
         loadingOverlay.classList.add('video-loading--hide');
-        
-        // Remover el elemento después de la animación
         setTimeout(() => {
             loadingOverlay.style.display = 'none';
         }, 500);
     }
-    
-    // Verificar si el video ya está listo
-    if (video.readyState >= 3) {
-        // El video ya está listo (tiene suficiente data para reproducir)
-        hideLoading();
-    } else {
-        // Esperar a que el video pueda reproducirse
-        video.addEventListener('canplay', hideLoading, { once: true });
-        
-        // Fallback: ocultar después de 3 segundos aunque el video no esté listo
-        setTimeout(hideLoading, 3000);
+
+    function getVisibleVideo() {
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        if (isMobile) {
+            return document.querySelector('.main__video--mobile');
+        }
+        return document.querySelector('.main__video--desktop');
     }
+
+    function watchVideo(video) {
+        if (!video) return;
+        if (video.readyState >= 3) {
+            hideLoading();
+        } else {
+            video.addEventListener('canplay', hideLoading, { once: true });
+        }
+    }
+
+    const visibleVideo = getVisibleVideo();
+    watchVideo(visibleVideo);
+
+    setTimeout(hideLoading, 3000);
 });

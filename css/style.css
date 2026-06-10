@@ -17,7 +17,7 @@ body {
 }
 
 /* ========================================
-   NAVEGACIÃ“N
+   NAVEGACIÓN
    ======================================== */
 
 /* Desktop navigation - hidden by default */
@@ -565,6 +565,29 @@ body {
     width: 100%;
 }
 
+.staff__title--founders
+ {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    
+}
+
+.staff__title--instructors
+ {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-font-color);
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    
+}
+
+
 /* Contenedores de filas */
 .staff__main-row,
 .staff__secondary-row {
@@ -603,12 +626,12 @@ body {
 /* Card modifiers */
 .staff__card--main {
     width: 290px;
-    height: 390px;
+    height: 420px;
 }
 
 .staff__card--secondary {
-    width: 260px;
-    height: 330px;
+    width: 300px;
+    height: 400px;
     transform: scale(0.9);
     box-shadow: var(--box-shadow-light);
 }
@@ -632,7 +655,7 @@ body {
     }
 }
 
-/* En dispositivos tÃ¡ctiles, usamos una clase para controlar el flip */
+/* En dispositivos táctiles, usamos una clase para controlar el flip */
 .staff__card-flipped .staff__card-inner {
     transform: rotateY(-180deg);
 }
@@ -645,6 +668,7 @@ body {
     backface-visibility: hidden;
     border-radius: 5px;
     background: var(--secondary-bg-color);
+    
 }
 
 .staff__card-back {
@@ -654,6 +678,8 @@ body {
     align-items: center;
     padding-top: 20px;
     text-align: left;
+    border-top: 10px solid;
+    border-image: linear-gradient(90deg,rgba(16, 55, 92, 1) 0%, rgba(129, 199, 132, 1) 50%, rgba(255, 210, 132, 1) 100%)1;
 }
 
 /* ========================================
@@ -716,6 +742,15 @@ body {
     font-weight: 800;
 }
 
+.staff__header--data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+    gap: 5px;
+    }
+
 .staff__details {
     width: 90%;
     margin: 15px auto;
@@ -725,27 +760,42 @@ body {
     font-size: 1.2rem;
     font-family: var(--secondary-font-family);
     color: var(--secondary-font-color);
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .staff__detail-label {
-    font-weight: bold;
+    color: var(--secondary-font-color);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.staff__detail-text{
     color: var(--primary-font-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 25px;
 }
 
 .staff__detail-label--title {
+    
     font-weight: 800;
+    margin-left: 20px;
+}
+.staff__detail-label--artist {
+    font-style: italic;
+    margin-left: 20px;
 }
 
 .staff__detail a {
     text-decoration: none;
     color: var(--primary-font-color);
-}
+    }
 
 .staff__tags {
     display: flex;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
     justify-content: flex-start;
 }
 
@@ -756,10 +806,12 @@ body {
     font-family: var(--primary-font-family);
     font-weight: 600;
     color: var(--primary-font-light-color);
+    text-transform: uppercase;
 }
 
 .staff__tag--funcional {
     background-color: var(--funcional-bg-color);
+    color: var(--primary-font-color);
 }
 
 .staff__tag--pilates {
@@ -797,6 +849,13 @@ body {
     transform: scale(1.1);
 }
 
+.staff__detail i {
+    color: var(--activity-navbar-font-color);
+    font-size: 1.2rem;
+    
+    margin-right: 5px;
+    }
+
 /* ========================================
    HOVER EFFECTS
    ======================================== */
@@ -816,7 +875,7 @@ body {
    ======================================== */
 
 .staff__card--secondary .staff__header {
-    margin: 10px auto;
+    margin: -5px auto 10px auto;
     gap: 5px;
 }
 
@@ -836,7 +895,8 @@ body {
 
 .staff__card--secondary .staff__detail {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .staff__card--secondary .staff__tags {
@@ -1888,8 +1948,8 @@ body {
     }
 
     .staff__card--secondary {
-        width: 200px;
-        height: 300px;
+                max-width: 250px;
+        height: 410px;
         transform: scale(1);
         box-shadow: var(--box-shadow-light);
     }
@@ -1964,10 +2024,9 @@ body {
 
     /* TODAS las cards secundarias del mismo tamaÃ±o */
     .staff__card--secondary {
-        width: 220px;
-        height: 330px;
-        flex: 0 0 220px;
-        /* TamaÃ±o fijo, no porcentual */
+        max-width:260px;
+        height: 410px;
+       
     }
 
     .staff__card--secondary:hover {
@@ -2311,9 +2370,7 @@ body {
         margin-top: 0;
     }
 
-    .section__title--staff {
-        display: none;
-    }
+   
 
     /* Contenedor principal de staff */
     .staff {
@@ -2340,13 +2397,6 @@ body {
         gap: 25px;
     }
 
-    .staff__card--secondary {
-        width: 250px;
-        height: 340px;
-        flex: 0 0 250px;
-        /* TamaÃ±o fijo mÃ¡s grande */
-    }
-
     /* ========================================
        CARDS PRINCIPALES (Main)
        ======================================== */
@@ -2365,10 +2415,6 @@ body {
         font-size: 2rem;
     }
 
-    .staff__card--main .staff__details {
-        margin: 40px auto;
-    }
-
     .staff__card--main .staff__detail {
         font-size: 1.2rem;
     }
@@ -2380,7 +2426,7 @@ body {
     .staff__card--secondary {
         flex: 0 0 calc(25% - 25px);
         width: 250px;
-        height: 340px;
+        height: 400px;
         max-width: none;
         transform: scale(1);
     }
@@ -2568,7 +2614,7 @@ body {
 
     .staff__card--secondary {
         width: 270px;
-        height: 360px;
+        height: 420px;
         flex: 0 0 270px;
         /* TamaÃ±o fijo final */
     }
